@@ -44,7 +44,7 @@ usuario necesita a través de las historias de usuario.
 Dicho en palabras sencillas, aprenderás a:
 
 * Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-* Trabajar con **historias de usuario**, y crear en equipo las definiciones de terminado (_definition of done_) y los criterios de aceptación en el proceso de organización y planificación del trabajo.
+* Trabajar con **historias de usuario**, y crear en equipo las **definiciones de terminado (_definition of done_)*** y los **criterios de aceptación** en el proceso de organización y planificación del trabajo.
 * Definir en equipo con que data van a trabajar.
 * Crear productos que sigan los **principios básicos de diseño visual** y las **heurísticas de usabilidad**.
 * Iterar el diseño del producto, basándote en los resultados de los **tests de usabilidad**.
