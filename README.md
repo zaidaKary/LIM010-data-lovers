@@ -43,15 +43,15 @@ usuario necesita a través de las historias de usuario.
 
 Dicho en palabras sencillas, aprenderás a:
 
-* Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-* Trabajar con **historias de usuario**, y crear en equipo las **definiciones de terminado (_definition of done_)*** y los **criterios de aceptación** en el proceso de organización y planificación del trabajo.
-* Definir en equipo con que data van a trabajar.
-* Crear productos que sigan los **principios básicos de diseño visual** y las **heurísticas de usabilidad**.
-* Iterar el diseño del producto, basándote en los resultados de los **tests de usabilidad**.
-* Manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**.
-* **Manipular el DOM** (agregar elementos dinámicamente basados en la data).
-* **Manejar eventos del DOM** para permitir interacción con el usuario (filtrado, ordenado, ...).
-* Entender los beneficios y complejidades de **trabajar en equipo** en un ambiente de alta incertidumbre.
+- Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
+- Trabajar con **historias de usuario**, y crear en equipo las **definiciones de terminado (_definition of done_)*** y los **criterios de aceptación** en el proceso de organización y planificación del trabajo.
+- Definir en equipo con que data van a trabajar.
+- Crear productos que sigan los **principios básicos de diseño visual** y las **heurísticas de usabilidad**.
+- Iterar el diseño del producto, basándote en los resultados de los **tests de usabilidad**.
+- Manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**.
+- **Manipular el DOM** (agregar elementos dinámicamente basados en la data).
+- **Manejar eventos del DOM** para permitir interacción con el usuario (filtrado, ordenado, ...).
+- Entender los beneficios y complejidades de **trabajar en equipo** en un ambiente de alta incertidumbre.
 
 ## Consideraciones generales
 
@@ -67,7 +67,7 @@ Dicho en palabras sencillas, aprenderás a:
   | **2do Sprint**    | 01/07 al 05/07 |
   | **3er Sprint**    | 08/06 al 12/07 |
   
-- Recuerda que en cada Sprint deberás realizar las siguientes actividades:
+- Recuerda que en cada sprint deberás realizar las siguientes actividades:
   - definir colaborativamente las _definiciones de terminado_ y _criterios de aceptación_ por cada historia de usuario a desarrollar en cada sprint.
   - _code review_
   - _peer feedback_
@@ -85,7 +85,7 @@ explores y decidas con cual trabajar. En cada una encontrarás las historias de 
 
 - [Indicadores de desarrollo del Banco Mundial](src/data/worldbank/)
   de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen
-  indicadores demográficos, económicos y comerciales. [Banco Mundial](https://www.bancomundial.org/)
+  indicadores demográficos, económicos y comerciales. [Banco Mundial](https://www.bancomundial.org/).
 - [Pokémon](src/data/pokemon/):
   En este set encontrarás una lista con los 151 Pokémon de la región de Kanto,
   junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](pokemongolive.com).
