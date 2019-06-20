@@ -61,18 +61,22 @@ Dicho en palabras sencillas, aprenderás a:
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
 - El tiempo sugerido para presentar este proyecto es de aproximadamente 3 semanas (3 sprints):
 
-  | Tiempos      | Fechas | Detalles | 
-  | :---------------: | :------------: | :------------: |
-  | **1er Sprint**    | 24/06 al 28/06 |Durante este sprint se deberá terminar la primera HU |
-  | **2do Sprint**    | 01/07 al 05/07 |Para este sprint se prefiere empezar con la segunda HU|
-  | **3er Sprint**    | 08/06 al 12/07 | Al igual que las anteriores, se prefiere que empieces con la tercera HU|
+  | Tiempos      | Fechas |
+  | :---------------: | :------------: |
+  | **1er Sprint**    | 24/06 al 28/06 |
+  | **2do Sprint**    | 01/07 al 05/07 |
+  | **3er Sprint**    | 08/06 al 12/07 |
   
-- Recuerda que en cada Sprint deberás realizar las siguientes ceremonias:
-   - _Cocrear y definir las definiciones de terminado y criterios de aceptación por cada historia de usuario.
-   - _code review_ 
-   - _peer feedback_
-   - _retrospectiva_
-   - planificación del sprint 2  
+- Recuerda que en cada Sprint deberás realizar las siguientes actividades:
+  - definir colaborativamente las _definiciones de terminado_ y _criterios de aceptación_ por cada historia de usuario a desarrollar en cada sprint.
+  - _code review_
+  - _peer feedback_
+  - _retrospectiva_
+  - _sprint planning_
+
+- Antes de comenzar, conversen sobre cómo le fue a cada una en el proyecto anterior para que puedan entender mejor cómo organizarse. No caigan en el error de cada una hacer lo que ya sabe bien cómo hacer. Aprovechen la oportunidad de hacer lo que no saben bien. Acá estás para aprender, no para "entregar" proyectos solamente.
+
+- Desarrollar una historia de usuario hasta completarla, es decir, que se cumplen **todos** sus _criterios de aceptación_ + **toda** su _definición de terminado_.
 
 ## Requerimientos del proyecto
 
