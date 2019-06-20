@@ -35,22 +35,28 @@ al lado derecho.
 \* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
 y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
 
-
 ## Objetivos de aprendizaje
 
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web responsive donde se pueda visualizar y manipular un conjunto (set) de datos.
+interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
+usuario necesita a través de las historias de usuario.
 
-Para completar el proyecto tendrás que aplicar y profundizar los objetivos de aprendizaje del proyecto 
-anterior así como :
-- Familiarizarte con conceptos nuevos como Historias de usuario, sus definiciones de  terminado (_definition of done_) y Criterios de Aceptación como herramienta central de la organización y planificación de tu trabajo. - - Lograr un diseño responsive; manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**, agregar elementos dinámicamente basados en la data (Manipular DOM).
+Dicho en palabras sencillas, aprenderás a:
 
+* Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
+* Trabajar con **historias de usuario**, y crear en equipo las definiciones de terminado (_definition of done_) y los criterios de aceptación en el proceso de organización y planificación del trabajo.
+* Definir en equipo con que data van a trabajar.
+* Crear productos que sigan los **principios básicos de diseño visual** y las **heurísticas de usabilidad**.
+* Iterar el diseño del producto, basándote en los resultados de los **tests de usabilidad**.
+* Manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**.
+* **Manipular el DOM** (agregar elementos dinámicamente basados en la data).
+* **Manejar eventos del DOM** para permitir interacción con el usuario (filtrado, ordenado, ...).
+* Entender los beneficios y complejidades de **trabajar en equipo** en un ambiente de alta incertidumbre.
 
 ## Consideraciones generales
 
 - Este proyecto se debe resolver en duplas.
-- Una integrante deberá _forkear_ y _clonar_ este repositorio; luego, su compañera, 
-deberá _forkear_ y _clonar_ a la anterior.
+- Una integrante deberá _forkear_ y _clonar_ este repositorio; luego, su compañera, deberá _forkear_ y _clonar_ a la anterior.
 - El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
 - El tiempo sugerido para presentar este proyecto es de aproximadamente 3 semanas (3 sprints):
@@ -62,6 +68,7 @@ deberá _forkear_ y _clonar_ a la anterior.
   | **3er Sprint**    | 08/06 al 12/07 | Al igual que las anteriores, se prefiere que empieces con la tercera HU|
   
 - Recuerda que en cada Sprint deberás realizar las siguientes ceremonias:
+   - _Cocrear y definir las definiciones de terminado y criterios de aceptación por cada historia de usuario.
    - _code review_ 
    - _peer feedback_
    - _retrospectiva_
