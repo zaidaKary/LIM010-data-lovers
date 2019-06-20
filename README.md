@@ -67,64 +67,105 @@ Dicho en palabras sencillas, aprenderás a:
   | **2do Sprint**    | 01/07 al 05/07 |
   | **3er Sprint**    | 08/06 al 12/07 |
   
-- Recuerda que en cada sprint deberás realizar las siguientes actividades:
-  - definir colaborativamente las _definiciones de terminado_ y _criterios de aceptación_ por cada historia de usuario a desarrollar en cada sprint.
-  - _code review_
-  - _peer feedback_
-  - _retrospectiva_
-  - _sprint planning_
+Recuerda que en cada sprint deberás realizar las siguientes actividades:
 
-- Antes de comenzar, conversen sobre cómo le fue a cada una en el proyecto anterior para que puedan entender mejor cómo organizarse. No caigan en el error de cada una hacer lo que ya sabe bien cómo hacer. Aprovechen la oportunidad de hacer lo que no saben bien. Acá estás para aprender, no para "entregar" proyectos solamente.
+- definir colaborativamente las _definiciones de terminado_ y _criterios de aceptación_ por cada historia de usuario a desarrollar en cada sprint.
+- _code review_
+- _peer feedback_
+- _retrospectiva_
+- _sprint planning_
+
+- Antes de comenzar, conversen sobre cómo les fue a cada una en el proyecto anterior para que puedan entender mejor cómo organizarse. No caigan en el error de separar las tareas en función a lo que ya sabes hacer o con lo que te sientas más cómoda. Recuerden que acá están para aprender, no para "entregar" proyectos solamente.
 
 - Desarrollar una historia de usuario hasta completarla, es decir, que se cumplen **todos** sus _criterios de aceptación_ + **toda** su _definición de terminado_.
 
 ## Requerimientos del proyecto
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con cual trabajar. En cada una encontrarás las historias de usuario:
+Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que exploren y decidan en equipo con cual trabajar.
+Por cada una encontrarás las historias de usuario a implementar:
 
-- [Indicadores de desarrollo del Banco Mundial](src/data/worldbank/)
-  de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen
-  indicadores demográficos, económicos y comerciales. [Banco Mundial](https://www.bancomundial.org/).
-- [Pokémon](src/data/pokemon/):
-  En este set encontrarás una lista con los 151 Pokémon de la región de Kanto,
-  junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](pokemongolive.com).
-- [Steam noticias](src/data/steam/):
-  Lista noticias relacionadas a los videojuegos presentes en la
-  plataforma de [Steam](https://store.steampowered.com/).
-- [League of Legends - Challenger leaderboard](src/data/lol/):
-  Este set de datos muestra la lista de jugadores en una liga del
-  juego [League of Legends](https://play.lan.leagueoflegends.com/es_MX) (LoL), 
-  puedes revisar la documentación de su API en este [link](https://developer.riotgames.com/api-methods/) 
-- [Personas heridas por medio de transporte en EEUU](src/data/injuries/).
-  Este set nos muestra el número de personas heridas en accidentes de
-  transporte, con data anual desde 1960 y categorizada por tipo de transporte
-  (aire, barco, automóvil, moto, bicicleta, ...) [Accidentes de transporte](http://www.paho.org/data/index.php/es/indicadores/107-cat-data-es/453-land-accidents-es.html?showall=&start=4)
+### Banco Mundial
+
+Este set de datos contiene [indicadores de desarrollo del Banco Mundial](src/data/worldbank/) de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen indicadores demográficos, económicos y comerciales.
+Si _como equipo_ deciden trabajar con la data del [Banco Mundial](https://www.bancomundial.org/), deberán implementar las siguientes historias de usuario:
+
+- EL usuario debe poder seleccionar un país (Perú, México, Brasil o Chile), seleccionar el indicador correspondiente a ese país y por medio de un click, poder visualizar todos los años que muestran los porcentajes correspondientes al indicador seleccionado.
+
+- EL usuario debe poder tener la opción de ordenar los datos visualizados de manera ascendente (menor a mayor) o descendente (mayor a menor) por año y/o porcentaje.
+
+- El usuario requiere poder filtrar la información visualizada por rango de años.
+
+- El usuario requiere poder consultar a través de un botón el promedio de los porcentajes del indicador seleccionado.
+
+- El usuario requiere un boton que le permita limpiar la selección establecida para iniciar una nueva consulta.
+
+- Finalmente, el usuario requiere poder visualizar los datos a través de un gráfico que le permita ver la tendencia del indicador seleccionado.
+
+### Pokemon
+
+En este set encontrarás una lista con los 151 [Pokémon](src/data/pokemon/) de la región de Kanto, junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](pokemongolive.com).
+Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
+
+- El usuario requiere visualizar  la imagen y el nombre de todos los pokemones al ingresar a la página.
+
+- Al dar click sobre un pokemon, el usuario requiere poder ver,a través de un modal,  más información del pokemon : Nombre, imagen, altura en metros, peso en kilogramos, Huevos, Tipo y Debilidades. Al cerrar el modal, debe poder visualizar el listado de todos los pokemones presentados inicialmente.
+
+- El usuario requiere poder filtrar a los pokemones por tipo (grass, poison, fire, flying, water, bug, normal, electric, ground, fighting, psychic, rock, ice, ghost, dragon) y ver la cantidad de pokemones que pertenecen a un tipo seleccionado.
+
+- El usuario requiere poder filtrar a los pokemones visualizados por debilidad y ver la cantidad de pokemones por debilidad seleccionada.
+
+- El usuario requiere poder ordenar de manera ascendente (menor a mayor) o descendente (mayor a menor) por el nombre a los todos los pokemones visualizados.
+
+- Por medio de un boton, el usuario requiere poder ver el promedio multiplicador de todos los pokemones.
+
+- Finalmente, el usuario conocedor de pokemon requiere poder buscar a su pokemon favorito por su nombre.
+
+### LOL (League of Legends)
+
+El set de datos de [League of Legends - Challenger leaderboard](src/data/lol/) muestra la lista de jugadores en una liga del
+juego [League of Legends](https://play.lan.leagueoflegends.com/es_MX) (LoL), puedes revisar la documentación de su API en este [link](https://developer.riotgames.com/api-methods/).
+Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
+
+- El usuario requiere poder visualizar las imagenes y los nombres de todos los campeones de LOL al ingresar a la página.
+
+- Al dar click sobre un campeón de LOL, el usuario requiere poder ver, a través de un modal, más información del campeón: Nombre del campeón, titulo, imagen, descripción y los valores de ataque, defensa, mana y dificultad . Al cerrar el modal, debe poder visualizar el listado de todos los campeones.
+
+- El usuario requiere poder tener la opción de visualizar a los campeones por categoria o tags (Assasin, Fighter, Mage, Marksman, Tank y Support) y por cada categoria visualizar el total de campeones y el promedio de dificultad
+
+Tag : Assasin  
+Nro de campeones 33
+Promedio de dificultad: 6.36
+
+- El usuario requiere poder ordenar de manera ascendente (menor a mayor) y/o descendente (mayor a menor)  por ataque y/o defensa a todos los campeones que pertenecen a una categoría o tag.
+
+- Finalmente el usuario conocedor de los campeones de Lol requiere poder buscarlo por su nombre.
+
+### INJURIES
+
+Este set de datos nos muestra el número de [personas heridas por medio de transporte en EEUU](src/data/injuries/) data anual desde 1960 y categorizada por tipo de transporte
+(aire, barco, automóvil, moto, bicicleta, ...) [Accidentes de transporte](http://www.paho.org/data/index.php/es/indicadores/107-cat-data-es/453-land-accidents-es.html?showall=&start=4)
 
 ### Planificación (Agile-Scrum)
 
-En este proyecto te vamos a dar las historias de usuario los cuales representan los requerimientos y funcionales que desea el usuario final. Para ello, deberás incluir criterios de aceptación y definiciones de terminado específicos que permitan considerar a la historia de usuario desarrollada como válida y aceptada por el usuario.
-
+En este proyecto te hemos dado las historias de usuario. Estos representan los requerimientos y funcionalidades que desea el usuario final. Para su proceso de planificación, deberán definir colaborativamente los _criterios de aceptación_ y _definiciones de terminado_ específicos que permitan considerar a la historia de usuario desarrollada como válida y aceptada por el usuario final.
 
 Para realizar el seguimiento del desarrollo de las historias de usuario utilizarás [issues](https://help.github.com/en/articles/about-issues) y [project](https://help.github.com/en/articles/about-project-boards) en Github.
 No dudes en solicitar ayuda a tus coaches.
 
 ### UX (Diseño de experiencia de usuario)
 
-Antes de iniciar a codear, debes entender el problema que quieres solucionar 
-y cómo tu aplicación lo soluciona.
+Antes de iniciar a codear, debes entender el problema que quieres solucionar y cómo tu aplicación lo soluciona para ello:
 
-- Primero trabaja tu prototipo de baja fidelidad con papel y lápiz (blanco y negro) para
-la vista mobile y desktop.
+- Primero trabaja tu prototipo de baja fidelidad con papel y lápiz (blanco y negro) para la vista mobile y desktop.
 - Luego valida esta solución con una compañera (pedir feedback).
-- Toma lo aprendido al momento de validar tu primer prototipo y desarrolla un nuevo prototipo
-de alta fidelidad usando [Figma](https://www.figma.com/) para la vista mobile y desktop. 
-Recuerda utilizar la identidad gráfica correspondiente a la data que elijas.
-- Deberás exportar tu diseño a [Zeplin](https://zeplin.io/) y utilizar las especificaciones de
-estilo que te dé Zeplin al momento de implementar tus diseños en código.
+- Toma lo aprendido al momento de validar tu primer prototipo y desarrolla un nuevo prototipo de alta fidelidad usando [Figma](https://www.figma.com/) para la vista mobile y desktop.
+- Recuerda utilizar la identidad gráfica correspondiente a la data que elijas.
+- Deberás exportar tu diseño a [Zeplin](https://zeplin.io/) y utilizar las especificaciones de estilo que te dé Zeplin al momento de implementar tus diseños en código.
+- Elaborar el readme del proyecto.
 
 `README.md`:
 Debe contener lo siguiente:
+
 - Un título con el nombre de tu proyecto.
 - Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
 - La imagen final de tu proyecto.
@@ -135,144 +176,29 @@ Debe contener lo siguiente:
   - Agregar un resumen del feedback recibido indicando las mejoras a realizar.
   - Imagen y link del prototipo de alta fidelidad final (mobile y desktop) en Figma.
 
-
-
-
-
-
 ### Front-end
 
 #### Visualmente (HTML5 y CSS3)
 
-Deberás maquetar de forma exacta el prototipo final que hiciste en Figma utilizando
-HTML5 y CSS3. 
+Deberás maquetar de forma exacta el prototipo final que hiciste en Figma utilizando HTML5 y CSS3.
 
 A continuación describimos los archivos que utilizarás:
 
 **`src/index.html`**:
 
-En este archivo va el contenido que se mostrará al usuario (esqueleto HTML). Encontrarás
-3 etiquetas iniciales:
+En este archivo va el contenido que se mostrará al usuario (esqueleto HTML). Encontrarás 3 etiquetas iniciales:
 
 - `<header>`: encabezado de tu proyecto.
 - `<main>`: contenido principal de tu proyecto.
 - `<footer>`: pie de página de tu proyecto.
 
-**`src/style.css`**:
-
-Este archivo debe contener las reglas de estilo. Queremos que escribas tus propias reglas,
-por eso NO está permitido el uso de frameworks de CSS3 (Bootstrap, materialize, etc).
-
-#### Funcionalmente (JavaScript ES6 - pruebas unitarias)
-
-- La lógica del proyecto debe estar implementada completamente en JavaScript (ES6).
-- En este proyecto NO está permitido usar librerías o frameworks, sólo
-[vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e).
-- No se debe utilizar la _pseudo-variable_ `this`.
-
-Vamos a tener 2 archivos JavaScript separando responsabilidades, a continuación indicamos qué
-harás en cada archivo:
-
-
-### `src/main.js`
-
-En este archivo escribirás todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
-
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
-
-### `src/data.js`
-
-En este archivo escribirás todo el código que contenga las funcionalidades 
-descritas en las historias de usuario. Estas funciones, que representan lo 
-que el usuario quiere, deben ser [funciones puras]((https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d) e independientes del DOM.
-
-### `src/data`
-
-En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
-extensión `.js` y otro `.json`. Ambos archivos contienen la misma data.
-- Inicialmente solo usarás el `.js`, el cual se agrega a tu proyecto en el `html` 
-mediante una etiqueta `<script>`.
-- Cuando tu proyecto ya esté completado, en lugar de consumir la data estática 
-en `js`, utilizarás la data de forma dinámica por medio del `.json`, la cual se 
-realizará de forma asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-
-
-**`test/cipher.spec.js`**:
-
-En este archivo tendrás que completar las pruebas unitarias de las funciones
-implementadas en `data.js` utilizando **Jest**.
-Tus pruebas unitarias deben dar un 70% en _coverage_ (cobertura), _statements_ (sentencias),
-_functions_ (funciones) y _lines_ (líneas); y un mínimo del 50% de _branches_ (ramas).
-
-
-
-
-Te reomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones):
-
-* `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
-
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
-
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
-
-Estos nombres de funciones y de parámetros son solamente referenciales, lo que
-decidas depende de tu propia implementación.
-
-
-
-
-
-
-### Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
-
-
-
-
-Features/características extra sugeridas:
-
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
-
-
-
-### `src/index.html`
-
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
+Por otro lado, este archivo, nos sirve para indicar qué scripts se usarán y unir todo lo que hemos hecho.
 
 En este archivo encontrarás una serie de _etiquetas_ (_tags_) `<script>`
-_comentadas_. Para _cargar_ las diferentes fuentes de datos tendrás que
+_comentadas_.
+Para _cargar_ las diferentes fuentes de datos tendrás que
 _descomentar_ estas _etiquetas_. Cada uno estos scripts asignará una variable
-global con la data correspondiente a esa fuente de datos.
+global con la data correspondiente al set de datos selecionado.
 
 Por ejemplo, si "descomentamos" la siguiente línea:
 
@@ -287,41 +213,79 @@ La línea quedaría así:
 ```
 
 Y ahora tendríamos la variable global `WORLDBANK` disponible en nuestros otros
-scripts (como `src/data.js` o `src/main.js`).
+scripts (como `src/data.js` o `src/main.js`) prueba que funciona en cada archivo con:
 
+```js
+console.log(WORLDBANK)
+```
 
+**`src/style.css`**:
 
+Este archivo debe contener las reglas de estilo. Queremos que escribas tus propias reglas, por eso NO está permitido el uso de frameworks de CSS3 (Bootstrap, materialize, etc).
 
-### `test/data.spec.js`
+#### Funcionalmente (JavaScript ES6 - pruebas unitarias)
 
-Tendrás también que completar las pruebas unitarias de las funciones
-implementadas en el archivo `data.js`.
+- La lógica del proyecto debe estar implementada completamente en JavaScript (ES6).
+- En este proyecto NO está permitido usar librerías o frameworks, sólo
+[vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e).
+- No se debe utilizar la _pseudo-variable_ `this`.
 
+Vamos a tener 2 archivos JavaScript separando responsabilidades, a continuación indicamos qué harás en cada archivo:
+
+### `src/main.js`
+
+En este archivo escribirás todo tu código que tenga que ver con
+mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
+interacción con el DOM. Operaciones como creación de nodos, registro de
+manejadores de eventos (_event listeners_ o _event handlers_), ....
+
+Esta no es la única forma de dividir tu código, puedes usar más archivos y
+carpetas, siempre y cuando la estructura sea clara para el equipo.
+
+### `src/data.js`
+
+En este archivo escribirás todo el código que contenga las funcionalidades
+descritas en las historias de usuario. Estas funciones, que representan lo
+que el usuario necesita, deben ser [funciones puras]((https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d) e independientes del DOM.
+
+### `src/data`
+
+En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
+carpeta por cada fuente de datos, y dentro de cada carpeta dos archivos: uno con la extensión `.js` y otro `.json`. Ambos archivos contienen la misma data.
+
+- Inicialmente solo usarás el archivo con extensión `.js`.
+- Cuando tu proyecto ya esté completado, en lugar de consumir la data desde un archivo con extensión`.js` lo harás desde el archivo con extensión`.json` utilizando [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API).
+
+**`test/cipher.spec.js`**:
+
+En este archivo tendrás que completar las pruebas unitarias de las funciones
+implementadas en `data.js` utilizando **Jest**.
+Tus pruebas unitarias deben dar un 70% en _coverage_ (cobertura), _statements_ (sentencias),
+_functions_ (funciones) y _lines_ (líneas); y un mínimo del 50% de _branches_ (ramas).
 
 ## Contenido de referencia
 
 ### Diseño de experiencia de usuario (User Experience Design)
 
-* Investigación con usuarios / entrevistas
-* Principios de diseño visual
+- Unidad de fundamentos de diseño visual de Visual Desing en LMS.
 
 ### Desarrollo Front-end
 
-* Unidad de testing en curso de JavaScript en LMS.
-* Unidad de arreglos en curso de JavaScript en LMS.
-* Unidad de objetos en curso de JavaScript en LMS.
-* Unidad de funciones en curso de JavaScript en LMS.
-* Unidad de DOM en curso de Browser JavaScript en LMS.
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
+- Unidad de testing en curso de JavaScript en LMS.
+- Unidad de arreglos en curso de JavaScript en LMS.
+- Unidad de objetos en curso de JavaScript en LMS.
+- Unidad de funciones en curso de JavaScript en LMS.
+- Unidad de DOM en curso de Browser JavaScript en LMS.
+- [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
+- [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
+- [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
+- [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
+- [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
+- [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
+- [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
+- [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
+- [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [json.org](https://json.org/json-es.html)
 
 ### Herramientas
 
@@ -336,20 +300,3 @@ implementadas en el archivo `data.js`.
 * [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s). Ojo que Cris no diferencia _Definición de terminado_ de
 _Criterios de Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
 * [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
-
-***
-
-
-Como mínimo, tu implementación debe:
-
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
-2. Permitir al usuario filtrar y ordenar la data.
-3. Calcular estadísticas de la colección (o subcolección) como media aritmética,
-   máximo y/o mínimo de algún atributo numérico, o contar cuántas veces aparece
-   un determinado valor, por ejemplo.
-4. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-tamaños de pantallas: móviles, tablets y desktops.
-
-Es importante que tu interfaz, a pesar de ser una versión mínima de tu ideal,
-siga los fundamentos de _visual design_.
