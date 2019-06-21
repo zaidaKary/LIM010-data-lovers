@@ -100,8 +100,7 @@ Si _como equipo_ deciden trabajar con la data del [Banco Mundial](https://www.ba
 En este set encontrarás una lista con los 151 [Pokémon](src/data/pokemon/) de la región de Kanto, junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](pokemongolive.com).
 Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
 
-- El usuario requiere visualizar  la imagen y el nombre de todos los pokemones al ingresar a la página.
-- Al dar click sobre un pokemon, el usuario requiere poder ver,a través de un modal,  más información del pokemon : Nombre, imagen, altura en metros, peso en kilogramos, Huevos, Tipo y Debilidades. Al cerrar el modal, debe poder visualizar el listado de todos los pokemones presentados inicialmente.
+- El usuario requiere visualizar  la imagen y el nombre de todos los pokemones al ingresar a la página. Al dar click sobre un pokemon, el usuario requiere poder ver,a través de un modal,  más información del pokemon : Nombre, imagen, altura en metros, peso en kilogramos, Huevos, Tipo y Debilidades. Al cerrar el modal, debe poder visualizar el listado de todos los pokemones presentados inicialmente.
 - El usuario requiere poder filtrar a los pokemones por tipo (grass, poison, fire, flying, water, bug, normal, electric, ground, fighting, psychic, rock, ice, ghost, dragon) y ver la cantidad de pokemones que pertenecen a un tipo seleccionado.
 - El usuario requiere poder filtrar a los pokemones visualizados por debilidad y ver la cantidad de pokemones por debilidad seleccionada.
 - El usuario requiere poder ordenar de manera ascendente (menor a mayor) o descendente (mayor a menor) por el nombre a los todos los pokemones visualizados.
@@ -114,8 +113,7 @@ El set de datos de [League of Legends - Challenger leaderboard](src/data/lol/) m
 juego [League of Legends](https://play.lan.leagueoflegends.com/es_MX) (LoL), puedes revisar la documentación de su API en este [link](https://developer.riotgames.com/api-methods/).
 Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
 
-- El usuario requiere poder visualizar las imagenes y los nombres de todos los campeones de LOL al ingresar a la página.
-- Al dar click sobre un campeón de LOL, el usuario requiere poder ver, a través de un modal, más información del campeón: Nombre del campeón, titulo, imagen, descripción y los valores de ataque, defensa, mana y dificultad . Al cerrar el modal, debe poder visualizar el listado de todos los campeones.
+- El usuario requiere poder visualizar las imagenes y los nombres de todos los campeones de LOL al ingresar a la página. Al dar click sobre un campeón de LOL, el usuario requiere poder ver, a través de un modal, más información del campeón: Nombre del campeón, titulo, imagen, descripción y los valores de ataque, defensa, mana y dificultad . Al cerrar el modal, debe poder visualizar el listado de todos los campeones.
 - El usuario requiere poder tener la opción de visualizar a los campeones por categoria o tags (Assasin, Fighter, Mage, Marksman, Tank y Support) y por cada categoria visualizar el total de campeones y el promedio de dificultad, por ejemplo:
 
 ````txt
@@ -134,10 +132,10 @@ Si _como equipo_ deciden trabajar con esta data deberán implementar las siguien
 
 - El usuario requiere poder visualizar el total de personas heridas por año y ordenar la data visualizada de manera ascedente (menor a mayor) y/o descendente(mayor a menor) por año y por total de heridos.
 - El usuario requiere poder seleccionar el tipo de transporte en el que se accidentaron estas personas y poder visualizar el total de personas heridas por año y ordenar la data visualizada de manera ascedente (menor a mayor) y/o descendente(mayor a menor) por año y por total de heridos.
--El usuario requiere poder saber cual ha sido el medio de transporte en el que más personas se han accidentando a través de los años.
--El usuario requiere poder saber cual ha sido el medio de transporte en el que menos personas se han accidentado a través de los años.
--El usuario solicita que no desea ver en la pantalla valores "null" necesita tomar decisiones en función a datos numéricos.
--El usuario requiere poder tener la opción de indicar un rango de años para realizar las consultas descritas anteriormente.
+- El usuario requiere poder saber cual ha sido el medio de transporte en el que más personas se han accidentando a través de los años.
+- El usuario requiere poder saber cual ha sido el medio de transporte en el que menos personas se han accidentado a través de los años.
+- El usuario solicita que no desea ver en la pantalla valores "null" necesita tomar decisiones en función a datos numéricos.
+- El usuario requiere poder tener la opción de indicar un rango de años para realizar las consultas descritas anteriormente.
 - Finalmente, el usuario requiere visualizar graficamente la tendencia del medio de transporte en el que menos personas se han accidentado a través de los años y la tendencia del medio de transporte en el que más personas se han accidentado a través de los años.
 
 ### Planificación (Agile-Scrum)
@@ -294,3 +292,4 @@ _functions_ (funciones) y _lines_ (líneas); y un mínimo del 50% de _branches_ 
 
 - [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s)
 - [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
+- [Definiciones de terminado](https://www.scrum.org/resources/blog/definicion-de-terminado-done)
