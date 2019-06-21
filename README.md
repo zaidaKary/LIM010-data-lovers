@@ -293,3 +293,4 @@ _functions_ (funciones) y _lines_ (líneas); y un mínimo del 50% de _branches_ 
 - [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s)
 - [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
 - [Definiciones de terminado](https://www.scrum.org/resources/blog/definicion-de-terminado-done)
+- [Criterios de aceptación](https://pabloquilca.com/criterios-de-aceptacion/)
