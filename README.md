@@ -79,31 +79,34 @@ Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que ex
 Por cada una encontrarás las historias de usuario a implementar:
 
 **Banco Mundial**
+
 Este set de datos contiene [indicadores de desarrollo del Banco Mundial](src/data/worldbank/) de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen indicadores demográficos, económicos y comerciales.
 Si _como equipo_ deciden trabajar con la data del [Banco Mundial](https://www.bancomundial.org/), deberán implementar las siguientes historias de usuario:
 
 - El usuario requiere poder logearse a través de una vista de acceso utilizando la contraseña LABORATORIA, tendrás que replicar [este prototipo](https://www.figma.com/file/awZfJWfpAioeanwhlcrsjSjc/Data-lovers?node-id=1%3A2) _pixel perfect_.
 - El usuario debe poder seleccionar un país (Perú, México, Brasil o Chile), seleccionar el indicador correspondiente a ese país y por medio de un click, poder visualizar todos los años que muestran los porcentajes correspondientes al indicador seleccionado.
-- EL usuario debe poder tener la opción de ordenar los datos visualizados de manera ascendente (menor a mayor) o descendente (mayor a menor) por año y/o porcentaje.
+- El usuario debe poder tener la opción de ordenar los datos visualizados de manera ascendente (menor a mayor) o descendente (mayor a menor) por año y/o porcentaje.
 - El usuario requiere poder filtrar la información visualizada por rango de años.
 - El usuario requiere poder consultar a través de un botón el promedio de los porcentajes del indicador seleccionado.
 -El usuario solicita que no desea ver en la pantalla valores "null" necesita tomar decisiones en función a datos numéricos.
 - El usuario requiere un boton que le permita limpiar la selección establecida para iniciar una nueva consulta.
 - El usuario requiere poder visualizar los datos a través de un gráfico que le permita ver la tendencia del indicador seleccionado.
 
-**Pokemon**
+**Pokémon**
+
 En este set encontrarás una lista con los 151 [Pokémon](src/data/pokemon/) de la región de Kanto, junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](pokemongolive.com).
-Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
+Si _como equipo_ deciden trabajar con esta data deberán implementar las siguientes historias de usuario:
 
 - El usuario requiere poder logearse a través de una vista de acceso utilizando la contraseña LABORATORIA, tendrás que replicar [este prototipo](https://www.figma.com/file/awZfJWfpAioeanwhlcrsjSjc/Data-lovers?node-id=1%3A2) _pixel perfect_.
-- El usuario requiere visualizar  la imagen y el nombre de todos los pokemones al ingresar a la página. Al dar click sobre un pokemon, el usuario requiere poder ver,a través de un modal,  más información del pokemon : Nombre, imagen, altura en metros, peso en kilogramos, Huevos, Tipo y Debilidades. Al cerrar el modal, debe poder visualizar el listado de todos los pokemones presentados inicialmente.
+- El usuario requiere visualizar  la imagen y el nombre de todos los pokemones al ingresar a la página. Al dar click sobre un pokémon, el usuario requiere poder ver,a través de un modal,  más información del pokémon : Nombre, imagen, altura en metros, peso en kilogramos, Huevos, Tipo y Debilidades. Al cerrar el modal, debe poder visualizar el listado de todos los pokemones presentados inicialmente.
 - El usuario requiere poder filtrar a los pokemones por tipo (grass, poison, fire, flying, water, bug, normal, electric, ground, fighting, psychic, rock, ice, ghost, dragon) y ver la cantidad de pokemones que pertenecen a un tipo seleccionado.
 - El usuario requiere poder filtrar a los pokemones visualizados por debilidad y ver la cantidad de pokemones por debilidad seleccionada.
-- El usuario requiere poder ordenar de manera ascendente (menor a mayor) o descendente (mayor a menor) por el nombre a los todos los pokemones visualizados.
+- El usuario requiere ordenar lo pokemones por su nombre de manera ascendente (menor a mayor) o descendente (mayor a menor)
 - Por medio de un boton, el usuario requiere poder ver el promedio multiplicador de todos los pokemones y ordenarlos de manera ascendente o descendente por este valor.
-- El usuario conocedor de pokemon requiere poder buscar a su pokemon favorito por el nombre.
+- El usuario conocedor de pokémon requiere poder buscar a su pokemon favorito por el nombre.
 
 **LOL (League of Legends)**
+
 El set de datos de [League of Legends - Challenger leaderboard](src/data/lol/) muestra la lista de jugadores en una liga del
 juego [League of Legends](https://play.lan.leagueoflegends.com/es_MX) (LoL), puedes revisar la documentación de su API en este [link](https://developer.riotgames.com/api-methods/).
 Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
@@ -202,7 +205,7 @@ La línea quedaría así:
 ```
 
 Y ahora tendríamos la variable global `WORLDBANK` disponible en nuestros otros
-scripts (como `src/data.js` o `src/main.js`) prueba que funciona en cada archivo con:
+scripts (como `src/data.js` o `src/main.js`) prueba que funciona en cada archivo con :
 
 ```js
 console.log(WORLDBANK)
