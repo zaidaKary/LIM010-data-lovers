@@ -91,6 +91,7 @@ Si _como equipo_ deciden trabajar con la data del [Banco Mundial](https://www.ba
 - EL usuario debe poder tener la opción de ordenar los datos visualizados de manera ascendente (menor a mayor) o descendente (mayor a menor) por año y/o porcentaje.
 - El usuario requiere poder filtrar la información visualizada por rango de años.
 - El usuario requiere poder consultar a través de un botón el promedio de los porcentajes del indicador seleccionado.
+-El usuario solicita que no desea ver en la pantalla valores "null" necesita tomar decisiones en función a datos numéricos.
 - El usuario requiere un boton que le permita limpiar la selección establecida para iniciar una nueva consulta.
 - Finalmente, el usuario requiere poder visualizar los datos a través de un gráfico que le permita ver la tendencia del indicador seleccionado.
 
@@ -104,8 +105,8 @@ Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguien
 - El usuario requiere poder filtrar a los pokemones por tipo (grass, poison, fire, flying, water, bug, normal, electric, ground, fighting, psychic, rock, ice, ghost, dragon) y ver la cantidad de pokemones que pertenecen a un tipo seleccionado.
 - El usuario requiere poder filtrar a los pokemones visualizados por debilidad y ver la cantidad de pokemones por debilidad seleccionada.
 - El usuario requiere poder ordenar de manera ascendente (menor a mayor) o descendente (mayor a menor) por el nombre a los todos los pokemones visualizados.
-- Por medio de un boton, el usuario requiere poder ver el promedio multiplicador de todos los pokemones.
-- Finalmente, el usuario conocedor de pokemon requiere poder buscar a su pokemon favorito por su nombre.
+- Por medio de un boton, el usuario requiere poder ver el promedio multiplicador de todos los pokemones y ordenarlos de manera ascendente o descendente por este valor.
+- Finalmente, el usuario conocedor de pokemon requiere poder buscar a su pokemon favorito por el nombre.
 
 ### LOL (League of Legends)
 
@@ -117,23 +118,31 @@ Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguien
 - Al dar click sobre un campeón de LOL, el usuario requiere poder ver, a través de un modal, más información del campeón: Nombre del campeón, titulo, imagen, descripción y los valores de ataque, defensa, mana y dificultad . Al cerrar el modal, debe poder visualizar el listado de todos los campeones.
 - El usuario requiere poder tener la opción de visualizar a los campeones por categoria o tags (Assasin, Fighter, Mage, Marksman, Tank y Support) y por cada categoria visualizar el total de campeones y el promedio de dificultad, por ejemplo:
 
-````cmd
+````txt
 Tag : Assasin  
 Nro de campeones 33
 Promedio de dificultad: 6.36
 ````
 
 - El usuario requiere poder ordenar de manera ascendente (menor a mayor) y/o descendente (mayor a menor)  por ataque y/o defensa a todos los campeones que pertenecen a una categoría o tag.
-- Finalmente el usuario conocedor de los campeones de Lol requiere poder buscarlo por su nombre.
+- Finalmente el usuario conocedor de los campeones de Lol requiere poder buscarlo por el nombre.
 
 ### INJURIES
 
-Este set de datos nos muestra el número de [personas heridas por medio de transporte en EEUU](src/data/injuries/) data anual desde 1960 y categorizada por tipo de transporte
-(aire, barco, automóvil, moto, bicicleta, ...) [Accidentes de transporte](http://www.paho.org/data/index.php/es/indicadores/107-cat-data-es/453-land-accidents-es.html?showall=&start=4)
+Este set de datos nos muestra el número de [personas heridas por medio de transporte en EEUU](src/data/injuries/) data anual desde 1960 y categorizada por tipo de transporte (aire, barco, automóvil, moto, bicicleta, ...) [Accidentes de transporte](http://www.paho.org/data/index.php/es/indicadores/107-cat-data-es/453-land-accidents-es.html?showall=&start=4).
+Si _como equipo_ deciden trabajar con esta data deberán implementar las siguientes historias de usuario:
+
+- El usuario requiere poder visualizar el total de personas heridas por año y ordenar la data visualizada de manera ascedente (menor a mayor) y/o descendente(mayor a menor) por año y por total de heridos.
+- El usuario requiere poder seleccionar el tipo de transporte en el que se accidentaron estas personas y poder visualizar el total de personas heridas por año y ordenar la data visualizada de manera ascedente (menor a mayor) y/o descendente(mayor a menor) por año y por total de heridos.
+-El usuario requiere poder saber cual ha sido el medio de transporte en el que más personas se han accidentando a través de los años.
+-El usuario requiere poder saber cual ha sido el medio de transporte en el que menos personas se han accidentado a través de los años.
+-El usuario solicita que no desea ver en la pantalla valores "null" necesita tomar decisiones en función a datos numéricos.
+-El usuario requiere poder tener la opción de indicar un rango de años para realizar las consultas descritas anteriormente.
+- Finalmente, el usuario requiere visualizar graficamente la tendencia del medio de transporte en el que menos personas se han accidentado a través de los años y la tendencia del medio de transporte en el que más personas se han accidentado a través de los años.
 
 ### Planificación (Agile-Scrum)
 
-En este proyecto te hemos dado las historias de usuario. Estos representan los requerimientos y funcionalidades que desea el usuario final. Para su proceso de planificación, deberán definir colaborativamente los _criterios de aceptación_ y _definiciones de terminado_ específicos que permitan considerar a la historia de usuario desarrollada como válida y aceptada por el usuario final.
+En este proyecto te hemos dado las historias de usuario. Estas representan los requerimientos y funcionalidades que desea el usuario final. Para su proceso de planificación, deberán definir colaborativamente los _criterios de aceptación_ y _definiciones de terminado_ específicos que permitan considerar a la historia de usuario desarrollada como válida y aceptada por el usuario final.
 
 Para realizar el seguimiento del desarrollo de las historias de usuario utilizarás [issues](https://help.github.com/en/articles/about-issues) y [project](https://help.github.com/en/articles/about-project-boards) en Github.
 No dudes en solicitar ayuda a tus coaches.
