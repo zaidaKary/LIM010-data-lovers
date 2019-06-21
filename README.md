@@ -60,23 +60,20 @@ Dicho en palabras sencillas, aprenderás a:
 - El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
 - El tiempo sugerido para presentar este proyecto es de aproximadamente 3 semanas (3 sprints):
-
   | Tiempos      | Fechas |
   | :---------------: | :------------: |
   | **1er Sprint**    | 24/06 al 28/06 |
   | **2do Sprint**    | 01/07 al 05/07 |
   | **3er Sprint**    | 08/06 al 12/07 |
-  
+
 Recuerda que en cada sprint deberás realizar las siguientes actividades:
 
 - definir colaborativamente las _definiciones de terminado_ y _criterios de aceptación_ por cada historia de usuario a desarrollar en cada sprint.
-- _code review_
-- _peer feedback_
-- _retrospectiva_
-- _sprint planning_
-
+- _code review_.
+- _peer feedback_.
+- _retrospectiva_.
+- _sprint planning_.
 - Antes de comenzar, conversen sobre cómo les fue a cada una en el proyecto anterior para que puedan entender mejor cómo organizarse. No caigan en el error de separar las tareas en función a lo que ya sabes hacer o con lo que te sientas más cómoda. Recuerden que acá están para aprender, no para "entregar" proyectos solamente.
-
 - Desarrollar una historia de usuario hasta completarla, es decir, que se cumplen **todos** sus _criterios de aceptación_ + **toda** su _definición de terminado_.
 
 ## Requerimientos del proyecto
