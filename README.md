@@ -40,119 +40,153 @@ usuario necesita a través de las historias de usuario.
 Dicho en palabras sencillas, aprenderás a:
 
 - Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-- Trabajar con **historias de usuario**, y crear en equipo las **definiciones de terminado (_definition of done_)*** y los **criterios de aceptación** en el proceso de organización y planificación del trabajo.
+- Trabajar con **historias de usuario**, y crear en equipo las **definiciones de 
+terminado (_definition of done_)*** y los **criterios de aceptación** en el 
+proceso de organización y planificación del trabajo.
 - Definir en equipo con que data van a trabajar.
-- Crear productos que sigan los **principios básicos de diseño visual** y las **heurísticas de usabilidad**.
-- Iterar el diseño del producto, basándote en los resultados de los **tests de usabilidad**.
+- Crear productos que sigan los **principios básicos de diseño visual** y las 
+**heurísticas de usabilidad**.
+- Iterar el diseño del producto, basándote en los resultados de los **tests de 
+usabilidad**.
 - Manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**.
 - **Manipular el DOM** (agregar elementos dinámicamente basados en la data).
-- **Manejar eventos del DOM** para permitir interacción con el usuario (filtrado, ordenado, ...).
-- Entender los beneficios y complejidades de **trabajar en equipo** en un ambiente de alta incertidumbre.
+- **Manejar eventos del DOM** para permitir interacción con el usuario (filtrado, 
+ordenado, ...).
+- Entender los beneficios y complejidades de **trabajar en equipo** en un ambiente 
+de alta incertidumbre.
 
 ## Consideraciones generales
 
 - Este proyecto se debe resolver en duplas.
-- Una integrante deberá _forkear_ y _clonar_ este repositorio; luego, su compañera, deberá _forkear_ y _clonar_ a la anterior.
+- Una integrante deberá _forkear_ y _clonar_ este repositorio; luego, su compañera, 
+deberá _forkear_ y _clonar_ a la anterior.
+- Utilizarán como usuario LABORATORIA y como contraseña también LABORATORIA.
+- Antes de comenzar, conversen sobre cómo les fue a cada una en el proyecto anterior 
+para que puedan entender mejor cómo organizarse. No caigan en el error de separar 
+las tareas en función a lo que ya sabes hacer o con lo que te sientas más cómoda. 
+Recuerden que acá están para aprender, no para "entregar" proyectos solamente.
 - El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-- El tiempo sugerido para presentar este proyecto es de aproximadamente 3 semanas (3 sprints):
 
-  | Tiempos      | Fechas |
+- El tiempo sugerido para presentar este proyecto es de aproximadamente 3 semanas 
+(3 sprints):
+
+  | Tiempos           | Fechas         |
   | :---------------: | :------------: |
-  | **1er Sprint**    | 21/06 al 28/06 |
+  | **1er Sprint**    | 24/06 al 28/07 |
   | **2do Sprint**    | 28/07 al 05/07 |
   | **3er Sprint**    | 05/06 al 12/07 |
 
-Recuerda que en cada sprint deberás realizar las siguientes actividades:
+  Recuerda que en cada sprint deberás realizar las siguientes actividades:
 
-- definir colaborativamente las _definiciones de terminado_ y _criterios de aceptación_ por cada historia de usuario a desarrollar en cada sprint.
-- _code review_.
-- _peer feedback_.
-- _retrospectiva_.
-- _sprint planning_.
-- Antes de comenzar, conversen sobre cómo les fue a cada una en el proyecto anterior para que puedan entender mejor cómo organizarse. No caigan en el error de separar las tareas en función a lo que ya sabes hacer o con lo que te sientas más cómoda. Recuerden que acá están para aprender, no para "entregar" proyectos solamente.
-- Desarrollar una historia de usuario hasta completarla, es decir, que se cumplen **todos** sus _criterios de aceptación_ + **toda** su _definición de terminado_.
+  - Definir colaborativamente las _definiciones de terminado_ y _criterios de 
+  aceptación_ por cada historia de usuario a desarrollar en cada sprint.
+  - _Code review_.
+  - _Peer feedback_.
+  - _Retrospectiva_.
+  - _Sprint planning_.
+  
+- Desarrollar una historia de usuario hasta completarla, es decir, que se cumplen 
+**todos** sus _criterios de aceptación_ + **toda** su _definición de terminado_.
 
 ## Requerimientos del proyecto
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que exploren y decidan en equipo con cual trabajar.
-Por cada una encontrarás las historias de usuario a implementar:
+Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que 
+exploren y decidan en equipo con cual trabajar. Por cada una encontrarás las 
+historias de usuario a implementar:
 
-**Banco Mundial**
+**League of Legends (LOL)**
 
-Este set de datos contiene [indicadores de desarrollo del Banco Mundial](src/data/worldbank/) de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen indicadores demográficos, económicos y comerciales.
-Si _como equipo_ deciden trabajar con la data del [Banco Mundial](https://www.bancomundial.org/), deberán implementar las siguientes historias de usuario:
+El set de datos de [League of Legends - Challenger leaderboard](src/data/lol/) 
+muestra la lista de jugadores en una liga del 
+juego [League of Legends](https://play.lan.leagueoflegends.com/es_MX) (LoL), 
+puedes revisar la documentación de su API en este [link](https://developer.riotgames.com/api-methods/).
+Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
 
-- El usuario requiere poder logearse a través de una vista de acceso utilizando la contraseña LABORATORIA, tendrás que replicar [este prototipo](https://www.figma.com/file/awZfJWfpAioeanwhlcrsjSjc/Data-lovers?node-id=1%3A2) _pixel perfect_.
-- El usuario debe poder seleccionar un país (Perú, México, Brasil o Chile), seleccionar el indicador correspondiente a ese país y por medio de un click, poder visualizar todos los años que muestran los porcentajes correspondientes al indicador seleccionado.
-- El usuario debe poder tener la opción de ordenar los datos visualizados de manera ascendente (menor a mayor) o descendente (mayor a menor) por año y/o porcentaje.
-- El usuario requiere poder filtrar la información visualizada por rango de años.
-- El usuario requiere poder consultar a través de un botón el promedio de los porcentajes del indicador seleccionado.
--El usuario solicita que no desea ver en la pantalla valores "null" necesita tomar decisiones en función a datos numéricos.
-- El usuario requiere un boton que le permita limpiar la selección establecida para iniciar una nueva consulta.
-- El usuario requiere poder visualizar los datos a través de un gráfico que le permita ver la tendencia del indicador seleccionado.
+- Como usuaria quiero poder loguearme para acceder al sitio web.
+- Como usuaria quiero poder ver a todos los campeones al ingresar a la página 
+para saber que personajes existen.
+- Como usuaria quiero poder elegir un campeón para ver sus características más 
+relevantes.
+- Como usuaria quiero poder ordenar por orden alfabético (A-Z y Z-A) y por daño 
+de ataque (_attackdamage_) de manera ascendente (menor a mayor) o descendente 
+(mayor a menor) a los campeones para poder ubicarlos fácilmente y saber cuál es 
+el más poderoso.
+- Como usuaria quiero poder filtrar a los campeones por tipo (_tags_) para saber 
+quiénes y cuántos son de cada tipo.
+- Como usuaria quiero poder ver los campeones, cantidad y promedio de daño por 
+cada tipo de campeón.
 
 **Pokémon**
 
-En este set encontrarás una lista con los 151 [Pokémon](src/data/pokemon/) de la región de Kanto, junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](pokemongolive.com).
-Si _como equipo_ deciden trabajar con esta data deberán implementar las siguientes historias de usuario:
+En este set encontrarás una lista con los 151 [Pokémon](src/data/pokemon/) de la 
+región de Kanto, junto con sus respectivas estadísticas usadas en el 
+juego [Pokémon GO](pokemongolive.com). Si _como equipo_ deciden trabajar con esta 
+data deberán implementar las siguientes historias de usuario:
 
-- El usuario requiere poder logearse a través de una vista de acceso utilizando la contraseña LABORATORIA, tendrás que replicar [este prototipo](https://www.figma.com/file/awZfJWfpAioeanwhlcrsjSjc/Data-lovers?node-id=1%3A2) _pixel perfect_.
-- El usuario requiere visualizar  la imagen y el nombre de todos los pokemones al ingresar a la página. Al dar click sobre un pokémon, el usuario requiere poder ver,a través de un modal,  más información del pokémon : Nombre, imagen, altura en metros, peso en kilogramos, Huevos, Tipo y Debilidades. Al cerrar el modal, debe poder visualizar el listado de todos los pokemones presentados inicialmente.
-- El usuario requiere poder filtrar a los pokemones por tipo (grass, poison, fire, flying, water, bug, normal, electric, ground, fighting, psychic, rock, ice, ghost, dragon) y ver la cantidad de pokemones que pertenecen a un tipo seleccionado.
-- El usuario requiere poder filtrar a los pokemones visualizados por debilidad y ver la cantidad de pokemones por debilidad seleccionada.
-- El usuario requiere ordenar lo pokemones por su nombre de manera ascendente (menor a mayor) o descendente (mayor a menor)
-- Por medio de un boton, el usuario requiere poder ver el promedio multiplicador de todos los pokemones y ordenarlos de manera ascendente o descendente por este valor.
-- El usuario conocedor de pokémon requiere poder buscar a su pokemon favorito por el nombre.
+- Como usuaria quiero poder loguearme para acceder al sitio web.
+- Como usuaria quiero poder ver a todos los pokemones al ingresar a la página para 
+saber cuántos tengo y cuántos me faltan atrapar.
+- Como usuaria quiero poder elegir un pokemon para ver sus características más 
+relevantes.
+- Como usuaria quiero poder ordenar por orden alfabético (A-Z y Z-A) y frecuencia 
+de aparición (_spawn_) de manera ascendente (menor a mayor) o descendente (mayor 
+a menor) a los pokemones para poder ubicarlos fácilmente y saber cuáles son los 
+más difíciles de atrapar.
+- Como usuaria quiero poder filtrar a los pokemones por tipo y debilidades para 
+saber quiénes y cuántos son de cada tipo y tienen esa debilidad.
+- Como usuaria quiero poder obtener el porcentaje de los pokemones que aparecen 
+en los diferentes tipos de huevo para saber qué huevos eclosionar.
 
-**LOL (League of Legends)**
+**Banco Mundial (World Bank)**
 
-El set de datos de [League of Legends - Challenger leaderboard](src/data/lol/) muestra la lista de jugadores en una liga del
-juego [League of Legends](https://play.lan.leagueoflegends.com/es_MX) (LoL), puedes revisar la documentación de su API en este [link](https://developer.riotgames.com/api-methods/).
-Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
+Este set de datos contiene [indicadores de desarrollo del Banco Mundial](src/data/worldbank/) 
+de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen indicadores 
+demográficos, económicos y comerciales. Si _como equipo_ deciden trabajar con 
+la data del [Banco Mundial](https://www.bancomundial.org/), deberán implementar 
+las siguientes historias de usuario:
 
-- El usuario requiere poder logearse a través de una vista de acceso utilizando la contraseña LABORATORIA, tendrás que replicar [este prototipo](https://www.figma.com/file/awZfJWfpAioeanwhlcrsjSjc/Data-lovers?node-id=1%3A2) _pixel perfect_.
-- El usuario requiere poder visualizar las imagenes y los nombres de todos los campeones de LOL al ingresar a la página. Al dar click sobre un campeón de LOL, el usuario requiere poder ver, a través de un modal, más información del campeón: Nombre del campeón, titulo, imagen, descripción y los valores de ataque, defensa, mana y dificultad . Al cerrar el modal, debe poder visualizar el listado de todos los campeones.
-- El usuario requiere poder tener la opción de visualizar a los campeones por categoria o tags (Assasin, Fighter, Mage, Marksman, Tank y Support) y por cada categoria visualizar el total de campeones y el promedio de dificultad, por ejemplo:
-
-````txt
-Tag : Assasin  
-Nro de campeones 33
-Promedio de dificultad: 6.36
-````
-
-- El usuario requiere poder ordenar de manera ascendente (menor a mayor) y/o descendente (mayor a menor)  por ataque y/o defensa a todos los campeones que pertenecen a una categoría o tag.
-- El usuario conocedor de los campeones de Lol requiere poder buscarlo por el nombre.
-
-**INJURIES**
-Este set de datos nos muestra el número de [personas heridas por medio de transporte en EEUU](src/data/injuries/) data anual desde 1960 y categorizada por tipo de transporte (aire, barco, automóvil, moto, bicicleta, ...) [Accidentes de transporte](http://www.paho.org/data/index.php/es/indicadores/107-cat-data-es/453-land-accidents-es.html?showall=&start=4).
-Si _como equipo_ deciden trabajar con esta data deberán implementar las siguientes historias de usuario:
-
-- El usuario requiere poder logearse a través de una vista de acceso utilizando la contraseña LABORATORIA, tendrás que replicar [este prototipo](https://www.figma.com/file/awZfJWfpAioeanwhlcrsjSjc/Data-lovers?node-id=1%3A2) _pixel perfect_.
-- El usuario requiere poder visualizar el total de personas heridas por año y ordenar la data visualizada de manera ascedente (menor a mayor) y/o descendente(mayor a menor) por año y por total de heridos.
-- El usuario requiere poder seleccionar el tipo de transporte en el que se accidentaron estas personas y poder visualizar el total de personas heridas por año y ordenar la data visualizada de manera ascedente (menor a mayor) y/o descendente(mayor a menor) por año y por total de heridos.
-- El usuario requiere poder saber cual ha sido el medio de transporte en el que más personas se han accidentando a través de los años.
-- El usuario requiere poder saber cual ha sido el medio de transporte en el que menos personas se han accidentado a través de los años.
-- El usuario solicita que no desea ver en la pantalla valores "null" necesita tomar decisiones en función a datos numéricos.
-- El usuario requiere poder tener la opción de indicar un rango de años para realizar las consultas descritas anteriormente.
-- Finalmente, el usuario requiere visualizar graficamente la tendencia del medio de transporte en el que menos personas se han accidentado a través de los años y la tendencia del medio de transporte en el que más personas se han accidentado a través de los años.
+- Como usuaria quiero poder loguearme con mi usuario y contraseña para acceder 
+al sitio web.
+- Como usuaria quiero poder seleccionar un país y visualizar la data de sus 
+respectivos indicadores para analizar el comportamiento demográfico/económico 
+de cada región.
+- Como usuaria quiero poder ordenar los datos de los indicadores de manera ascendente 
+(menor a mayor) o descendente (mayor a menor) para entender su evolución por años 
+y porcentaje.
+- Como usuaria quiero poder filtrar los datos de los indicadores por año o rango 
+de años para entender su evolución en un tiempo definido.
+- Como usuario quiero poder ver el promedio de los porcentajes del indicador 
+seleccionado para tomar decisiones nuevas.
 
 ### Planificación (Agile-Scrum)
 
-En este proyecto te hemos dado las historias de usuario. Estas representan los requerimientos y funcionalidades que desea el usuario final. Para su proceso de planificación, deberán definir colaborativamente los _criterios de aceptación_ y _definiciones de terminado_ específicos que permitan considerar a la historia de usuario desarrollada como válida y aceptada por el usuario final.
+En este proyecto te hemos dado las historias de usuario. Estas representan los 
+requerimientos y funcionalidades que desea el usuario final. Para su proceso de 
+planificación, deberán definir colaborativamente los _criterios de aceptación_ y 
+_definiciones de terminado_ específicos que permitan considerar a la historia de 
+usuario desarrollada como válida y aceptada por el usuario final.
 
-Para realizar el seguimiento del desarrollo de las historias de usuario utilizarás [issues](https://help.github.com/en/articles/about-issues) y [project](https://help.github.com/en/articles/about-project-boards) en Github.
+Para realizar el seguimiento del desarrollo de las historias de usuario utilizarás
+[issues](https://help.github.com/en/articles/about-issues) y 
+[project](https://help.github.com/en/articles/about-project-boards) en Github.
 No dudes en solicitar ayuda a tus coaches.
 
 ### UX (Diseño de experiencia de usuario)
 
-Antes de iniciar a codear, debes entender el problema que quieres solucionar y cómo tu aplicación lo soluciona para ello:
+Antes de iniciar a codear, debes entender el problema que quieres solucionar y cómo 
+tu aplicación lo soluciona para ello:
 
-- Primero trabaja tu prototipo de baja fidelidad con papel y lápiz (blanco y negro) para la vista mobile y desktop.
+- Primero trabaja tu prototipo de baja fidelidad con papel y lápiz (blanco y negro) 
+para la vista mobile y desktop.
 - Luego valida esta solución con una compañera (pedir feedback).
-- Toma lo aprendido al momento de validar tu primer prototipo y desarrolla un nuevo prototipo de alta fidelidad usando [Figma](https://www.figma.com/) para la vista mobile y desktop.
+- Toma lo aprendido al momento de validar tu primer prototipo y desarrolla un nuevo 
+prototipo de alta fidelidad usando [Figma](https://www.figma.com/) para la vista 
+mobile y desktop.
 - Recuerda utilizar la identidad gráfica correspondiente a la data que elijas.
-- Deberás exportar tu diseño a [Zeplin](https://zeplin.io/) y utilizar las especificaciones de estilo que te dé Zeplin al momento de implementar tus diseños en código.
+- Deberás exportar tu diseño a [Zeplin](https://zeplin.io/) y utilizar las 
+especificaciones de estilo que te dé Zeplin al momento de implementar tus diseños 
+en código.
 - Elaborar el readme del proyecto.
 
 `README.md`:
@@ -164,7 +198,8 @@ Debe contener lo siguiente:
 - Investigación UX:
   - Explicar quiénes son los usuarios y los objetivos en relación con el producto.
   - Explicar cómo el producto soluciona los problemas/necesidades de dichos usuarios.
-  - Luego colocarás la foto de tu primer prototipo de baja fidelidad (mobile y desktop) en papel.
+  - Luego colocarás la foto de tu primer prototipo de baja fidelidad (mobile y 
+  desktop) en papel.
   - Agregar un resumen del feedback recibido indicando las mejoras a realizar.
   - Imagen y link del prototipo de alta fidelidad final (mobile y desktop) en Figma.
 
@@ -172,19 +207,22 @@ Debe contener lo siguiente:
 
 #### Visualmente (HTML5 y CSS3)
 
-Deberás maquetar de forma exacta el prototipo final que hiciste en Figma utilizando HTML5 y CSS3.
+Deberás maquetar de forma exacta el prototipo final que hiciste en Figma utilizando 
+HTML5 y CSS3.
 
 A continuación describimos los archivos que utilizarás:
 
 **`src/index.html`**:
 
-En este archivo va el contenido que se mostrará al usuario (esqueleto HTML). Encontrarás 3 etiquetas iniciales:
+En este archivo va el contenido que se mostrará al usuario (esqueleto HTML). Encontrarás 
+3 etiquetas iniciales:
 
 - `<header>`: encabezado de tu proyecto.
 - `<main>`: contenido principal de tu proyecto.
 - `<footer>`: pie de página de tu proyecto.
 
-Por otro lado, este archivo, nos sirve para indicar qué scripts se usarán y unir todo lo que hemos hecho.
+Por otro lado, este archivo, nos sirve para indicar qué scripts se usarán y unir todo 
+lo que hemos hecho.
 
 En este archivo encontrarás una serie de _etiquetas_ (_tags_) `<script>`
 _comentadas_.
@@ -213,7 +251,8 @@ console.log(WORLDBANK)
 
 **`src/style.css`**:
 
-Este archivo debe contener las reglas de estilo. Queremos que escribas tus propias reglas, por eso NO está permitido el uso de frameworks de CSS3 (Bootstrap, materialize, etc).
+Este archivo debe contener las reglas de estilo. Queremos que escribas tus propias 
+reglas, por eso NO está permitido el uso de frameworks de CSS3 (Bootstrap, materialize, etc).
 
 #### Funcionalmente (JavaScript ES6 - pruebas unitarias)
 
@@ -222,7 +261,8 @@ Este archivo debe contener las reglas de estilo. Queremos que escribas tus propi
 [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e).
 - No se debe utilizar la _pseudo-variable_ `this`.
 
-Vamos a tener 2 archivos JavaScript separando responsabilidades, a continuación indicamos qué harás en cada archivo:
+Vamos a tener 2 archivos JavaScript separando responsabilidades, a continuación indicamos 
+qué harás en cada archivo:
 
  **`src/main.js`**
 
@@ -238,15 +278,19 @@ carpetas, siempre y cuando la estructura sea clara para el equipo.
 
 En este archivo escribirás todo el código que contenga las funcionalidades
 descritas en las historias de usuario. Estas funciones, que representan lo
-que el usuario necesita, deben ser [funciones puras](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d) e independientes del DOM.
+que el usuario necesita, deben ser [funciones puras](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d) 
+e independientes del DOM.
 
 **`src/data`**
 
 En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente de datos, y dentro de cada carpeta dos archivos: uno con la extensión `.js` y otro `.json`. Ambos archivos contienen la misma data.
+carpeta por cada fuente de datos, y dentro de cada carpeta dos archivos: 
+uno con la extensión `.js` y otro `.json`. Ambos archivos contienen la misma data.
 
 - Inicialmente solo usarás el archivo con extensión `.js`.
-- Cuando tu proyecto ya esté completado, en lugar de consumir la data desde un archivo con extensión`.js` lo harás desde el archivo con extensión`.json` utilizando [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API).
+- Cuando tu proyecto ya esté completado, en lugar de consumir la data desde un 
+archivo con extensión`.js` lo harás desde el archivo con extensión`.json` 
+utilizando [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API).
 
 **`test/cipher.spec.js`**:
 
