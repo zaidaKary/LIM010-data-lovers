@@ -60,6 +60,7 @@ Dicho en palabras sencillas, aprenderás a:
 - El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
 - El tiempo sugerido para presentar este proyecto es de aproximadamente 3 semanas (3 sprints):
+
   | Tiempos      | Fechas |
   | :---------------: | :------------: |
   | **1er Sprint**    | 24/06 al 28/06 |
