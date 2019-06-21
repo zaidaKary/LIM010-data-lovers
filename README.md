@@ -90,15 +90,10 @@ Este set de datos contiene [indicadores de desarrollo del Banco Mundial](src/dat
 Si _como equipo_ deciden trabajar con la data del [Banco Mundial](https://www.bancomundial.org/), deberán implementar las siguientes historias de usuario:
 
 - EL usuario debe poder seleccionar un país (Perú, México, Brasil o Chile), seleccionar el indicador correspondiente a ese país y por medio de un click, poder visualizar todos los años que muestran los porcentajes correspondientes al indicador seleccionado.
-
 - EL usuario debe poder tener la opción de ordenar los datos visualizados de manera ascendente (menor a mayor) o descendente (mayor a menor) por año y/o porcentaje.
-
 - El usuario requiere poder filtrar la información visualizada por rango de años.
-
 - El usuario requiere poder consultar a través de un botón el promedio de los porcentajes del indicador seleccionado.
-
 - El usuario requiere un boton que le permita limpiar la selección establecida para iniciar una nueva consulta.
-
 - Finalmente, el usuario requiere poder visualizar los datos a través de un gráfico que le permita ver la tendencia del indicador seleccionado.
 
 ### Pokemon
@@ -107,17 +102,11 @@ En este set encontrarás una lista con los 151 [Pokémon](src/data/pokemon/) de 
 Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
 
 - El usuario requiere visualizar  la imagen y el nombre de todos los pokemones al ingresar a la página.
-
 - Al dar click sobre un pokemon, el usuario requiere poder ver,a través de un modal,  más información del pokemon : Nombre, imagen, altura en metros, peso en kilogramos, Huevos, Tipo y Debilidades. Al cerrar el modal, debe poder visualizar el listado de todos los pokemones presentados inicialmente.
-
 - El usuario requiere poder filtrar a los pokemones por tipo (grass, poison, fire, flying, water, bug, normal, electric, ground, fighting, psychic, rock, ice, ghost, dragon) y ver la cantidad de pokemones que pertenecen a un tipo seleccionado.
-
 - El usuario requiere poder filtrar a los pokemones visualizados por debilidad y ver la cantidad de pokemones por debilidad seleccionada.
-
 - El usuario requiere poder ordenar de manera ascendente (menor a mayor) o descendente (mayor a menor) por el nombre a los todos los pokemones visualizados.
-
 - Por medio de un boton, el usuario requiere poder ver el promedio multiplicador de todos los pokemones.
-
 - Finalmente, el usuario conocedor de pokemon requiere poder buscar a su pokemon favorito por su nombre.
 
 ### LOL (League of Legends)
@@ -127,17 +116,16 @@ juego [League of Legends](https://play.lan.leagueoflegends.com/es_MX) (LoL), pue
 Si _como equipo_ deciden trabajar con esta data deberán implemantar las siguientes historias de usuario:
 
 - El usuario requiere poder visualizar las imagenes y los nombres de todos los campeones de LOL al ingresar a la página.
-
 - Al dar click sobre un campeón de LOL, el usuario requiere poder ver, a través de un modal, más información del campeón: Nombre del campeón, titulo, imagen, descripción y los valores de ataque, defensa, mana y dificultad . Al cerrar el modal, debe poder visualizar el listado de todos los campeones.
+- El usuario requiere poder tener la opción de visualizar a los campeones por categoria o tags (Assasin, Fighter, Mage, Marksman, Tank y Support) y por cada categoria visualizar el total de campeones y el promedio de dificultad, por ejemplo:
 
-- El usuario requiere poder tener la opción de visualizar a los campeones por categoria o tags (Assasin, Fighter, Mage, Marksman, Tank y Support) y por cada categoria visualizar el total de campeones y el promedio de dificultad
-
+````cmd
 Tag : Assasin  
 Nro de campeones 33
 Promedio de dificultad: 6.36
+````
 
 - El usuario requiere poder ordenar de manera ascendente (menor a mayor) y/o descendente (mayor a menor)  por ataque y/o defensa a todos los campeones que pertenecen a una categoría o tag.
-
 - Finalmente el usuario conocedor de los campeones de Lol requiere poder buscarlo por su nombre.
 
 ### INJURIES
@@ -289,14 +277,13 @@ _functions_ (funciones) y _lines_ (líneas); y un mínimo del 50% de _branches_ 
 
 ### Herramientas
 
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Node.js](https://nodejs.org/)
+- [Jest](https://jestjs.io/)
 
 ### Organización del Trabajo:
 
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s). Ojo que Cris no diferencia _Definición de terminado_ de
-_Criterios de Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
+- [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s)
+- [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
