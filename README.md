@@ -59,9 +59,9 @@ Dicho en palabras sencillas, aprenderás a:
 
   | Tiempos      | Fechas |
   | :---------------: | :------------: |
-  | **1er Sprint**    | 24/06 al 28/06 |
-  | **2do Sprint**    | 01/07 al 05/07 |
-  | **3er Sprint**    | 08/06 al 12/07 |
+  | **1er Sprint**    | 21/06 al 28/06 |
+  | **2do Sprint**    | 28/07 al 05/07 |
+  | **3er Sprint**    | 05/06 al 12/07 |
 
 Recuerda que en cada sprint deberás realizar las siguientes actividades:
 
@@ -83,7 +83,7 @@ Este set de datos contiene [indicadores de desarrollo del Banco Mundial](src/dat
 Si _como equipo_ deciden trabajar con la data del [Banco Mundial](https://www.bancomundial.org/), deberán implementar las siguientes historias de usuario:
 
 - El usuario requiere poder logearse a través de una vista de acceso utilizando la contraseña LABORATORIA, tendrás que replicar [este prototipo](https://www.figma.com/file/awZfJWfpAioeanwhlcrsjSjc/Data-lovers?node-id=1%3A2) _pixel perfect_.
-- EL usuario debe poder seleccionar un país (Perú, México, Brasil o Chile), seleccionar el indicador correspondiente a ese país y por medio de un click, poder visualizar todos los años que muestran los porcentajes correspondientes al indicador seleccionado.
+- El usuario debe poder seleccionar un país (Perú, México, Brasil o Chile), seleccionar el indicador correspondiente a ese país y por medio de un click, poder visualizar todos los años que muestran los porcentajes correspondientes al indicador seleccionado.
 - EL usuario debe poder tener la opción de ordenar los datos visualizados de manera ascendente (menor a mayor) o descendente (mayor a menor) por año y/o porcentaje.
 - El usuario requiere poder filtrar la información visualizada por rango de años.
 - El usuario requiere poder consultar a través de un botón el promedio de los porcentajes del indicador seleccionado.
