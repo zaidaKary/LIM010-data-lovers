@@ -122,7 +122,6 @@ Promedio de dificultad: 6.36
 - El usuario conocedor de los campeones de Lol requiere poder buscarlo por el nombre.
 
 **INJURIES**
-
 Este set de datos nos muestra el número de [personas heridas por medio de transporte en EEUU](src/data/injuries/) data anual desde 1960 y categorizada por tipo de transporte (aire, barco, automóvil, moto, bicicleta, ...) [Accidentes de transporte](http://www.paho.org/data/index.php/es/indicadores/107-cat-data-es/453-land-accidents-es.html?showall=&start=4).
 Si _como equipo_ deciden trabajar con esta data deberán implementar las siguientes historias de usuario:
 
@@ -291,3 +290,4 @@ _functions_ (funciones) y _lines_ (líneas); y un mínimo del 50% de _branches_ 
 - [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
 - [Definiciones de terminado](https://www.scrum.org/resources/blog/definicion-de-terminado-done)
 - [Criterios de aceptación](https://pabloquilca.com/criterios-de-aceptacion/)
+- [Github plannig](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
