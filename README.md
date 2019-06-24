@@ -13,9 +13,9 @@
 
 ## Preámbulo
 
-Según un [estudio de IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
+Según un estudio de IBM, el 90% de la data que existe hoy ha sido creada durante 
+los últimos dos años. Cada día generamos 2.5 trillones de bytes de datos, una 
+cifra sin precedentes.
 
 No obstante, los datos por sí mismos son de poca utilidad. Para que esas 
 grandes cantidades de datos se conviertan en **información** fácil de leer para 
@@ -60,7 +60,8 @@ ambiente de alta incertidumbre.
 - Este proyecto se debe resolver en duplas.
 - Una integrante deberá _forkear_ y _clonar_ este repositorio; luego, su 
 compañera, deberá _forkear_ y _clonar_ a la anterior.
-- Utilizarán como usuario LABORATORIA y como contraseña también LABORATORIA.
+- Para poder interactuar con la pagina, al iniciar sesión deberán utilizar 
+como usuario y contraseña LABORATORIA.
 - Antes de comenzar, conversen sobre cómo les fue a cada una en el proyecto 
 anterior para que puedan entender mejor cómo organizarse. No caigan en el error 
 de separar las tareas en función a lo que ya sabes hacer o con lo que te 
@@ -120,7 +121,7 @@ cada tipo de campeón.
 
 En este set encontrarás una lista con los 151 [Pokémon](src/data/pokemon/) de la 
 región de Kanto, junto con sus respectivas estadísticas usadas en el 
-juego [Pokémon GO](pokemongolive.com). Si _como equipo_ deciden trabajar con esta 
+juego [Pokémon GO](www.pokemongolive.com). Si _como equipo_ deciden trabajar con esta 
 data deberán implementar las siguientes historias de usuario:
 
 - Como usuaria quiero poder loguearme para acceder al sitio web.
