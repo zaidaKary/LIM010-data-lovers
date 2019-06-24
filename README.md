@@ -39,11 +39,9 @@ el usuario necesita a través de las historias de usuario.
 
 Dicho en palabras sencillas, aprenderás a:
 
-- Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
 - Trabajar con **historias de usuario**, y crear en equipo las **definiciones 
 de terminado (_definition of done_)** y los **criterios de aceptación** en el 
 proceso de organización y planificación del trabajo.
-- Definir en equipo con que data van a trabajar.
 - Crear productos que sigan los **principios básicos de diseño visual** y las 
 **heurísticas de usabilidad**.
 - Iterar el diseño del producto, basándote en los resultados de los **tests de 
@@ -60,7 +58,7 @@ ambiente de alta incertidumbre.
 - Este proyecto se debe resolver en duplas.
 - Una integrante deberá _forkear_ y _clonar_ este repositorio; luego, su 
 compañera, deberá _forkear_ y _clonar_ a la anterior.
-- Para poder interactuar con la pagina, al iniciar sesión deberán utilizar 
+- Para poder interactuar con la página, al iniciar sesión deberán utilizar 
 como usuario y contraseña LABORATORIA.
 - Antes de comenzar, conversen sobre cómo les fue a cada una en el proyecto 
 anterior para que puedan entender mejor cómo organizarse. No caigan en el error 
@@ -304,6 +302,8 @@ utilizando [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API).
 
 En este archivo tendrás que completar las pruebas unitarias de las funciones
 implementadas en `data.js` utilizando **Jest**.
+Recuerda que deberás configurar tu ambiente de trabajo para trabajar con esta 
+herramienta.
 Tus pruebas unitarias deben dar un 70% en _coverage_ (cobertura), _statements_
 (sentencias), _functions_ (funciones) y _lines_ (líneas); y un mínimo del 50% 
 de _branches_ (ramas).
