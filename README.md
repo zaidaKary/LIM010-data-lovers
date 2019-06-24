@@ -82,10 +82,11 @@ semanas (3 sprints):
 
   - Definir colaborativamente las _definiciones de terminado_ y _criterios 
   de aceptación_ por cada historia de usuario a desarrollar en cada sprint.
-  - _Code review_.
-  - _Peer feedback_.
-  - _Retrospectiva_.
   - _Sprint planning_.
+  - _Trabajo (dailys)_.
+  - _Demo_.
+  - _Retrospectiva_.
+ 
 
 ## Requerimientos del proyecto
 
@@ -313,6 +314,7 @@ de _branches_ (ramas).
 ### Diseño de experiencia de usuario (User Experience Design)
 
 - Unidad de fundamentos de diseño visual de Visual Desing en LMS.
+- [Heurística de usabilidad](https://lms.laboratoria.la/cohorts/lim-2019-05-bc-core-lim010/courses/product-design/03-usability-and-accessibility/00-usability)
 
 ### Desarrollo Front-end
 
@@ -341,7 +343,7 @@ de _branches_ (ramas).
 - [Jest](https://jestjs.io/)
 
 ### Organización del Trabajo:
-
+* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
 - [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s)
 - [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
 - [Definiciones de terminado](https://www.scrum.org/resources/blog/definicion-de-terminado-done)
