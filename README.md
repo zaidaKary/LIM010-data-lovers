@@ -121,8 +121,8 @@ cada tipo de campeón.
 
 En este set encontrarás una lista con los 151 [Pokémon](src/data/pokemon/) de la 
 región de Kanto, junto con sus respectivas estadísticas usadas en el 
-juego [Pokémon GO](www.pokemongolive.com). Si _como equipo_ deciden trabajar con esta 
-data deberán implementar las siguientes historias de usuario:
+juego [Pokémon GO](https://www.pokemongolive.com). Si _como equipo_ deciden 
+trabajar con esta data deberán implementar las siguientes historias de usuario:
 
 - Como usuaria quiero poder loguearme para acceder al sitio web.
 - Como usuaria quiero poder ver a todos los pokemones al ingresar a la página 
