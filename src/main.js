@@ -2,6 +2,9 @@
 //Valores del input
 const usuario = document.getElementById('usuario');
 const contrasenha = document.getElementById('contrasenha');
+//console.log(nuevaDataPokemones());
+mostrarPokemones();
+
 
 //Vistas
 const VistaLogin = document.getElementById('VistaLogin');
