@@ -1,4 +1,7 @@
 /* Manejo del DOM */
+//console.log(pokemon());
+const pokedata = POKEMON.pokemon;
+
 //Valores del input
 const usuario = document.getElementById('usuario');
 const contrasenha = document.getElementById('contrasenha');
@@ -10,6 +13,7 @@ const VistaError = document.getElementById('VistaError');
 
 //Botones
 const BotonIngresar = document.getElementById('BotonIngresar');
+const p = document.getElementById('p');
 
 //Funcionalidad del Boton Ingresar
 let contador = 2;
@@ -34,10 +38,23 @@ BotonIngresar.addEventListener('click', () => {
             VistaLogin.classList.add('hide');
             VistaError.classList.remove('hide');
         }else{
-            contrasenhaIncorrecta.innerHTML = '<strong>Datos incorrecta, le quedan '+ contador +' intento(s)</strong>';
+            contrasenhaIncorrecta.innerHTML = '<strong>Datos incorrectos, le quedan '+ contador +' intento(s)</strong>';
             usuario.value = '';
             contrasenha.value = '';
             contador--;
         }
     }
 });
+const mostrarData = (pokemon) =>{
+    let mostrar = '';
+    for(i=0;i<pokemon.length;i++){
+        let llamado=`<div>
+                    <img src= "${pokemon[i].img}" />
+                    <p>${pokemon[i].img}</p></div>
+                    <p>${pokemon[i].type}</p>`;
+        mostrar += llamado;
+    }
+    return mostrar;
+};
+
+p.innerHTML= mostrarData(pokedata);
