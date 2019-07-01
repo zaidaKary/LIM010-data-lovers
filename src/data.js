@@ -11,6 +11,14 @@ const nuevaDataPokemones = () => {
       'nombre': POKEMON.pokemon[i].name,
       'imagen': POKEMON.pokemon[i].img,
       'tipo': POKEMON.pokemon[i].type,
+      'altura': POKEMON.pokemon[i].height,
+      'peso': POKEMON.pokemon[i].weight,
+      'caramelo': POKEMON.pokemon[i].candy,
+      'contadorDeCaramelos': POKEMON.pokemon[i].candy_count,
+      'huevo': POKEMON.pokemon[i].egg
+
+       
+
 
     })
    }
