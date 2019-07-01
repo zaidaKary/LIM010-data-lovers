@@ -6,6 +6,7 @@ const pokedata = POKEMON.pokemon;
 const usuario = document.getElementById('usuario');
 const contrasenha = document.getElementById('contrasenha');
 
+
 //Vistas
 const VistaLogin = document.getElementById('VistaLogin');
 const VistaInicio = document.getElementById('VistaInicio');
@@ -44,17 +45,24 @@ BotonIngresar.addEventListener('click', () => {
             contador--;
         }
     }
-});
-const mostrarData = (pokemon) =>{
-    let mostrar = '';
-    for(i=0;i<pokemon.length;i++){
-        let llamado=`<div>
-                    <img src= "${pokemon[i].img}" />
-                    <p>${pokemon[i].img}</p></div>
-                    <p>${pokemon[i].type}</p>`;
-        mostrar += llamado;
-    }
-    return mostrar;
-};
 
-p.innerHTML= mostrarData(pokedata);
+    //INICIO 
+    //console.log(nuevaDataPokemones());
+    const pokemonNew= nuevaDataPokemones();
+
+
+    const mostrarPokemones = (allpokemon) => {
+  
+        let mostrar = '';
+        for(i=0;i<allpokemon.length;i++){
+            let llamado=`<div>
+                        <img src= "${allpokemon[i].imagen}" />
+                        <p>Nombre: ${allpokemon[i].nombre}</p>
+                        <p>Número: ${allpokemon[i].number}</p>
+                        <p>Tipo: ${allpokemon[i].tipo}</p></div>`;
+            mostrar += llamado;
+        }
+        return mostrar;
+    };
+inicio.innerHTML= mostrarPokemones(pokemonNew);
+});

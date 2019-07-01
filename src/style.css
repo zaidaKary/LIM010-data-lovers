@@ -9,13 +9,16 @@ body {
 .login {
     display: flex;
     flex-flow: column wrap;
-    height: 100vh;
+    height: 512.14px;
     margin: 0 auto;
-    width: 260px;
+    width: 370px;
     padding-left: 20px;
     padding-right: 20px;
     justify-content: center;
+    background: rgba(208, 197, 197, 0.4);
+box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
+
 .logopokemon{
     width: 218px;
     height: 137px;
@@ -53,6 +56,10 @@ body {
     font-size: 16px;
     color: #FFFFFF;
     margin-top: 20px;
+    cursor: pointer;
+}
+.login button:active{
+transform: scale(0.95);
 }
 
 .hide{
