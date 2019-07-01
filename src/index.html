@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/iconosuperior.png">
 </head>
-
 <body class="fondo1">
   <header>
   </header>
   <main>
     <section id="VistaLogin">
       <form class="login">
-        <img class="logopokemon" src="img/Logopokemon.png" alt="LogoPokemonGo" />
-        <label for="usuario"><strong>Usuario:</label>
+        <img class="logopokemon" src="img/Logopokemon.png" alt="LogoPokemonGo"/>
+        <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" placeholder="Ingrese su usuario..." size="20">
-        <label for="contrasenha"><strong>Contraseña:</label>
+        <label for="contrasenha">Contraseña:</label>
         <input type="password" id="contrasenha" placeholder="Ingrese su constraseña..." size="20">
         <p id="contrasenhaIncorrecta"></p>
-        <label for="Olvidastecontrasenha" class="Olvidastecontrasenha"><strong>¿Olvidaste tu
-            contraseña?</strong></label>
-        <button id="BotonIngresar" class="botonIngresar" type="button">INGRESAR</button>
+        <label for="Olvidastecontrasenha" class="Olvidastecontrasenha"><strong>¿Olvidaste tu contraseña?</strong></label>
+        <button id ="BotonIngresar" class="botonIngresar" type="button">INGRESAR</button>
         <label for="Registrate" class="Registrate">¿No tienes una cuenta? <strong>Registrate</strong></label>
       </form>
     </section>
@@ -32,19 +29,13 @@
     </section>
     <section id="VistaInicio" class="hide">
       <p>HOLA BIENVENIDO</p>
-      <div id ="allpokemones"></div>
+    <div id ="allPokemones"></div>
     </section>
-    <section id =inicio>
-
-    </section>
+    
   </main>
   <footer></footer>
-  <!-- <script src="./data/pokemon/pokemon.js">
-    </script> -->
-
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
-
 </html>

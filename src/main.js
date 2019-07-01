@@ -1,7 +1,4 @@
 /* Manejo del DOM */
-//console.log(pokemon());
-const pokedata = POKEMON.pokemon;
-
 //Valores del input
 const usuario = document.getElementById('usuario');
 const contrasenha = document.getElementById('contrasenha');
@@ -14,7 +11,6 @@ const VistaError = document.getElementById('VistaError');
 
 //Botones
 const BotonIngresar = document.getElementById('BotonIngresar');
-const p = document.getElementById('p');
 
 //Funcionalidad del Boton Ingresar
 let contador = 2;
@@ -64,5 +60,5 @@ BotonIngresar.addEventListener('click', () => {
         }
         return mostrar;
     };
-inicio.innerHTML= mostrarPokemones(pokemonNew);
+allPokemones.innerHTML= mostrarPokemones(pokemonNew);
 });
