@@ -29,3 +29,5 @@ window.nuevaDataPokemones = nuevaDataPokemones;
 
 
 
+
+

@@ -27,13 +27,20 @@
         <label for="Registrate" class="Registrate">¿No tienes una cuenta? <strong>Registrate</strong></label>
       </form>
     </section>
-    <section id="VistaError" class="hide">
-      <p>ERROR, INTENTA MAS TARDE</p>
+    <section id="vistaError" class="hide">
+      <img class="logopokemon" src="img/Logopokemon.png" alt="LogoPokemonGo" />
+      <div id="fondoParrafoError"> 
+          <p id ="parrafoError">   <strong>Upss!!!...Tercer intento incorrecto!!!
+              Ya utilizaste todos tus intentos, en 
+                este momento no podras ingresar a  PokémonGO.</strong>  </p>
+      </div>
+      
+      <img src="img/pikallorandogif.gif" alt=" pikachu llorando" id = "pikallorando">
     </section>
    
     <section id =inicio class ="hide">
       <input type="text" id="nombre" placeholder="Buscar" size="10">
-      <button id="botonBuscar" type="button"></button>
+      <button id="botonBuscar" type="button"><img src="img/buscar.png" alt="buscar" width= "20px" height= "10px" /></button>
       <div id="allPokemones"></div>
     </section>
 

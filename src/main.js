@@ -35,7 +35,7 @@ BotonIngresar.addEventListener('click', () => {
     }else{
         if(contador==0){
             VistaLogin.classList.add('hide');
-            VistaError.classList.remove('hide');
+            vistaError.classList.remove('hide');
         }else{
             contrasenhaIncorrecta.innerHTML = '<strong>Datos incorrectos, le quedan '+ contador +' intento(s)</strong>';
             usuario.value = '';
