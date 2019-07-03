@@ -65,6 +65,47 @@ body {
 .login button:active{
     transform: scale(0.95);
 }
+/*Media para el error*/
+@media (min-width: 1200px){
+
+    #VistaError{
+        width: 1280px;
+        height: 716px;
+      
+    }
+
+    #pikallorando{
+        width: 332px;
+        height: 309px;
+        margin-top: 10vh;
+        border-radius: 200px;
+    }
+
+    #fondoParrafoError{
+        width: 517px;
+        height: 210px;
+        box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.1);
+        background-color: rgba(208, 197, 197, 0.4);
+        margin-left: 3vh;
+        margin-top: 5vh;
+    }
+
+    #parrafoError{
+        width: 299px;
+        height: 80px;
+        font-family: OpenSans;
+        font-size: 15px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        padding-top: 4vh;
+        color: #000000;
+    }
+    
+}
+
 .hide{
     display: none;
 }
