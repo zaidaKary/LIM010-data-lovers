@@ -19,7 +19,7 @@ body {
     margin-top: 76px;
 }
 #contenedor-login{
-    width: 335px;
+    width: 360px;
     height: 499px;
     background: rgba(129, 107, 107, 0.37);
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
@@ -65,47 +65,6 @@ body {
 .login button:active{
     transform: scale(0.95);
 }
-/*Media para el error*/
-@media (min-width: 1200px){
-
-    #VistaError{
-        width: 1280px;
-        height: 716px;
-      
-    }
-
-    #pikallorando{
-        width: 332px;
-        height: 309px;
-        margin-top: 10vh;
-        border-radius: 200px;
-    }
-
-    #fondoParrafoError{
-        width: 517px;
-        height: 210px;
-        box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.1);
-        background-color: rgba(208, 197, 197, 0.4);
-        margin-left: 3vh;
-        margin-top: 5vh;
-    }
-
-    #parrafoError{
-        width: 299px;
-        height: 80px;
-        font-family: OpenSans;
-        font-size: 15px;
-        font-weight: 800;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        padding-top: 4vh;
-        color: #000000;
-    }
-    
-}
-
 .hide{
     display: none;
 }
@@ -157,7 +116,7 @@ body {
     box-sizing: border-box;
 }
 header{
-    width: 360px;
+    width: 375px;
     height: 62px;
     left: 0px;
     top: 0px;
@@ -235,7 +194,7 @@ p{
 #VistaInicio .buscador{
     padding: 8px;
     margin-top: 78px;
-    margin-left: 23px;
+    margin-left: 34px;
 }
 /*ICONO BUSCAR*/
 #botonBuscar{
@@ -243,7 +202,7 @@ p{
     width: 36px;
     margin-left: -4px;
 }
-/*Haciendo el responsive*/
+/*Haciendo el responsive para la página de mostrar*/
 @media (min-width:1024px){
     .menu {
         position: static;
@@ -258,5 +217,48 @@ p{
     }
     header label{
         display: none;
+    }
+}
+
+/*Haciendo el responsive para el login*/
+@media (min-width:1024px){ 
+    #contenedor-login{
+        margin-left: 80vh;
+        margin-top: 15vh;
+    }
+    .footer{
+        position: absolute;
+        width: 622px;
+        height: 27px;
+        left: 500px;
+        top: 680px;
+        font-size: 20px; 
+    }
+}
+/*Haciendo el responsive para la página de error*/
+@media (min-width: 1200px){
+    #pikallorando{
+        position: absolute;
+        width: 332px;
+        height: 309px;
+        left: 190px;
+        top: 210px;
+        border-radius: 200px;
+    }
+    #fondoParrafoError{
+        width: 535px;
+        height: 170px;
+        margin-top: 22vh;
+        margin-left: 20vh;
+    }
+    #parrafoError{
+        margin-top: 4vh;
+        width: 541px;
+        height: 160px;
+        font-size: 27px;
+        line-height: 37px;
+    }
+    .contenedor-error{
+        margin-left: 80vh;
     }
 }

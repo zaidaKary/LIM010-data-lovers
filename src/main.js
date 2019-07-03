@@ -18,7 +18,7 @@ const botonBuscar = document.getElementById('botonBuscar');
 const pokemonNew = nuevaDataPokemones();
 
 //Funcionalidad del Boton Ingresar
-let contador = 2;
+let contador = 0;
 
 BotonIngresar.addEventListener('click', () => {
     if (contrasenha.value === '' && usuario.value === '') {
