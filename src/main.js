@@ -50,7 +50,7 @@ BotonIngresar.addEventListener('click', () => {
 });
 
 //Funcionalidad del Boton Buscar
-/*botonBuscar.addEventListener('click', () => {
+botonBuscar.addEventListener('click', () => {
     uno.innerHTML = buscarPorNombre(pokemonNew);
     allPokemones.classList.add('hide');
     unPokemon.classList.remove('hide');
@@ -79,7 +79,7 @@ const buscarPorNombre = (allPokemon) => {
         }
     }
     return llamado
-};*/
+};
 
 //Funcion Mostrar Pokemones
 const mostrarPokemones = (allPokemon) => {
