@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1,
+  minimum-sacle=1">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/iconosuperior.png">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 </head>
+
 <body class="fondo1">
-  <header>
+  <header class="barra-menu" id="barra-menu">
+      <div class="contenedor-menu">
+          <img class="logopokemonmenu" src="img/Logopokemon.png" alt="Logo pokemon go" />  
+          <input type="checkbox" id="menu-bar">
+          <label class="em em-arrow_backward" for="menu-bar"></label>
+          <nav class="menu">
+            <a href="">BUSCAR</a>
+            <a href="">ORDENAR</a>
+            <a href="">FILTRAR</a>
+            <a href="">PORCENTAJE</a>
+            <a href="">CERRAR SESIÓN</a>
+          </nav>
+      </div>
   </header>
   <main>
+    
     <section id="VistaLogin">
-      <form class="login">
-        <img class="logopokemon" src="img/Logopokemon.png" alt="LogoPokemonGo"/>
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" placeholder="Ingrese su usuario..." size="20">
-        <label for="contrasenha">Contraseña:</label>
-        <input type="password" id="contrasenha" placeholder="Ingrese su constraseña..." size="20">
-        <p id="contrasenhaIncorrecta"></p>
-        <label for="Olvidastecontrasenha" class="Olvidastecontrasenha"><strong>¿Olvidaste tu contraseña?</strong></label>
-        <button id ="BotonIngresar" class="botonIngresar" type="button">INGRESAR</button>
-        <label for="Registrate" class="Registrate">¿No tienes una cuenta? <strong>Registrate</strong></label>
-      </form>
-    </section>
-    <section id="VistaError" class="hide">
-      <p>ERROR, INTENTA MAS TARDE</p>
-    </section>
-    <section id="VistaInicio" class="hide">
-      <p>HOLA BIENVENIDO</p>
-    <div id ="allPokemones"></div>
-    </section>
-    <section id =inicio class ="hide">
-      <input type="text" id="nombre" placeholder="Buscar" size="10">
-      <button id="botonBuscar" type="button"></button>
-      <div id="allPokemones"></div>
-    </section>
-    <section id="unPokemon" class="hide">
-       <div id="uno"></div>
+          <form class="login" id="contenedor-login">
+              <img class="logopokemon" src="img/Logopokemon.png" alt="Logo pokemon go" />
+              <label for="usuario">Usuario:</label>
+              <input type="text" id="usuario" placeholder="Ingrese su usuario..." size="20">
+              <label for="contrasenha">Contraseña:</label>
+              <input type="password" id="contrasenha" placeholder="Ingrese su constraseña..." size="20">
+              <p id="contrasenhaIncorrecta"></p>
+              <label for="Olvidastecontrasenha" class="Olvidastecontrasenha"><strong>¿Olvidaste tu contraseña?</strong></label>
+              <button id="BotonIngresar" class="botonIngresar" type="button">INGRESAR</button>
+              <label for="Registrate" class="Registrate">¿No tienes una cuenta? <strong>Registrate</strong></label>
+            </form>
     </section>
 
+    <section id="VistaError" class="hide">
+      <div class="contenedor-error">
+      <img class="logopokemon" src="img/Logopokemon.png" alt="Logo pokemon go" />
+      <div id="fondoParrafoError">
+        <p id ="parrafoError"><strong>Upss!!!...Tercer intento incorrecto!!!
+          Ya utilizaste todos tus intentos, en 
+          este momento no podras ingresar a PokémonGo.</strong></p>
+      </div>
+      <img id = "pikallorando" src="img/pikallorandogif.gif" alt=" pikachu llorando">
+    </div>
+    </section>
+
+    <section id="VistaInicio" class="hide">
+      <input class="buscador" type="text" id="buscador" placeholder="Ingrese el nombre del pokémon..." size="30">
+      <button id="botonBuscar" class="em em-gear" type="button"></button>
+      <div class="contenedor" id="allPokemones">
+         <!--imagenes de pokemones-->
+      </div>
+    </section>
+
+    <!--<section id =inicio class ="hide">
+      <input type="text" id="nombre" placeholder="Buscar" size="10">
+      <button id="botonBuscar" type="button"><img src="img/buscar.png" alt="buscar" width= "20px" height= "10px" />Buscar</button>
+      <div id="allPokemones"></div>
+    </section>
+
+    <section id="unPokemon" class="hide">
+       <div id="uno"></div>
+    </section>-->
+
   </main>
-  <footer></footer>
-    <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+  <footer class="footer">Copyright © 2019 por Zaida & Arianna. All rights reserved.</footer>
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
