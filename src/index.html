@@ -3,12 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1,
-  minimum-sacle=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1,minimum-sacle=1">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/iconosuperior.png">
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body class="fondo1">
@@ -18,13 +21,12 @@
           <img class="logopokemonmenu" src="img/Logopokemon.png" alt="Logo pokemon go" /> 
         </div> 
           <input type="checkbox" id="menu-bar">
-          <label class="em em-arrow_backward" for="menu-bar"></label>
+          <label class="glyphicon glyphicon-align-justify" for="menu-bar"></label>
           <nav class="menu">
-            <a href="">BUSCAR</a>
-            <a href="">ORDENAR</a>
-            <a href="">FILTRAR</a>
-            <a href="">PORCENTAJE</a>
-            <a href="">CERRAR SESIÓN</a>
+            <a href=""> <span class="glyphicon glyphicon-sort"></span>  ORDENAR  </a>
+            <a href=""> <span class="glyphicon glyphicon-filter"></span>  FILTRAR  </a>
+            <a href=""> <span class="glyphicon glyphicon-tasks"></span>  PORCENTAJE  </a>
+            <a href=""> <span class="glyphicon glyphicon-log-in"></span>  CERRAR SESIÓN </a>
           </nav>
       </div>
   </header>
@@ -57,22 +59,16 @@
     </section>
 
     <section id="VistaInicio" class="hide">
-      <input class="buscador" type="text" id="buscador" placeholder="Ingrese el nombre del pokémon..." size="30">
-      <button id="botonBuscar" class="em em-gear" type="button"></button>
+      <input class="buscador" type="text" id="nombre" placeholder="Ingrese el nombre del pokémon..." size="30">
+      <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
       <div class="contenedor" id="allPokemones">
          <!--imagenes de pokemones-->
       </div>
     </section>
 
-    <!--<section id =inicio class ="hide">
-      <input type="text" id="nombre" placeholder="Buscar" size="10">
-      <button id="botonBuscar" type="button"><img src="img/buscar.png" alt="buscar" width= "20px" height= "10px" />Buscar</button>
-      <div id="allPokemones"></div>
-    </section>
-
     <section id="unPokemon" class="hide">
        <div id="uno"></div>
-    </section>-->
+    </section>
 
   </main>
   <footer class="footer">Copyright © 2019 por Zaida & Arianna. All rights reserved.</footer>
