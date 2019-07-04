@@ -262,3 +262,21 @@ p{
         margin-left: 80vh;
     }
 }
+
+#especifico{
+    background-color: rgb(97, 95, 95);
+    
+}
+
+#letras{
+    background-color: bisque;
+}
+
+#regresar{
+    border-radius: 500px;
+    
+}
+
+#unPokemon{
+    text-align: center;
+}
