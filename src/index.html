@@ -14,7 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
-<body class="fondo1">
+<body>
   <header class="barra-menu" id="barra-menu">
       <div class="contenedor-menu">
         <div class="contenedor-logo">
@@ -48,27 +48,30 @@
 
     <section id="VistaError" class="hide">
       <div class="contenedor-error">
-      <img class="logopokemon" src="img/Logopokemon.png" alt="Logo pokemon go" />
-      <div id="fondoParrafoError">
-        <p id ="parrafoError"><strong>Upss!!!...Tercer intento incorrecto!!!
+        <img class="logopokemon" src="img/Logopokemon.png" alt="Logo pokemon go" />
+        <div id="fondoParrafoError">
+          <p id ="parrafoError"><strong>Upss!!!...Tercer intento incorrecto!!!
           Ya utilizaste todos tus intentos, en 
           este momento no podras ingresar a PokémonGo.</strong></p>
+        </div>
+        <img id = "pikallorando" src="img/pikallorandogif.gif" alt=" pikachu llorando">
       </div>
-      <img id = "pikallorando" src="img/pikallorandogif.gif" alt=" pikachu llorando">
-    </div>
     </section>
 
     <section id="VistaInicio" class="hide">
+      <div class="contenedor-buscar">
       <input class="buscador" type="text" id="nombre" placeholder="Ingrese el nombre del pokémon..." size="30">
       <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
-      <div class="contenedor" id="allPokemones">
-         <!--imagenes de pokemones-->
-      </div>
+    </div>
+    <div class="contenedor" id="allPokemones">
+        <!--imagenes de pokemones-->
+    </div>
     </section>
 
     <section id="unPokemon" class="hide">
-       <div id="uno"></div>
-       <td id><button class="glyphicon glyphicon-circle-arrow-left" id= "regresar"></button></td> 
+       <div id="uno">
+       </div>
+       <input id= "regresar" type=image src="img/regresar.png">
     </section>
 
   </main>
@@ -79,3 +82,4 @@
 </body>
 
 </html>
+<!--getelementbytagname-->

@@ -100,10 +100,13 @@ const mostrarPokemones = (allPokemon) => {
     let mostrar = '';
     for (let i = 0; i < allPokemon.length; i++) {
         let llamado = `<div id="pokemones">
+                        <div class="contenedor-img">
                         <img src= "${allPokemon[i].imagen}" />
+                        </div>
+                        <div class="contenedor-info">
                         <p class="p-nombre">${allPokemon[i].nombre}</p>
-                        <p class="p-number">${allPokemon[i].number}</p>
-                        <p class="p-tipo">Tipo: ${allPokemon[i].tipo}</p></div>`;
+                        <p class="p-numbertipo">${allPokemon[i].number}</p>
+                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
         mostrar += llamado;
     }
     return mostrar;
@@ -123,7 +126,4 @@ const ordenarZa =(allPokemon ) =>{
     mostrarPokemones(allPokemon);
 
 }
-
-
-
 

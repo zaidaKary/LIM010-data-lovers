@@ -1,282 +1,361 @@
-body {
-    width: 356px;
-    height: 667px;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;   
-    display: inline-block;
-}
+
 /*CSS PARA EL LOGIN*/
-.fondo1 {
-    background-image: url(img/fondoLogin.jpg);
+
+#VistaLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(img/fondoLogin.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 .login {
-    display: flex;
-    flex-flow: column wrap;
-    padding-left: 10px;
-    padding-right: 10px;
-    justify-content: center;
-    margin-top: 76px;
+  display: flex;
+  flex-flow: column wrap;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+  background: rgba(129, 107, 107, 0.37);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  width: 331px;
+  height: 500px;
 }
-#contenedor-login{
-    width: 360px;
-    height: 499px;
-    background: rgba(129, 107, 107, 0.37);
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+
+.logopokemon {
+  width: 218px;
+  height: 137px;
+  align-self: center;
 }
-.logopokemon{
-    width: 218px;
-    height: 137px;
-    align-self: center;
-}
+
 .login label {
-    font-family: Open Sans;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 35px;
-    color: #000000;
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 35px;
+  color: #000000;
 }
-.Olvidastecontrasenha{
-    align-self: flex-end;
+
+.Olvidastecontrasenha {
+  align-self: flex-end;
 }
-.Registrate{
-    align-self: center;
+
+.Registrate {
+  align-self: center;
 }
-.login input{
-    background: #FFFFFF;
-    border-radius: 2px;
-    line-height: 25px;
-    margin-bottom: 12px;
+
+.login input {
+  background: #FFFFFF;
+  border-radius: 2px;
+  line-height: 25px;
+  margin-bottom: 12px;
 }
-.login button{
-    background: rgba(26, 153, 224, 0.8);
-    padding-top:10px;
-    padding-bottom:10px;
-    box-shadow: 4px 4px 4px rgba(156, 150, 150, 0.92);
-    border-radius: 5px;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 16px;
-    color: #FFFFFF;
-    margin-top: 20px;
-    cursor: pointer;
+
+.login button {
+  background: rgba(26, 153, 224, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 4px 4px 4px rgba(156, 150, 150, 0.92);
+  border-radius: 5px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-top: 20px;
+  cursor: pointer;
 }
-.login button:active{
-    transform: scale(0.95);
+
+.login button:active {
+  transform: scale(0.95);
 }
-.hide{
-    display: none;
+
+/*Para esconder vistas*/
+.hide {
+  display: none;
 }
-.footer{
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    color: #000000; 
-    text-align: center;   
-    margin-top: 60px;
+
+/*Pie de página*/
+.footer {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  color: #000000;
+  text-align: center;
+  margin-top: -26px;
 }
+
 /*CSS PARA LA PANTALLA DE ERROR*/
-.contenedor-error{
-    display: flex;
-    flex-flow: column wrap;
-    align-content: center;
-    padding-top: 50px;
+#VistaError {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
-#pikallorando{
-    width: 183px;
-    height: 172px;
-    margin-top: 12vh;
-    border-radius: 100px;
-    margin-left: 45px
+
+.contenedor-error {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
-#fondoParrafoError{
-    width: 290px;
-    box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.1);
-    background-color: rgba(208, 197, 197, 0.4);
-    margin-top: 10vh;
+
+#pikallorando {
+  width: 183px;
+  height: 172px;
+  margin-top: 12vh;
+  border-radius: 100px;
+  align-self: center;
 }
-#parrafoError{
-    font-family: OpenSans;
-    font-size: 15px;
-    font-weight: 800;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000000;
+
+#fondoParrafoError {
+  width: 290px;
+  box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgba(208, 197, 197, 0.4);
+  margin-top: 10vh;
 }
+
+#parrafoError {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+#fondoParrafoError p {
+  margin-top: 8px;
+}
+
 /*CSS PARA EL MENU DE INICIO*/
-.logopokemonmenu{
-    width: 94px;
-    height: 60px;
+/*Barra de menu*/
+header {
+  width: 100vw;
+  height: 62px;
+  top: 0%;
+  background: rgba(6, 184, 56, 0.75);
+  position: fixed;
+  z-index: 100;
 }
-*{
-    box-sizing: border-box;
+
+.logopokemonmenu {
+  width: 94px;
+  height: 60px;
 }
-header{
-    width: 375px;
-    height: 62px;
-    left: 0px;
-    top: 0px;
-    background: rgba(6, 184, 56, 0.75);
-    position: fixed;
-    z-index: 100;
-    
+
+header label {
+  float: right;
+  font-size: 28px;
+  margin: 10px 10px;
+  margin-top: 16px;
 }
-.barra-menu{
-    display: none;
+
+.barra-menu {
+  display: none;
 }
-.contenedor-error{
-    width: 98%;
-    margin: auto;
+
+header img {
+  float: left;
 }
-header img{
-    float:left;
+
+#menu-bar {
+  display: none;
 }
-header .contenedor-error{
-    display: table;
-}
-#menu-bar{
-    display: none;
-}
-header label{
-    float: right;
-    font-size: 28px;
-    margin: 10px 10px;
-}
-.menu{
-    position: absolute;
-    top: 62px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(51, 51, 51, 0.9);
-    transition: all 0.5s;
-    transform: translateX(-100%);
+
+.menu {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(51, 51, 51, 0.9);
+  transition: all 0.5s;
+  transform: translateX(-100%);
 }
 
 .menu a {
-    display: block;
-    color: #fff;
-    height: 50px;
-    text-decoration: none;
-    padding: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: block;
+  color: #fff;
+  height: 50px;
+  text-decoration: none;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-.menu a:hover{
-    background: rgba(255, 255, 255, 0.3);
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
-#menu-bar:checked ~ .menu{
-    transform: translate(0%)
+
+#menu-bar:checked~.menu {
+  transform: translateX(0%);
 }
-#VistaInicio .contenedor{
+
+/*Mostrar pokemones*/
+#VistaInicio {
+    background-image: url(img/fondoMenu.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#VistaInicio .contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contenedor img {
+  width: 116px;
+  background: #C4C4C4;
+}
+
+#pokemones {
+  margin: 12px;
+  padding: 15px;
+}
+
+.contenedor-info p {
+  text-align: center;
+}
+
+#VistaInicio .p-nombre {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+#VistaInicio .p-numbertipo {
+  margin-top: -10px;
+  font-size: 12px;
+}
+
+#VistaInicio .contenedor-info {
+  background: #D9DC41;
+}
+
+#VistaInicio .buscador {
+  padding: 8px;
+  margin-top: 78px;
+  width: 253px;
+}
+
+#VistaInicio .contenedor-buscar {
+  display: flex;
+  justify-content: center;
+}
+
+#botonBuscar {
+  height: 39px;
+  width: 36px;
+  margin-top: 78px;
+}
+
+/*Haciendo el responsive para web*/
+
+@media (min-width:1024px) {
+
+  /*Haciendo el responsive para la página de mostrar*/
+  .menu {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: translateX(0%);
+    float: right;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-#pokemones{
-    margin: 15px;
-}
-#VistaInicio .img{
-    width: 100%;
-    max-width: 280px;
-}
-p{
-    text-align: center;
-}
-#VistaInicio .p-nombre{
-    font-weight: 600;
+  }
+
+  .menu a {
+    border: none;
+    height: 62px;
+  }
+
+  header label {
+    display: none !important;
+  }
+
+  #VistaInicio .buscador {
+    margin-top: 90px;
+    width: 500px;
+  }
+
+  #botonBuscar {
+    height: 50px;
+    width: 50px;
+    margin-top: 90px;
+  }
+
+  #pokemones {
+    padding: 33px;
+  }
+
+  /*Haciendo el responsive para pantalla de error*/
+
+  #pikallorando {
+    position: absolute;
+     
+    width: 332px;
+    height: 309px;
+    /*left: 190px;
+    top: 210px;*/
+    border-radius: 172px;
+  }
+/*
+  #fondoParrafoError {
+    width: 535px;
+    height: 170px;
+    margin-top: 22vh;
+    margin-left: 20vh;
+  }
+  #parrafoError {
+    margin-top: 4vh;
+    width: 541px;
+    height: 160px;
+    font-size: 27px;
+    line-height: 37px;
+  }
+  .contenedor-error {
+    margin-left: 80vh;
+  }*/
+  /*Pie de página*/
+  .footer {
     font-size: 20px;
-    margin-top: 1px;
-}
-#VistaInicio .buscador{
-    padding: 8px;
-    margin-top: 78px;
-    margin-left: 34px;
-}
-/*ICONO BUSCAR*/
-#botonBuscar{
-    height: 34px;
-    width: 36px;
-    margin-left: -4px;
-}
-/*Haciendo el responsive para la página de mostrar*/
-@media (min-width:1024px){
-    .menu {
-        position: static;
-        width: auto;
-        height: auto;
-        transform: translateX(0%);
-        float: right;
-        display: flex;
-    }
-    .menu a{
-        border: none;
-    }
-    header label{
-        display: none;
-    }
-}
-
-/*Haciendo el responsive para el login*/
-@media (min-width:1024px){ 
-    #contenedor-login{
-        margin-left: 80vh;
-        margin-top: 15vh;
-    }
-    .footer{
-        position: absolute;
-        width: 622px;
-        height: 27px;
-        left: 500px;
-        top: 680px;
-        font-size: 20px; 
-    }
-}
-/*Haciendo el responsive para la página de error*/
-@media (min-width: 1200px){
-    #pikallorando{
-        position: absolute;
-        width: 332px;
-        height: 309px;
-        left: 190px;
-        top: 210px;
-        border-radius: 200px;
-    }
-    #fondoParrafoError{
-        width: 535px;
-        height: 170px;
-        margin-top: 22vh;
-        margin-left: 20vh;
-    }
-    #parrafoError{
-        margin-top: 4vh;
-        width: 541px;
-        height: 160px;
-        font-size: 27px;
-        line-height: 37px;
-    }
-    .contenedor-error{
-        margin-left: 80vh;
-    }
-}
-
-#especifico{
-    background-color: rgb(97, 95, 95);
-    
-}
-
-#letras{
-    background-color: bisque;
-}
-
-#regresar{
-    border-radius: 500px;
-    
-}
-
-#unPokemon{
     text-align: center;
+    margin-top: -42px;
+  }
+}
+/*CSS PARA EL BUSCAR POKEMON*/
+#unPokemon {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 16px;
+    background-image: url(img/fondoMenu.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+#uno{
+    align-self: center;
+}
+#especifico {
+  background-color: rgb(97, 95, 95);
+  width: 215px;
+  display: flex;
+  justify-content: center;
+}
+#letras {
+    background-color: bisque;
+    padding: 14px;
+    width: 215px;
+  }
+#regresar {
+  width: 79px;
+  height: 79px;
+  align-self: center;
+  margin: 26px;
 }
