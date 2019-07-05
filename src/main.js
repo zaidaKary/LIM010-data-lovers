@@ -112,3 +112,18 @@ const mostrarPokemones = (allPokemon) => {
     return mostrar;
 };
 allPokemones.innerHTML = mostrarPokemones(pokemonNew);
+
+//Funcionaliad de ordenar Pokemones de A-z
+const ordenarAz =(allPokemon ) =>{
+    allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
+    mostrarPokemones(allPokemon);
+
+}
+
+//Funcionaliad de ordenar Pokemones de Z-a
+const ordenarZa =(allPokemon ) =>{
+    allPokemon.sort((unPokemon, otroPokemon) => otroPokemon.nombre.localeCompare(unPokemon.nombre));
+    mostrarPokemones(allPokemon);
+
+}
+
