@@ -112,25 +112,18 @@ allPokemones.innerHTML = mostrarPokemones(pokemonNew);
 
 //Funcionaliad de ordenar Pokemones de A-z
 const ordenarAz =(allPokemon ) =>{
-    const nombres =[];
-    const ordenados=[];
-    for(let i=0; i < allPokemon.length; i++){
-        nombres[i] = allPokemon[i].nombre;
-    }
-    for(let j=0; j < allPokemon.length; j++){
-    for(let x=0; x < allPokemon.length; x++){
-            /* ordenados.push({
-            'n':allPokemon[j].number,
-            'no': allPokemon[j].nombre,
-            'i': allPokemon[j].imagen,
-            'tip': allPokemon[j].tipo,});*/
-        }
-        
-    }
-    return ordenados;
+    allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
+    mostrarPokemones(allPokemon);
 
 }
 
-console.log(ordenarAz(pokemonNew));
+//Funcionaliad de ordenar Pokemones de Z-a
+const ordenarZa =(allPokemon ) =>{
+    allPokemon.sort((unPokemon, otroPokemon) => otroPokemon.nombre.localeCompare(unPokemon.nombre));
+    mostrarPokemones(allPokemon);
+
+}
+
+
 
 
