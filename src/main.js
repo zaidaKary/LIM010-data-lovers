@@ -13,6 +13,7 @@ const BarraMenu = document.getElementById('barra-menu');
 //Botones
 const BotonIngresar = document.getElementById('BotonIngresar');
 const botonBuscar = document.getElementById('botonBuscar');
+const regresar = document.getElementById('regresar');
 
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
@@ -56,23 +57,35 @@ botonBuscar.addEventListener('click', () => {
     unPokemon.classList.remove('hide');
 });
 
+//Funcionalidad del boton regresar 
+    regresar.addEventListener('click', () => {
+    obtenerNombre.value ='';    
+    allPokemones.classList.remove('hide');
+    unPokemon.classList.add('hide');
+
+});
+const MaysPrimera =(string)=>{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
 //Funcion Buscar Pokemones
 const buscarPorNombre = (allPokemon) => {
     let llamado = '';
 
     for (let i = 0; i < allPokemon.length; i++) {
 
-        if (obtenerNombre.value == allPokemon[i].nombre && i < allPokemon.length) {
-            llamado = `<div>
-             <img src= "${allPokemon[i].imagen}" />
-             <p>Nombre: ${allPokemon[i].nombre}</p>
-             <p>Número: ${allPokemon[i].number}</p>
-             <p>Altura: ${allPokemon[i].altura}</p>
-             <p>Peso: ${allPokemon[i].peso}</p>
-             <p>caramelo: ${allPokemon[i].caramelo}</p>
-             <p>contador de Caramelos: ${allPokemon[i].contadorDeCaramelos}</p>
-             <p>Huevo: ${allPokemon[i].huevo}</p>
-             <p>Tipo: ${allPokemon[i].tipo}</p></div>`;
+        if (MaysPrimera(obtenerNombre.value) == allPokemon[i].nombre && i < allPokemon.length) {
+            llamado = `<div id="especifico">
+             <img src= "${allPokemon[i].imagen}"/></div>
+             <div id="letras">
+             <p><strong>Nombre:</strong> ${allPokemon[i].nombre}</p>
+             <p><strong>Número:</strong> ${allPokemon[i].number}</p>
+             <p><strong>Altura:</strong> ${allPokemon[i].altura}</p>
+             <p><strong>Peso:</strong> ${allPokemon[i].peso}</p>
+             <p><strong>caramelo</strong>: ${allPokemon[i].caramelo}</p>
+             <p><strong>contador de Caramelos:</strong> ${allPokemon[i].contadorDeCaramelos}</p>
+             <p><strong>Huevo:</strong> ${allPokemon[i].huevo}</p>
+             <p><strong>Tipo:</strong> ${allPokemon[i].tipo}</p></div>`;
             break;
         } else {
             llamado = "No se encontraron resultados";
@@ -92,8 +105,8 @@ const mostrarPokemones = (allPokemon) => {
                         </div>
                         <div class="contenedor-info">
                         <p class="p-nombre">${allPokemon[i].nombre}</p>
-                        <p class="p-number">${allPokemon[i].number}</p>
-                        <p class="p-tipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
+                        <p class="p-numbertipo">${allPokemon[i].number}</p>
+                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
         mostrar += llamado;
     }
     return mostrar;
