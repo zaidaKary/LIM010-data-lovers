@@ -110,11 +110,13 @@
   align-self: center;
 }
 
+
 #fondoParrafoError {
   width: 290px;
   box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.1);
   background-color: rgba(208, 197, 197, 0.4);
   margin-top: 10vh;
+  
 }
 
 #parrafoError {

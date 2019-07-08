@@ -29,7 +29,10 @@ const nuevaDataPokemones = () => {
       'peso': POKEMON.pokemon[i].weight,
       'caramelo': POKEMON.pokemon[i].candy,
       'contadorDeCaramelos': POKEMON.pokemon[i].candy_count,
-      'huevo': POKEMON.pokemon[i].egg
+      'huevo': POKEMON.pokemon[i].egg,
+      'frecuencia':POKEMON.pokemon[i].avg_spawns,
+      'debilidades':POKEMON.pokemon[i].weaknesses
+
     });
    }
     return poke;
