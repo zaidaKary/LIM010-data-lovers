@@ -116,14 +116,127 @@ allPokemones.innerHTML = mostrarPokemones(pokemonNew);
 //Funcionaliad de ordenar Pokemones de A-z
 const ordenarAz =(allPokemon ) =>{
     allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
-    mostrarPokemones(allPokemon);
+   return(mostrarPokemones(allPokemon)) ;
 
 }
 
 //Funcionaliad de ordenar Pokemones de Z-a
 const ordenarZa =(allPokemon ) =>{
     allPokemon.sort((unPokemon, otroPokemon) => otroPokemon.nombre.localeCompare(unPokemon.nombre));
-    mostrarPokemones(allPokemon);
+    return(mostrarPokemones(allPokemon));
 
 }
 
+//Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
+
+ const ordenarAsc =(allPokemon) =>{
+    allPokemon.sort((unaMascota, otraMascota) => unaMascota.frecuencia - otraMascota.frecuencia);
+    return(allPokemon);
+ }
+
+ //Funcionalidad de ordenar descedentemente por frecuencia de aparicion
+ const ordenarDes =(allPokemon) =>{
+    allPokemon.sort((unaMascota, otraMascota) => otraMascota.frecuencia - unaMascota.frecuencia);
+    return(allPokemon);
+ }
+
+//funcionalidad para obtener todos los tipos de pokemones 
+
+const obtenerTipos = (allPokemon) =>{
+    let tipos =[], aux =0;
+    for (let i =0; i<allPokemon.length;i++){
+        
+        for(let j =0; j< allPokemon[i].tipo.length; j++)
+        {
+            tipos[aux]= allPokemon[i].tipo[j];
+            aux = aux+1;
+        }
+    }
+    const distintos = [...new Set(tipos)];
+    return(distintos);
+}
+
+//Funcionalidad para mostrar los pokemones por sus tipos 
+
+const  mostrarPorTipos= (allPokemon) =>{
+    const tipos = obtenerTipos(allPokemon);
+    let mostrar = '';
+    if(tipos.includes("Fire")){
+        for(let i=0; i<allPokemon.length; i++ ){
+            for(let j=0;j<allPokemon[i].tipo.length; j++){
+                if(allPokemon[i].tipo[j].includes("Fire")){
+                    let llamado = `<div id="pokemones">
+                        <div class="contenedor-img">
+                        <img src= "${allPokemon[i].imagen}" />
+                        </div>
+                        <div class="contenedor-info">
+                        <p class="p-nombre">${allPokemon[i].nombre}</p>
+                        <p class="p-numbertipo">${allPokemon[i].number}</p>
+                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
+                     mostrar += llamado;
+                }
+                
+            }
+        }
+
+        }else{
+            mostrar = `<div id="pokemones">
+           <p>No existe ese tipo de pokemon<p>
+            </div>`;
+        }
+
+        return mostrar;
+    }
+    
+    
+//funcionalidad para obtener todos las debilidades  de pokemones 
+
+const obtenerDebilidades = (allPokemon) =>{
+    let debilidades =[], aux =0;
+    for (let i =0; i<allPokemon.length;i++){
+        
+        for(let j =0; j< allPokemon[i].debilidades.length; j++)
+        {
+            debilidades[aux]= allPokemon[i].debilidades[j];
+            aux = aux+1;
+        }
+    }
+    const distintos = [...new Set(debilidades)];
+    return(distintos);
+}
+
+
+//Funcionalidad para mostrar los pokemones por sus tipos 
+
+const  mostrarPorDebilidades= (allPokemon) =>{
+    const debilidades = obtenerDebilidades(allPokemon);
+    let mostrar = '';
+    if(debilidades.includes("Fire")){
+        for(let i=0; i<allPokemon.length; i++ ){
+            for(let j=0;j<allPokemon[i].debilidades.length; j++){
+                if(allPokemon[i].debilidades[j].includes("Fire")){
+                    let llamado = `<div id="pokemones">
+                        <div class="contenedor-img">
+                        <img src= "${allPokemon[i].imagen}" />
+                        </div>
+                        <div class="contenedor-info">
+                        <p class="p-nombre">${allPokemon[i].nombre}</p>
+                        <p class="p-numbertipo">${allPokemon[i].number}</p>
+                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
+                     mostrar += llamado;
+                }
+                
+            }
+        }
+
+        }else{
+            mostrar = `<div id="pokemones">
+           <p>No existe ese tipo de debilidad<p>
+            </div>`;
+        }
+
+        return mostrar;
+    }
+  
+
+ 
