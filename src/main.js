@@ -175,7 +175,6 @@ const obtenerTipos = (allPokemon) =>{
 
 const  mostrarPorTipos= (allPokemon) =>{
     const tipos = obtenerTipos(allPokemon);
-    let newPoke =[];
     if(tipos.includes("Fire")){
         for(let i=0; i<allPokemon.length; i++ ){
             for(let j=0;j<allPokemon[i].tipo.length; j++){
@@ -199,8 +198,8 @@ const  mostrarPorTipos= (allPokemon) =>{
         return mostrar;
     }
 
-    const  mostrarTipos = () =>{
-        allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
+    const  mostrarPorTiposPantalla = () =>{
+        allPokemones.innerHTML = mostrarPorTipos(pokemonNew);
      }
     
     
