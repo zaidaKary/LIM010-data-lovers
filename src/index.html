@@ -27,16 +27,16 @@
           <ul>
             <li class="item-menu"><a href="#orden"><span class="glyphicon glyphicon-sort"></span> ORDENAR</a>
               <ul class="sub-menu uno">
-                <li><a href="#">DE A - Z</a></li>
-                <li><a href="#">DE Z - A</a></li>
-                <li><a href="#">ASCENDENTE</a></li>
-                <li><a href="#">DESCENDENTE</a></li>
+                <li><a href="javascript:mostrarOrdenadoAzPantalla()" >DE A - Z</a></li>
+                <li><a href="javascript:mostrarOrdenadoZaPantalla()">DE Z - A</a></li>
+                <li><a href="javascript:mostrarOrdenadoAsc()">ASCENDENTE</a></li>
+                <li><a href="javascript:mostrarOrdenadoDes()">DESCENDENTE</a></li>
               </ul>
             </li>
             <li class="item-menu"><a href="#"><span class="glyphicon glyphicon-filter"></span> FILTRAR</a>
               <ul class="sub-menu dos">
-                <li><a href="javaScript: mostrarPorTiposPantalla(pokemonNew)">POR TIPO</a></li>
-                <li><a href="javaScript: mostrarPorDebilidadesPantalla(pokemonNew)">POR DEBILIDAD</a></li>
+                <li><a href="javascript:mostrarTipos()">POR TIPO</a></li>
+                <li><a href="javaScript: mostrarPorDebilidadesPantalla()">POR DEBILIDAD</a></li>
               </ul>
             </li>
             <li><a href="#"><span class="glyphicon glyphicon-tasks"></span> PORCENTAJE</a></li>
@@ -78,7 +78,7 @@
       <input class="buscador" type="text" id="nombre" placeholder="Ingrese el nombre del pokémon..." size="30">
       <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
     </div>
-     <div class="contenedor" id="allPokemones">
+     <div class="contenedor " id="allPokemones">
         <!--imagenes de pokemones-->
     </div>
     </section>
@@ -88,6 +88,7 @@
       </div>
       <input id= "regresar" type=image src="img/regresar.png">
    </section>
+
   </main>
   <footer class="footer">Copyright © 2019 por Zaida & Arianna. All rights reserved.</footer>
   <script src="./data/pokemon/pokemon.js"></script>

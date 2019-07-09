@@ -115,17 +115,25 @@ allPokemones.innerHTML = mostrarPokemones(pokemonNew);
 //Funcionaliad de ordenar Pokemones de A-z
 const ordenarAz =(allPokemon ) =>{
     allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
-   return(mostrarPokemones(allPokemon)) ;
+    return(allPokemon);
+};
 
-}
+const  mostrarOrdenadoAzPantalla = () =>{
+    allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
+ }
+
 
 
 //Funcionaliad de ordenar Pokemones de Z-a
 const ordenarZa =(allPokemon ) =>{
     allPokemon.sort((unPokemon, otroPokemon) => otroPokemon.nombre.localeCompare(unPokemon.nombre));
-    return(mostrarPokemones(allPokemon));
-
+    return(allPokemon);
 }
+
+const  mostrarOrdenadoZaPantalla = () =>{
+    allPokemones.innerHTML = mostrarPokemones(ordenarZa(pokemonNew));
+ }
+
 
 //Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 
@@ -133,13 +141,20 @@ const ordenarZa =(allPokemon ) =>{
     allPokemon.sort((unaMascota, otraMascota) => unaMascota.frecuencia - otraMascota.frecuencia);
     return(allPokemon);
  }
+ const  mostrarOrdenadoAsc = () =>{
+    allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
+ }
+
 
  //Funcionalidad de ordenar descedentemente por frecuencia de aparicion
  const ordenarDes =(allPokemon) =>{
     allPokemon.sort((unaMascota, otraMascota) => otraMascota.frecuencia - unaMascota.frecuencia);
     return(allPokemon);
  }
-
+ const  mostrarOrdenadoDes = () =>{
+    allPokemones.innerHTML = mostrarPokemones(ordenarDes(pokemonNew));
+ }
+ 
 //funcionalidad para obtener todos los tipos de pokemones 
 
 const obtenerTipos = (allPokemon) =>{
@@ -160,7 +175,7 @@ const obtenerTipos = (allPokemon) =>{
 
 const  mostrarPorTipos= (allPokemon) =>{
     const tipos = obtenerTipos(allPokemon);
-    let mostrar = '';
+    let newPoke =[];
     if(tipos.includes("Fire")){
         for(let i=0; i<allPokemon.length; i++ ){
             for(let j=0;j<allPokemon[i].tipo.length; j++){
@@ -179,15 +194,15 @@ const  mostrarPorTipos= (allPokemon) =>{
             }
         }
 
-        }else{
-            mostrar = `<div id="pokemones">
-           <p>No existe ese tipo de pokemon<p>
-            </div>`;
         }
 
         return mostrar;
     }
-    console.log(obtenerTipos(pokemonNew));
+
+    const  mostrarTipos = () =>{
+        allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
+     }
+    
     
 //funcionalidad para obtener todos las debilidades  de pokemones 
 
@@ -229,10 +244,6 @@ const  mostrarPorDebilidades= (allPokemon) =>{
             }
         }
 
-        }else{
-            mostrar = `<div id="pokemones">
-           <p>No existe ese tipo de debilidad<p>
-            </div>`;
         }
 
         return mostrar;
