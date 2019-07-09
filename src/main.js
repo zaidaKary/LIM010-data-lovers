@@ -15,7 +15,6 @@ const BotonIngresar = document.getElementById('BotonIngresar');
 const botonBuscar = document.getElementById('botonBuscar');
 const regresar = document.getElementById('regresar');
 
-
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
 
