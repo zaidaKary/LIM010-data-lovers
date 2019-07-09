@@ -27,7 +27,7 @@
           <ul>
             <li class="item-menu"><a href="#orden"><span class="glyphicon glyphicon-sort"></span> ORDENAR</a>
               <ul class="sub-menu uno">
-                <li><a href="#">DE A - Z</a></li>
+                <li><a href="javascript:ordenarAz(pokemonNew)" >DE A - Z</a></li>
                 <li><a href="#">DE Z - A</a></li>
                 <li><a href="#">ASCENDENTE</a></li>
                 <li><a href="#">DESCENDENTE</a></li>
@@ -36,7 +36,7 @@
             <li class="item-menu"><a href="#"><span class="glyphicon glyphicon-filter"></span> FILTRAR</a>
               <ul class="sub-menu dos">
                 <li><a href="#">POR TIPO</a></li>
-                <li><a href="#">POR DEBILIDAD</a></li>
+                <li><a href="javascript:mostrarPorDebilidades(pokemonNew)">POR DEBILIDAD</a></li>
               </ul>
             </li>
             <li><a href="#"><span class="glyphicon glyphicon-tasks"></span> PORCENTAJE</a></li>
@@ -79,28 +79,19 @@
       <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
     </div>
 
-    <h2>Modal Example</h2>
+   
 
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-    
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-    
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
-      </div>
-    
-    </div>
-
-
-    <div class="contenedor" id="allPokemones">
+    <div class="contenedor" id="allPokemones" class="hide">
         <!--imagenes de pokemones-->
        
 
     </div>
+
+    <div class="contenedor" id="ordPokemones" class="hide">
+      <!--imagenes de pokemones-->
+     
+
+  </div>
     </section>
 
     <section id="unPokemon" class="hide">
