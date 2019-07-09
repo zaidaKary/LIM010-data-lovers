@@ -159,7 +159,7 @@ const  mostrarOrdenadoZaPantalla = () =>{
 //funcionalidad para obtener todos los tipos de pokemones 
 
 const obtenerTipos = (allPokemon) =>{
-    let tipos =[], aux =P;
+    let tipos =[], aux =0;
     for (let i =0; i<allPokemon.length;i++){
         
         for(let j =0; j< allPokemon[i].tipo.length; j++)
@@ -176,7 +176,7 @@ const obtenerTipos = (allPokemon) =>{
 
 const  mostrarPorTipos= (allPokemon) =>{
     const tipos = obtenerTipos(allPokemon);
-    let mostrar = '';
+    let newPoke =[];
     if(tipos.includes("Fire")){
         for(let i=0; i<allPokemon.length; i++ ){
             for(let j=0;j<allPokemon[i].tipo.length; j++){
@@ -195,14 +195,14 @@ const  mostrarPorTipos= (allPokemon) =>{
             }
         }
 
-        }else{
-            mostrar = `<div id="pokemones">
-           <p>No existe ese tipo de pokemon<p>
-            </div>`;
         }
 
         return mostrar;
     }
+
+    const  mostrarTipos = () =>{
+        allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
+     }
     
     
 //funcionalidad para obtener todos las debilidades  de pokemones 
@@ -245,18 +245,11 @@ const  mostrarPorDebilidades= (allPokemon) =>{
             }
         }
 
-        }else{
-            mostrar = `<div id="pokemones">
-           <p>No existe ese tipo de debilidad<p>
-            </div>`;
         }
 
         return mostrar;
     }
 
     const  mostrarPorDebilidadesPantalla = () =>{
-        allPokemonesFiltrarD.innerHTML = mostrarPorDebilidades(pokemonNew);
-        allPokemones.classList.add('hide');
-        filtrarDebilidad.classList.remove('hide');
+        allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
      }
-  
