@@ -182,14 +182,15 @@ height: 144px;
 background: rgba(248, 96, 8, 1);
 }
 /*Mostrar pokemones para movil*/
-#VistaInicio {
+#VistaInicio, #filtrarDebilidad, #filtrarTipo {
     background-image: url(img/fondoMenu.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#VistaInicio .contenedor {
+#VistaInicio .contenedor, #filtrarDebilidad .contenedor, #filtrarTipo .contenedor, #ordenarDESC .contenedor,
+#ordenarASC .conteneder, #ordenarZA .conteneder, #ordenarAZ .conteneder {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -205,23 +206,23 @@ background: rgba(248, 96, 8, 1);
 .contenedor-info p {
   text-align: center;
 }
-#VistaInicio .p-nombre {
+#VistaInicio .p-nombre, #filtrarDebilidad .p-nombre  {
   font-weight: 800;
   font-size: 13px;
 }
-#VistaInicio .p-numbertipo {
+#VistaInicio .p-numbertipo,  #filtrarDebilidad .p-numbertipo{
   margin-top: -10px;
   font-size: 12px;
 }
-#VistaInicio .contenedor-info {
+#VistaInicio .contenedor-info, #filtrarDebilidad .contenedor-info{
   background: #D9DC41;
 }
-#VistaInicio .buscador {
+#VistaInicio .buscador, #filtrarDebilidad .buscador {
   padding: 8px;
   margin-top: 78px;
   width: 253px;
 }
-#VistaInicio .contenedor-buscar {
+#VistaInicio .contenedor-buscar, #filtrarDebilidad .contenedor-buscar {
   display: flex;
   justify-content: center;
 }

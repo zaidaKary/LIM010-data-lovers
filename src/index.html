@@ -36,7 +36,7 @@
             <li class="item-menu"><a href="#"><span class="glyphicon glyphicon-filter"></span> FILTRAR</a>
               <ul class="sub-menu dos">
                 <li><a href="#">POR TIPO</a></li>
-                <li><a href="javascript:mostrarPorDebilidades(pokemonNew)">POR DEBILIDAD</a></li>
+                <li><a href="javaScript: mostrarPorDebilidadesPantalla()">POR DEBILIDAD</a></li>
               </ul>
             </li>
             <li><a href="#"><span class="glyphicon glyphicon-tasks"></span> PORCENTAJE</a></li>
@@ -78,26 +78,57 @@
       <input class="buscador" type="text" id="nombre" placeholder="Ingrese el nombre del pokémon..." size="30">
       <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
     </div>
-
-   
-
-    <div class="contenedor" id="allPokemones" class="hide">
+     <div class="contenedor" id="allPokemones">
         <!--imagenes de pokemones-->
-       
-
     </div>
-
-    <div class="contenedor" id="ordPokemones" class="hide">
-      <!--imagenes de pokemones-->
-     
-
-  </div>
     </section>
 
     <section id="unPokemon" class="hide">
-       <div id="uno">
-       </div>
-       <input id= "regresar" type=image src="img/regresar.png">
+      <div id="uno">
+      </div>
+      <input id= "regresar" type=image src="img/regresar.png">
+   </section>
+   
+   <section id="ordenarAZ" class="hide">
+    <div id="allPokemonesORDEaz" class="contenedor">
+      <!--imagenes de pokemones filtrados-->
+    </div>
+  <input id= "regresar" type=image src="img/regresar.png">
+  </section>
+
+  <section id="ordenarZA" class="hide">
+    <div id="allPokemonesORDEza" class="contenedor">
+      <!--imagenes de pokemones filtrados-->
+    </div>
+  <input id= "regresar" type=image src="img/regresar.png">
+  </section>
+
+  <section id="ordenarASC" class="hide">
+    <div id="allPokemonesORDEasc" class="contenedor">
+      <!--imagenes de pokemones filtrados-->
+    </div>
+  <input id= "regresar" type=image src="img/regresar.png">
+  </section>
+
+  <section id="ordenarDESC" class="hide">
+    <div id="allPokemonesORDEdesc" class="contenedor">
+      <!--imagenes de pokemones filtrados-->
+    </div>
+  <input id= "regresar" type=image src="img/regresar.png">
+  </section>
+
+    <section id="filtrarDebilidad" class="hide">
+    <div id="allPokemonesFiltrar" class="contenedor">
+      <!--imagenes de pokemones filtrados-->
+    </div>
+    <input id= "regresar" type=image src="img/regresar.png">
+    </section>
+
+    <section id="filtrarTipo" class="hide">
+      <div id="allPokemonesFiltrar" class="contenedor">
+        <!--imagenes de pokemones filtrados-->
+      </div>
+    <input id= "regresar" type=image src="img/regresar.png">
     </section>
 
   </main>
