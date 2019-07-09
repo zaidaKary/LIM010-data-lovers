@@ -1,6 +1,4 @@
-
-/*CSS PARA EL LOGIN*/
-
+/*CSS PARA EL LOGIN WEB Y MOVIL*/
 #VistaLogin {
   display: flex;
   align-items: center;
@@ -12,7 +10,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
 .login {
   display: flex;
   flex-flow: column wrap;
@@ -24,13 +21,11 @@
   width: 331px;
   height: 500px;
 }
-
 .logopokemon {
   width: 218px;
   height: 137px;
   align-self: center;
 }
-
 .login label {
   font-family: Open Sans;
   font-style: normal;
@@ -38,22 +33,18 @@
   line-height: 35px;
   color: #000000;
 }
-
 .Olvidastecontrasenha {
   align-self: flex-end;
 }
-
 .Registrate {
   align-self: center;
 }
-
 .login input {
   background: #FFFFFF;
   border-radius: 2px;
   line-height: 25px;
   margin-bottom: 12px;
 }
-
 .login button {
   background: rgba(26, 153, 224, 0.8);
   padding-top: 10px;
@@ -68,17 +59,14 @@
   margin-top: 20px;
   cursor: pointer;
 }
-
 .login button:active {
   transform: scale(0.95);
 }
-
 /*Para esconder vistas*/
 .hide {
   display: none;
 }
-
-/*Pie de página*/
+/*Pie de página para movil*/
 .footer {
   font-family: Open Sans;
   font-style: normal;
@@ -88,20 +76,17 @@
   text-align: center;
   margin-top: -26px;
 }
-
-/*CSS PARA LA PANTALLA DE ERROR*/
+/*CSS PARA LA PANTALLA DE ERROR PARA MOVIL*/
 #VistaError {
   display: flex;
   height: 100vh;
   justify-content: center;
 }
-
 .contenedor-error {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
 }
-
 #pikallorando {
   width: 183px;
   height: 172px;
@@ -109,16 +94,12 @@
   border-radius: 100px;
   align-self: center;
 }
-
-
 #fondoParrafoError {
   width: 290px;
   box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.1);
   background-color: rgba(208, 197, 197, 0.4);
-  margin-top: 10vh;
-  
+  margin-top: 10vh; 
 }
-
 #parrafoError {
   font-family: OpenSans;
   font-size: 15px;
@@ -129,94 +110,87 @@
   letter-spacing: normal;
   color: #000000;
 }
-
 #fondoParrafoError p {
   margin-top: 8px;
 }
-
-/*CSS PARA EL MENU DE INICIO*/
-/*Barra de menu*/
+/*CSS PARA EL MENU DE INICIO PARA WEB*/
+/*Barra de menu para web*/
 header {
   width: 100vw;
   height: 62px;
-  top: 0%;
+  top: 0;
+  left:0;
   background: rgba(6, 184, 56, 0.75);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   position: fixed;
   z-index: 100;
 }
-
-.logopokemonmenu {
+.logopokemonmenu { /*logo de menu*/
   width: 94px;
   height: 60px;
 }
-
-header label {
+header label{
+  display: none !important;
   float: right;
-  font-size: 28px;
-  margin: 10px 10px;
-  margin-top: 16px;
 }
-
-.barra-menu {
-  display: none;
-}
-
 header img {
   float: left;
 }
-
-#menu-bar {
+.barra-menu {
   display: none;
 }
-
-.menu {
-  position: absolute;
-  top: 62px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(15, 15, 15, 0.9);
-  transition: all 0.5s;
-  transform: translateX(-100%);
-  list-style: none;
-  padding-left: 0px
+#btn-menu{
+  display: none;
 }
-.item-menu:focus ~ .sub-menu, 
-.item-menu:active ~ .sub-menu, 
-.item-menu:hover .sub-menu{ 
-   display: block; 
-   list-style: none;
-} 
-.sub-menu{
-    display:none;
+.menu ul {
+  background: rgba(10, 10, 10, 1);
+  display:flex;
+  list-style: none;
+  height: 62px;
+  float: right;
+  align-items: center;
+  padding-left: 0px;
+}
+.menu ul ul {
+  display: none;
 }
 .menu a {
   display: block;
+  padding: 21px 23px;
   color: #fff;
-  height: 50px;
   text-decoration: none;
-  padding: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-.menu li a span {
-  margin-right: 10px;
-}
 .menu a:hover {
-  background: rgba(27, 219, 10, 0.3);
+  background: rgba(80, 78, 78, 0.836);
+  top: 0%;
 }
-
-#menu-bar:checked~.menu {
-  transform: translateX(0%);
+.menu ul li:hover .uno {
+  display: block;
+  position: absolute;
+  width: 135px;
+  height: 248px;
+  background: rgba(248, 96, 8, 1);
 }
-/*Mostrar pokemones*/
-#VistaInicio {
+.menu ul li:hover .dos {
+display: block;
+position: absolute;
+width: 122px;
+height: 144px;
+background: rgba(248, 96, 8, 1);
+}
+/*Mostrar pokemones para movil*/
+#VistaInicio, #filtrarDebilidad, #filtrarTipo {
     background-image: url(img/fondoMenu.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#VistaInicio .contenedor {
+#VistaInicio .contenedor, #filtrarDebilidad .contenedor, #filtrarTipo .contenedor, #ordenarDESC .contenedor,
+#ordenarASC .conteneder, #ordenarZA .conteneder, #ordenarAZ .conteneder {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -226,98 +200,92 @@ header img {
   width: 116px;
   background: #C4C4C4;
 }
-
 #pokemones {
   margin: 12px;
   padding: 15px;
 }
-
 .contenedor-info p {
   text-align: center;
 }
-
-#VistaInicio .p-nombre {
+#VistaInicio .p-nombre, #filtrarDebilidad .p-nombre  {
   font-weight: 800;
   font-size: 13px;
 }
-
-#VistaInicio .p-numbertipo {
+#VistaInicio .p-numbertipo,  #filtrarDebilidad .p-numbertipo{
   margin-top: -10px;
   font-size: 12px;
 }
-
-#VistaInicio .contenedor-info {
+#VistaInicio .contenedor-info, #filtrarDebilidad .contenedor-info{
   background: #D9DC41;
 }
-
-#VistaInicio .buscador {
+#VistaInicio .buscador, #filtrarDebilidad .buscador {
   padding: 8px;
   margin-top: 78px;
   width: 253px;
 }
-
-#VistaInicio .contenedor-buscar {
+#VistaInicio .contenedor-buscar, #filtrarDebilidad .contenedor-buscar {
   display: flex;
   justify-content: center;
 }
-
 #botonBuscar {
   height: 39px;
   width: 36px;
   margin-top: 78px;
 }
+/*Barra de menu para movil*/
+@media (max-width:768px){
+  header label {
+    display: block !important;
+    font-size: 28px;
+    margin: 10px 10px;
+    margin-top: 16px;
+}
+.menu {
+    position: absolute;
+    top: 62px;
+    left:0;
+    width: 100%;
+    transition: all 0.5s;
+    
+    transform: translateX(-100%);
+}
+.menu ul{
+    display: block;
+    background: rgba(10, 10, 10, 0.9);
+    width: 100%;
+    height: 100vh;
+}
 
+.menu ul li:hover ul{
+    display: none;
+}
+#btn-menu:checked ~ .menu {
+    transform: translateX(0%);
+}
+.item-menu:focus ~ .sub-menu, 
+.item-menu:active ~ .sub-menu, 
+.item-menu:hover .sub-menu{ 
+display: block; 
+} 
+}
 /*Haciendo el responsive para web*/
 
 @media (min-width:1024px) {
 
   /*Haciendo el responsive para la página de mostrar*/
-  .menu {
-    position: static;
-    width: auto;
-    height: auto;
-    transform: translateX(0%);
-    float: right;
-    display: flex;
-    padding-left: 0px;
-  }
 
-  .menu a {
-    border: none;
-    height: 62px;
-    display: flex;
-    justify-content: center;
-  }
-
-  header label {
-    display: none !important;
-  }
-
-  .sub-menu {
-    max-height: 0px;
-    overflow:hidden;
-    -webkit-transition:max-height 0.5s linear;
-    -moz-transition:max-height 0.25s linear;
-    transition:max-height 0.5s linear;
-    list-style: none;
-  }
-  .item-menu:hover .sub-menu{
-    max-height: 300px;
-  }
-  #VistaInicio .buscador {
+#VistaInicio .buscador {
     margin-top: 90px;
     width: 500px;
-  }
-
-  #botonBuscar {
+}
+#botonBuscar {
     height: 50px;
     width: 50px;
     margin-top: 90px;
-  }
-
-  #pokemones {
+}
+#pokemones {
     padding: 33px;
-  }
+}
 
   /*Haciendo el responsive para pantalla de error*/
 

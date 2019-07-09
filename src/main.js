@@ -6,8 +6,8 @@ const obtenerNombre = document.getElementById('nombre');
 
 //Vistas
 const VistaLogin = document.getElementById('VistaLogin');
-const VistaInicio = document.getElementById('VistaInicio');
 const VistaError = document.getElementById('VistaError');
+const VistaInicio = document.getElementById('VistaInicio');
 //Barra de menu
 const BarraMenu = document.getElementById('barra-menu');
 //Botones
@@ -96,7 +96,6 @@ const buscarPorNombre = (allPokemon) => {
 
 //Funcion Mostrar Pokemones
 const mostrarPokemones = (allPokemon) => {
-
     let mostrar = '';
     for (let i = 0; i < allPokemon.length; i++) {
         let llamado = `<div id="pokemones">
@@ -237,6 +236,10 @@ const  mostrarPorDebilidades= (allPokemon) =>{
 
         return mostrar;
     }
-  
 
- 
+    const  mostrarPorDebilidadesPantalla = () =>{
+        allPokemonesFiltrar.innerHTML = mostrarPorDebilidades(pokemonNew);
+        allPokemones.classList.add('hide');
+        filtrarDebilidad.classList.remove('hide');
+     }
+  
