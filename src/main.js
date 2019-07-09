@@ -14,7 +14,6 @@ const BarraMenu = document.getElementById('barra-menu');
 const BotonIngresar = document.getElementById('BotonIngresar');
 const botonBuscar = document.getElementById('botonBuscar');
 const regresar = document.getElementById('regresar');
-const clickAz = document.getElementById('az');
 
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
@@ -120,7 +119,6 @@ const ordenarAz =(allPokemon ) =>{
 
 }
 
-console.log(ordenarAz(pokemonNew));
 
 //Funcionaliad de ordenar Pokemones de Z-a
 const ordenarZa =(allPokemon ) =>{
@@ -128,10 +126,6 @@ const ordenarZa =(allPokemon ) =>{
     return(mostrarPokemones(allPokemon));
 
 }
-clickAz.addEventListener('click',()=>{
-   
-    ordenarAz(pokemonNew);
-});
 
 //Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 
@@ -193,7 +187,7 @@ const  mostrarPorTipos= (allPokemon) =>{
 
         return mostrar;
     }
-    
+    console.log(obtenerTipos(pokemonNew));
     
 //funcionalidad para obtener todos las debilidades  de pokemones 
 
@@ -245,8 +239,5 @@ const  mostrarPorDebilidades= (allPokemon) =>{
     }
 
     const  mostrarPorDebilidadesPantalla = () =>{
-        allPokemonesFiltrar.innerHTML = mostrarPorDebilidades(pokemonNew);
-        allPokemones.classList.add('hide');
-        filtrarDebilidad.classList.remove('hide');
+        allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
      }
-  
