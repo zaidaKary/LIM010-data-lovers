@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="modal.css" />
   <link rel="icon" href="img/iconosuperior.png">
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +26,7 @@
           <ul class="menu">
             <li class="item-menu"><a href="#orden"><span class="glyphicon glyphicon-sort"></span>  ORDENAR  </a>
               <ul class="sub-menu">
-                <li><a href="#">DE A - Z</a></li>
+                <li><a href="#" id="az">DE A - Z</a></li>
                 <li><a href="#">DE Z - A</a></li>
                 <li><a href="#">ASCENDENTE</a></li>
                 <li><a href="#">DESCENDENTE</a></li>
@@ -76,8 +77,28 @@
       <input class="buscador" type="text" id="nombre" placeholder="Ingrese el nombre del pokémon..." size="30">
       <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
     </div>
+
+    <h2>Modal Example</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    
+    </div>
+
+
     <div class="contenedor" id="allPokemones">
         <!--imagenes de pokemones-->
+       
+
     </div>
     </section>
 
