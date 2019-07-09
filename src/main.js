@@ -14,6 +14,7 @@ const BarraMenu = document.getElementById('barra-menu');
 const BotonIngresar = document.getElementById('BotonIngresar');
 const botonBuscar = document.getElementById('botonBuscar');
 const regresar = document.getElementById('regresar');
+const clickAz = document.getElementById('az');
 
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
@@ -119,12 +120,18 @@ const ordenarAz =(allPokemon ) =>{
 
 }
 
+console.log(ordenarAz(pokemonNew));
+
 //Funcionaliad de ordenar Pokemones de Z-a
 const ordenarZa =(allPokemon ) =>{
     allPokemon.sort((unPokemon, otroPokemon) => otroPokemon.nombre.localeCompare(unPokemon.nombre));
     return(mostrarPokemones(allPokemon));
 
 }
+clickAz.addEventListener('click',()=>{
+   
+    ordenarAz(pokemonNew);
+});
 
 //Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 
