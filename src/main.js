@@ -1,7 +1,7 @@
 /* Manejo del DOM */
 //Valores del input
-const usuario = document.getElementById('usuario');
-const contrasenha = document.getElementById('contrasenha');
+let usuario = document.getElementById('usuario');
+let contrasenha = document.getElementById('contrasenha');
 const obtenerNombre = document.getElementById('nombre');
 
 //Vistas
@@ -35,8 +35,10 @@ BotonIngresar.addEventListener('click', () => {
         document.getElementById('contrasenha').value = '';
     }
     else if (usuario.value === '1' && contrasenha.value === '1') {
+        
         VistaLogin.classList.add('hide');
         VistaInicio.classList.remove('hide');
+        BarraMenu.classList.remove('hide');
         BarraMenu.classList.remove('barra-menu');
     } else {
         if (contador == 0) {
@@ -176,7 +178,7 @@ const obtenerTipos = (allPokemon) =>{
 
 const  mostrarPorTipos= (allPokemon) =>{
     const tipos = obtenerTipos(allPokemon);
-    let newPoke =[];
+    let mostrar = '';
     if(tipos.includes("Fire")){
         for(let i=0; i<allPokemon.length; i++ ){
             for(let j=0;j<allPokemon[i].tipo.length; j++){
@@ -201,7 +203,7 @@ const  mostrarPorTipos= (allPokemon) =>{
     }
 
     const  mostrarTipos = () =>{
-        allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
+        allPokemones.innerHTML = mostrarPorTipos(pokemonNew);
      }
     
     
@@ -252,4 +254,13 @@ const  mostrarPorDebilidades= (allPokemon) =>{
 
     const  mostrarPorDebilidadesPantalla = () =>{
         allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
+     }
+
+
+     const salir= () =>{
+         usuario.value = '';
+         contrasenha.value ='';
+         BarraMenu.classList.add('hide');
+         VistaInicio.classList.add('hide');
+         VistaLogin.classList.remove('hide');
      }
