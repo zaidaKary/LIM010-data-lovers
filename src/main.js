@@ -255,6 +255,36 @@ const  mostrarPorDebilidades= (allPokemon) =>{
         allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
      }
 
+     //Funcionalidad de Obterner porcentaje de huevos a eclosionar 
+     const obtenerPorcentaje = (allPokemon) =>{
+        let km =[];
+        for (let i =0; i<allPokemon.length;i++){
+                km[i]= allPokemon[i].huevo;
+        }
+        const distintos = [...new Set(km)];
+        return(distintos);
+
+     }
+     const  porcentaje =(allPokemon)=>{
+        const distancia = obtenerPorcentaje(allPokemon);
+        let resultado =[], aux=0;
+    
+        for(let i=0; i< allPokemon.length; i++){
+          
+            if(distancia[0] == allPokemon[i].huevo){
+              
+                resultado[aux] =allPokemon[i];
+                aux++;
+            }
+
+        }
+        document.getElementById('texto').innerHTML =`<h2>El Porcentaje de los huevos a eclosionar con ${resultado[0].huevo}, es de ${((resultado.length/allPokemon.length)*100).toFixed(2)}%</h2>`;
+        return (resultado);
+     }
+
+     const mostrarPorcentaje = () => {
+        allPokemones.innerHTML = mostrarPokemones(porcentaje(pokemonNew));
+     }
 
      const salir= () =>{
          usuario.value = '';
