@@ -14,9 +14,12 @@ const BarraMenu = document.getElementById('barra-menu');
 const BotonIngresar = document.getElementById('BotonIngresar');
 const botonBuscar = document.getElementById('botonBuscar');
 const regresar = document.getElementById('regresar');
-//Cuando haces clic al menú
+const selecAz =document.getElementById('az');
+const selecZa =document.getElementById('za');
+const selecAsc =document.getElementById('asc');
+const selecDesc =document.getElementById('desc');
+//ComboBox
 const porTipo = document.getElementById('porTipo');
-
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
 
@@ -116,18 +119,21 @@ const mostrarPokemones = (allPokemon) => {
     return mostrar;
 };
 allPokemones.innerHTML = mostrarPokemones(pokemonNew);
-
 //Funcionaliad de ordenar Pokemones de A-z
 const ordenarAz = (allPokemon) => {
     allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
     return (allPokemon);
 };
 
+selecAz.addEventListener('click',()=>{
+    allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
+});
+
 //Funcionaliad de ordenar Pokemones de Z-a
-const ordenarZa = (allPokemon) => {
-    allPokemon.sort((unPokemon, otroPokemon) => otroPokemon.nombre.localeCompare(unPokemon.nombre));
-    return (allPokemon);
-}
+selecZa.addEventListener('click',() =>{
+    allPokemones.innerHTML = mostrarPokemones((ordenarAz(pokemonNew)).reverse());
+});
+
 
 //Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 
@@ -136,11 +142,15 @@ const ordenarAsc = (allPokemon) => {
     return (allPokemon);
 }
 
-//Funcionalidad de ordenar descedentemente por frecuencia de aparicion
-const ordenarDes = (allPokemon) => {
-    allPokemon.sort((unaMascota, otraMascota) => otraMascota.frecuencia - unaMascota.frecuencia);
-    return (allPokemon);
-}
+selecAsc.addEventListener('click',() =>{
+    allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
+});
+
+selecDesc.addEventListener('click',() =>{
+    allPokemones.innerHTML = mostrarPokemones((ordenarAsc(pokemonNew)).reverse());
+});
+
+
 
 //funcionalidad para obtener todos los tipos de pokemones 
 
@@ -230,10 +240,36 @@ const mostrarPorDebilidades = (allPokemon) => {
     return mostrar;
 }
 
-/*console.log(obtenerDebilidades(pokemonNew));*/
-/*const mostrarPorDebilidadesPantalla = () => {
-    allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
-}*/
+     //Funcionalidad de Obterner porcentaje de huevos a eclosionar 
+     const obtenerPorcentaje = (allPokemon) =>{
+        let km =[];
+        for (let i =0; i<allPokemon.length;i++){
+                km[i]= allPokemon[i].huevo;
+        }
+        const distintos = [...new Set(km)];
+        return(distintos);
+
+     }
+     const  porcentaje =(allPokemon)=>{
+        const distancia = obtenerPorcentaje(allPokemon);
+        let resultado =[], aux=0;
+    
+        for(let i=0; i< allPokemon.length; i++){
+          
+            if(distancia[0] == allPokemon[i].huevo){
+              
+                resultado[aux] =allPokemon[i];
+                aux++;
+            }
+
+        }
+        document.getElementById('texto').innerHTML =`<h2>El Porcentaje de los huevos a eclosionar con ${resultado[0].huevo}, es de ${((resultado.length/allPokemon.length)*100).toFixed(2)}%</h2>`;
+        return (resultado);
+     }
+
+     const mostrarPorcentaje = () => {
+        allPokemones.innerHTML = mostrarPokemones(porcentaje(pokemonNew));
+     }
 
 const salir = () => {
     usuario.value = '';

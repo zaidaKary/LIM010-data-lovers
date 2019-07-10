@@ -27,10 +27,10 @@
           <ul>
             <li class="item-menu"><a href="#orden"><span class="glyphicon glyphicon-sort"></span> ORDENAR</a>
               <ul class="sub-menu uno">
-                <li><a href="javascript:mostrarOrdenadoAzPantalla()" >DE A - Z</a></li>
-                <li><a href="javascript:mostrarOrdenadoZaPantalla()">DE Z - A</a></li>
-                <li><a href="javascript:mostrarOrdenadoAsc()">ASCENDENTE</a></li>
-                <li><a href="javascript:mostrarOrdenadoDes()">DESCENDENTE</a></li>
+                <li><a id="az">DE A - Z</a></li>
+                <li><a id="za">DE Z - A</a></li>
+                <li><a id="asc">ASCENDENTE</a></li>
+                <li><a id="desc">DESCENDENTE</a></li>
               </ul>
             </li>
             <li class="item-menu"><a href="#"><span class="glyphicon glyphicon-filter"></span> FILTRAR</a>
@@ -39,7 +39,7 @@
                 <li><a href="javaScript: mostrarPorDebilidadesPantalla()">POR DEBILIDAD</a></li>
               </ul>
             </li>
-            <li><a href="#"><span class="glyphicon glyphicon-tasks"></span> PORCENTAJE</a></li>
+            <li><a href="javascript: mostrarPorcentaje()"><span class="glyphicon glyphicon-tasks"></span> PORCENTAJE</a></li>
             <li><a href="javascript:salir()"><span class="glyphicon glyphicon-log-in"></span> CERRAR SESIÓN</a></li>
           </ul>
           </nav>
@@ -77,14 +77,15 @@
       <div class="contenedor-buscar">
       <input class="buscador" type="text" id="nombre" placeholder="Ingrese el nombre del pokémon..." size="30">
       <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
+      
     </div>
-
     <div id="ComboBoxFiltrar">
       <select id="seleccion-tipo"></select>
 
     </div>
     
      <div class="contenedor " id="allPokemones">
+       
         <!--imagenes de pokemones-->
     </div>
     </section>
