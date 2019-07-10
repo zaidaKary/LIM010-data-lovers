@@ -35,7 +35,7 @@
             </li>
             <li class="item-menu"><a href="#"><span class="glyphicon glyphicon-filter"></span> FILTRAR</a>
               <ul class="sub-menu dos">
-                <li><a href="javascript: comboBox()">POR TIPO</a></li>
+                <li><a id="porTipo">POR TIPO</a></li>
                 <li><a href="javaScript: mostrarPorDebilidadesPantalla()">POR DEBILIDAD</a></li>
               </ul>
             </li>
@@ -78,6 +78,12 @@
       <input class="buscador" type="text" id="nombre" placeholder="Ingrese el nombre del pokémon..." size="30">
       <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
     </div>
+
+    <div id="ComboBoxFiltrar">
+      <select id="seleccion-tipo"></select>
+
+    </div>
+    
      <div class="contenedor " id="allPokemones">
         <!--imagenes de pokemones-->
     </div>
