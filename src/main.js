@@ -14,7 +14,12 @@ const BarraMenu = document.getElementById('barra-menu');
 const BotonIngresar = document.getElementById('BotonIngresar');
 const botonBuscar = document.getElementById('botonBuscar');
 const regresar = document.getElementById('regresar');
-
+const selecAz =document.getElementById('az');
+const selecZa =document.getElementById('za');
+const selecAsc =document.getElementById('asc');
+const selecDesc =document.getElementById('desc');
+//ComboBox
+const Tipos = document.getElementById('tipos');
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
 
@@ -34,7 +39,7 @@ BotonIngresar.addEventListener('click', () => {
         document.getElementById('contrasenha').value = '';
     }
     else if (usuario.value === '1' && contrasenha.value === '1') {
-        
+
         VistaLogin.classList.add('hide');
         VistaInicio.classList.remove('hide');
         BarraMenu.classList.remove('hide');
@@ -60,15 +65,15 @@ botonBuscar.addEventListener('click', () => {
 });
 
 //Funcionalidad del boton regresar 
-    regresar.addEventListener('click', () => {
-    obtenerNombre.value ='';    
+regresar.addEventListener('click', () => {
+    obtenerNombre.value = '';
     allPokemones.classList.remove('hide');
     unPokemon.classList.add('hide');
 
 });
-const MaysPrimera =(string)=>{
+const MaysPrimera = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+}
 
 //Funcion Buscar Pokemones
 const buscarPorNombre = (allPokemon) => {
@@ -113,75 +118,63 @@ const mostrarPokemones = (allPokemon) => {
     return mostrar;
 };
 allPokemones.innerHTML = mostrarPokemones(pokemonNew);
-
 //Funcionaliad de ordenar Pokemones de A-z
-const ordenarAz =(allPokemon ) =>{
+const ordenarAz = (allPokemon) => {
     allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
-    return(allPokemon);
+    return (allPokemon);
 };
 
-const  mostrarOrdenadoAzPantalla = () =>{
+selecAz.addEventListener('click',()=>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
- }
-
-
+});
 
 //Funcionaliad de ordenar Pokemones de Z-a
-const ordenarZa =(allPokemon ) =>{
-    allPokemon.sort((unPokemon, otroPokemon) => otroPokemon.nombre.localeCompare(unPokemon.nombre));
-    return(allPokemon);
-}
-
-const  mostrarOrdenadoZaPantalla = () =>{
-    allPokemones.innerHTML = mostrarPokemones(ordenarZa(pokemonNew));
- }
+selecZa.addEventListener('click',() =>{
+    allPokemones.innerHTML = mostrarPokemones((ordenarAz(pokemonNew)).reverse());
+});
 
 
 //Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 
- const ordenarAsc =(allPokemon) =>{
+const ordenarAsc = (allPokemon) => {
     allPokemon.sort((unaMascota, otraMascota) => unaMascota.frecuencia - otraMascota.frecuencia);
-    return(allPokemon);
- }
- const  mostrarOrdenadoAsc = () =>{
+    return (allPokemon);
+}
+
+selecAsc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
- }
+});
+
+selecDesc.addEventListener('click',() =>{
+    allPokemones.innerHTML = mostrarPokemones((ordenarAsc(pokemonNew)).reverse());
+});
 
 
- //Funcionalidad de ordenar descedentemente por frecuencia de aparicion
- const ordenarDes =(allPokemon) =>{
-    allPokemon.sort((unaMascota, otraMascota) => otraMascota.frecuencia - unaMascota.frecuencia);
-    return(allPokemon);
- }
- const  mostrarOrdenadoDes = () =>{
-    allPokemones.innerHTML = mostrarPokemones(ordenarDes(pokemonNew));
- }
- 
+
 //funcionalidad para obtener todos los tipos de pokemones 
 
-const obtenerTipos = (allPokemon) =>{
-    let tipos =[], aux =0;
-    for (let i =0; i<allPokemon.length;i++){
-        
-        for(let j =0; j< allPokemon[i].tipo.length; j++)
-        {
-            tipos[aux]= allPokemon[i].tipo[j];
-            aux = aux+1;
+const obtenerTipos = (allPokemon) => {
+    let tipos = [], aux = 0;
+    for (let i = 0; i < allPokemon.length; i++) {
+
+        for (let j = 0; j < allPokemon[i].tipo.length; j++) {
+            tipos[aux] = allPokemon[i].tipo[j];
+            aux = aux + 1;
         }
     }
     const distintos = [...new Set(tipos)];
-    return(distintos);
+    return (distintos);
 }
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
 
-const  mostrarPorTipos= (allPokemon) =>{
+const mostrarPorTipos = (allPokemon) => {
     const tipos = obtenerTipos(allPokemon);
     let mostrar = '';
-    if(tipos.includes("Fire")){
-        for(let i=0; i<allPokemon.length; i++ ){
-            for(let j=0;j<allPokemon[i].tipo.length; j++){
-                if(allPokemon[i].tipo[j].includes("Fire")){
+    if (tipos.includes("tipos")) {
+        for (let i = 0; i < allPokemon.length; i++) {
+            for (let j = 0; j < allPokemon[i].tipo.length; j++) {
+                if (allPokemon[i].tipo[j].includes("Fire")) {
                     let llamado = `<div id="pokemones">
                         <div class="contenedor-img">
                         <img src= "${allPokemon[i].imagen}" />
@@ -190,48 +183,76 @@ const  mostrarPorTipos= (allPokemon) =>{
                         <p class="p-nombre">${allPokemon[i].nombre}</p>
                         <p class="p-numbertipo">${allPokemon[i].number}</p>
                         <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
-                     mostrar += llamado;
+                    mostrar += llamado;
                 }
-                
+
             }
         }
 
-        }
-
-        return mostrar;
     }
 
-    const  mostrarTipos = () =>{
-        allPokemones.innerHTML = mostrarPorTipos(pokemonNew);
-     }
-    
-    
+    return mostrar;
+}
+
+const comboBox = () => {
+    allPokemones.innerHTML = `<div id="contenedorFiltrar"><select name="selCombo" id="tipos" class="comboBox"> 
+    <option value="Grass">Grass</option>
+    <option value="Poison">Poison</option>
+    <option value="Fire">Fire</option>
+    <option value="Flying">Flying</option> 
+    <option value="Water">Water</option>
+    <option value="Bug">Bug</option>
+    <option value="Normal">Normal</option>
+    <option value="Electric">Electric</option> 
+    <option value="Ground">Ground</option>
+    <option value="Fighting">Fighting</option>
+    <option value="Psychic">Psychic</option>
+    <option value="Rock">Rock</option>
+    <option value="Ice">Ice</option> 
+    <option value="Ghost">Ghost</option>
+    <option value="Dragon">Dragon</option> 
+    </select></div> `;
+}
+
+/*Tipos.addEventListener('change',() => {
+ const seleccion = document.getElementById('tipos').value;
+ allPokemones.innerHTML = valor
+});*/
+
+
+
+
+
+const mostrarTipos = () => {
+    allPokemones.innerHTML = mostrarPorTipos(pokemonNew);
+}
+
+
 //funcionalidad para obtener todos las debilidades  de pokemones 
 
-const obtenerDebilidades = (allPokemon) =>{
-    let debilidades =[], aux =0;
-    for (let i =0; i<allPokemon.length;i++){
-        
-        for(let j =0; j< allPokemon[i].debilidades.length; j++)
-        {
-            debilidades[aux]= allPokemon[i].debilidades[j];
-            aux = aux+1;
+const obtenerDebilidades = (allPokemon) => {
+    let debilidades = [], aux = 0;
+    for (let i = 0; i < allPokemon.length; i++) {
+
+        for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
+            debilidades[aux] = allPokemon[i].debilidades[j];
+            aux = aux + 1;
         }
     }
     const distintos = [...new Set(debilidades)];
-    return(distintos);
+    return (distintos);
 }
 
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
 
-const  mostrarPorDebilidades= (allPokemon) =>{
+const mostrarPorDebilidades = (allPokemon) => {
     const debilidades = obtenerDebilidades(allPokemon);
     let mostrar = '';
-    if(debilidades.includes("Fire")){
-        for(let i=0; i<allPokemon.length; i++ ){
-            for(let j=0;j<allPokemon[i].debilidades.length; j++){
-                if(allPokemon[i].debilidades[j].includes("Fire")){
+    if (debilidades.includes("Fire")) {
+        for (let i = 0; i < allPokemon.length; i++) {
+            for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
+                if (allPokemon[i].debilidades[j].includes("Fire")) {
                     let llamado = `<div id="pokemones">
                         <div class="contenedor-img">
                         <img src= "${allPokemon[i].imagen}" />
@@ -240,20 +261,17 @@ const  mostrarPorDebilidades= (allPokemon) =>{
                         <p class="p-nombre">${allPokemon[i].nombre}</p>
                         <p class="p-numbertipo">${allPokemon[i].number}</p>
                         <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
-                     mostrar += llamado;
+                    mostrar += llamado;
                 }
-                
+
             }
         }
 
-        }
-
-        return mostrar;
     }
 
-    const  mostrarPorDebilidadesPantalla = () =>{
-        allPokemones.innerHTML = mostrarPorDebilidades(pokemonNew);
-     }
+    return mostrar;
+}
+
 
      //Funcionalidad de Obterner porcentaje de huevos a eclosionar 
      const obtenerPorcentaje = (allPokemon) =>{
@@ -286,10 +304,10 @@ const  mostrarPorDebilidades= (allPokemon) =>{
         allPokemones.innerHTML = mostrarPokemones(porcentaje(pokemonNew));
      }
 
-     const salir= () =>{
-         usuario.value = '';
-         contrasenha.value ='';
-         BarraMenu.classList.add('hide');
-         VistaInicio.classList.add('hide');
-         VistaLogin.classList.remove('hide');
-     }
+const salir = () => {
+    usuario.value = '';
+    contrasenha.value = '';
+    BarraMenu.classList.add('hide');
+    VistaInicio.classList.add('hide');
+    VistaLogin.classList.remove('hide');
+}

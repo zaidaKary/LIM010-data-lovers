@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -27,15 +27,15 @@
           <ul>
             <li class="item-menu"><a href="#orden"><span class="glyphicon glyphicon-sort"></span> ORDENAR</a>
               <ul class="sub-menu uno">
-                <li><a href="javascript:mostrarOrdenadoAzPantalla()" >DE A - Z</a></li>
-                <li><a href="javascript:mostrarOrdenadoZaPantalla()">DE Z - A</a></li>
-                <li><a href="javascript:mostrarOrdenadoAsc()">ASCENDENTE</a></li>
-                <li><a href="javascript:mostrarOrdenadoDes()">DESCENDENTE</a></li>
+                <li><a id="az">DE A - Z</a></li>
+                <li><a id="za">DE Z - A</a></li>
+                <li><a id="asc">ASCENDENTE</a></li>
+                <li><a id="desc">DESCENDENTE</a></li>
               </ul>
             </li>
             <li class="item-menu"><a href="#"><span class="glyphicon glyphicon-filter"></span> FILTRAR</a>
               <ul class="sub-menu dos">
-                <li><a href="javascript: mostrarTipos()">POR TIPO</a></li>
+                <li><a href="javascript: comboBox()">POR TIPO</a></li>
                 <li><a href="javaScript: mostrarPorDebilidadesPantalla()">POR DEBILIDAD</a></li>
               </ul>
             </li>
