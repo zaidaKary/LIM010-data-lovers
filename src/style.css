@@ -269,11 +269,39 @@ background: rgba(248, 96, 8, 1);
 .item-menu:active ~ .sub-menu, 
 .item-menu:hover .sub-menu{ 
 display: block; 
-} 
+}
+.menu ul li:hover .uno {
+  display: initial;
+  width: -1px;
+  height: 251px;
+  background: rgba(248, 96, 8, 1);
+}
+.menu ul li:hover .dos {
+  display: initial;
+  width: -1px;
+  height: 251px;
+  background: rgba(248, 96, 8, 1);
+}
 }
 /*Haciendo el responsive para web*/
 
 @media (min-width:1024px) {
+  
+  /*Barra de submenu*/
+  .menu ul li:hover .uno {
+    display: block;
+    position: absolute;
+    width: 135px;
+    height: 248px;
+    background: rgba(248, 96, 8, 1);
+  }
+  .menu ul li:hover .dos {
+  display: block;
+  position: absolute;
+  width: 122px;
+  height: 144px;
+  background: rgba(248, 96, 8, 1);
+  }
 
   /*Haciendo el responsive para la página de mostrar*/
 
