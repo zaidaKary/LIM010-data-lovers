@@ -337,5 +337,18 @@ display: block;
   width: 79px;
   height: 79px;
   align-self: center;
-  margin: 26px;
+  margin: 60px;
+}
+.comboBox {
+  margin: 61px;
+  width: 166px;
+  padding: 8px;
+}
+.contenedor{
+  background-image: url(img/fondoMenu.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
 }
