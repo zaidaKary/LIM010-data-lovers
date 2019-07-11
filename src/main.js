@@ -24,6 +24,7 @@ const porDebilidad = document.getElementById('porDebilidad');
 //ComboBox para ocultar
 const ComboBoxTipo = document.getElementById('ComboBoxFiltrarTipo');
 const ComboBoxDebilidad = document.getElementById('ComboBoxFiltrarDebilidad');
+const ComboBoxPorcentaje = document.getElementById('comboBoxPorcentaje');
 //Porcentaje
 const porcentaje = document.getElementById('porcentaje');
 //Variable de la Data
@@ -52,7 +53,7 @@ BotonIngresar.addEventListener('click', () => {
         BarraMenu.classList.remove('barra-menu');
         ComboBoxTipo.classList.add('ocultarComboBox');
         ComboBoxDebilidad.classList.add('ocultarComboBox');
-
+        ComboBoxPorcentaje.classList.add('ocultarComboBox');
 
     } else {
         if (contador == 0) {
@@ -146,6 +147,7 @@ selecAz.addEventListener('click',()=>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
     ComboBoxTipo.classList.add('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
 });
 
 //Funcionaliad de ordenar Pokemones de Z-a
@@ -153,14 +155,21 @@ selecZa.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAz(pokemonNew)).reverse());
     ComboBoxTipo.classList.add('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
 });
 //Funcionalidad de ordenar Pokemones ascendentemente
 selecAsc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
 });
 //Funcionalidad de ordenar Pokemones descendentemente
 selecDesc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAsc(pokemonNew)).reverse());
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
 });
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
@@ -265,14 +274,17 @@ const pintarEnComboBox = (p1, p2) => {
 
    porTipo.addEventListener('click', () => {
     pintarEnComboBox(tiposPokemones, seleccionComboBoxTipo);
-    ComboBoxTipo.classList.replace('ocultarComboBox', 'centrar-flex');
+    ComboBoxTipo.classList.remove('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
+
     
    });
    porDebilidad.addEventListener('click', () => {
     pintarEnComboBox(debilidadPokemones, seleccionComboBoxDebilidad);
     ComboBoxDebilidad.classList.remove('ocultarComboBox');
     ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
    });
 
 /*Haciendo el event target*/
@@ -294,8 +306,11 @@ seleccionComboBoxDebilidad.addEventListener('change', (event) => {
 const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
 const kmPokemones = obtenerPorcentaje(pokemonNew);
 
-   porcentaje.addEventListener('click', () => {
+porcentaje.addEventListener('click', () => {
     pintarEnComboBox(kmPokemones, seleccionOpcionComboBox2);
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.remove('ocultarComboBox');
    });
 
 /*Haciendo el event target*/
