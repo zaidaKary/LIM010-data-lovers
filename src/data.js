@@ -39,7 +39,56 @@ const nuevaDataPokemones = () => {
 
 window.nuevaDataPokemones = nuevaDataPokemones;
 
-//flick card
+//Funcionaliad de ordenar Pokemones de A-z
+const ordenarAz = (allPokemon) => {
+  allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
+  return (allPokemon);
+};
+//Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
+const ordenarAsc = (allPokemon) => {
+  allPokemon.sort((unaMascota, otraMascota) => unaMascota.frecuencia - otraMascota.frecuencia);
+  return (allPokemon);
+}
 
+//funcionalidad para obtener todos los tipos de pokemones 
+
+const obtenerTipos = (allPokemon) => {
+  let tipos = [], aux = 0;
+  for (let i = 0; i < allPokemon.length; i++) {
+
+      for (let j = 0; j < allPokemon[i].tipo.length; j++) {
+          tipos[aux] = allPokemon[i].tipo[j];
+          aux = aux + 1;
+      }
+  }
+  const distintos = [...new Set(tipos)];
+  return (distintos);
+}
+//funcionalidad para obtener todos las debilidades  de pokemones 
+
+const obtenerDebilidades = (allPokemon) => {
+  let debilidades = [], aux = 0;
+  for (let i = 0; i < allPokemon.length; i++) {
+
+      for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
+          debilidades[aux] = allPokemon[i].debilidades[j];
+          aux = aux + 1;
+      }
+  }
+  const distintos = [...new Set(debilidades)];
+  return (distintos);
+}
+
+    //Funcionalidad de Obterner porcentaje de huevos a eclosionar 
+     const obtenerPorcentaje = (allPokemon) =>{
+        let km =[];
+        for (let i =0; i<allPokemon.length;i++){
+                km[i]= allPokemon[i].huevo;
+        }
+        const distintos = [...new Set(km)];
+        return(distintos);
+
+     }
+//flick card
 
 
