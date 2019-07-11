@@ -36,7 +36,7 @@
             <li class="item-menu"><a href="#"><span class="glyphicon glyphicon-filter"></span> FILTRAR</a>
               <ul class="sub-menu dos">
                 <li><a id="porTipo">POR TIPO</a></li>
-                <li><a href="javaScript: mostrarPorDebilidadesPantalla()">POR DEBILIDAD</a></li>
+                <li><a id="porDebilidad">POR DEBILIDAD</a></li>
               </ul>
             </li>
             <li><a href="javascript: mostrarPorcentaje()"><span class="glyphicon glyphicon-tasks"></span> PORCENTAJE</a></li>
@@ -79,13 +79,15 @@
       <button id="botonBuscar" class="glyphicon glyphicon-search" type="button"></button>
       
     </div>
-    <div id="ComboBoxFiltrar">
+    <div id="ComboBoxFiltrarTipo" class="ocultarComboBox">
       <select id="seleccion-tipo"></select>
-
     </div>
     
-     <div class="contenedor " id="allPokemones">
-       
+    <div id="ComboBoxFiltrarDebilidad" class="ocultarComboBox">
+      <select id="seleccion-debilidad"></select>
+    </div>
+    
+    <div class="contenedor " id="allPokemones">
         <!--imagenes de pokemones-->
     </div>
     </section>

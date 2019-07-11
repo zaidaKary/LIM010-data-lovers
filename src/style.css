@@ -372,3 +372,12 @@ display: block;
   width: 166px;
   padding: 8px;
 }
+.ocultarComboBox {
+  display: none;
+
+}
+
+.centrar-flex{
+  display: flex;
+  justify-content: center;
+}
