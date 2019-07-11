@@ -146,6 +146,7 @@ selecAz.addEventListener('click',()=>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
     ComboBoxTipo.classList.add('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
+    info.classList.add('hide'); 
 });
 
 //Funcionaliad de ordenar Pokemones de Z-a
@@ -153,22 +154,23 @@ selecZa.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAz(pokemonNew)).reverse());
     ComboBoxTipo.classList.add('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
+    info.classList.add('hide'); 
 });
 //Funcionalidad de ordenar Pokemones ascendentemente
 selecAsc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
+    info.classList.add('hide'); 
 });
 //Funcionalidad de ordenar Pokemones descendentemente
 selecDesc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAsc(pokemonNew)).reverse());
+    info.classList.add('hide'); 
 });
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
 
 const mostrarPorTipos = (allPokemon,p2) => {
-    const tipos = obtenerTipos(allPokemon);
-    let mostrar = '';
-    if (tipos.includes(p2)) {
+    let mostrar = '',cont =0;
         for (let i = 0; i < allPokemon.length; i++) {
             for (let j = 0; j < allPokemon[i].tipo.length; j++) {
                 if (allPokemon[i].tipo[j].includes(p2)) {
@@ -180,14 +182,14 @@ const mostrarPorTipos = (allPokemon,p2) => {
                         <p class="p-nombre">${allPokemon[i].nombre}</p>
                         <p class="p-numbertipo">${allPokemon[i].number}</p>
                         <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
+                        cont++;
                     mostrar += llamado;
                 }
 
             }
         }
-
-    }
-
+    info.classList.remove('hide');       
+    texto.innerHTML = `La cantidad de pokemones de tipo ${p2} es de: ${cont}.`;
     return mostrar;
 }
 
@@ -195,8 +197,7 @@ const mostrarPorTipos = (allPokemon,p2) => {
 
 const mostrarPorDebilidades = (allPokemon,p2) => {
     const debilidades = obtenerDebilidades(allPokemon);
-    let mostrar = '';
-    if (debilidades.includes(p2)) {
+    let mostrar = '', cont =0;
         for (let i = 0; i < allPokemon.length; i++) {
             for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
                 if (allPokemon[i].debilidades[j].includes(p2)) {
@@ -208,20 +209,20 @@ const mostrarPorDebilidades = (allPokemon,p2) => {
                         <p class="p-nombre">${allPokemon[i].nombre}</p>
                         <p class="p-numbertipo">${allPokemon[i].number}</p>
                         <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
+                        cont++;
                     mostrar += llamado;
                 }
 
             }
-        }
-
-    }
-
+        }  
+    info.classList.remove('hide');       
+    texto.innerHTML = `La cantidad de pokemones con  debilidad ${p2} es de: ${cont}.`;
     return mostrar;
 }
 
  
      const  mostrarPorcentaje =(allPokemon,p2)=>{
-        let mostrar = '';
+        let mostrar = '', cont =0;
             for (let i = 0; i < allPokemon.length; i++) {
                 
                     if (allPokemon[i].huevo.includes(p2)) {
@@ -234,9 +235,12 @@ const mostrarPorDebilidades = (allPokemon,p2) => {
                             <p class="p-numbertipo">${allPokemon[i].number}</p>
                             <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
                         mostrar += llamado;
+                        cont++;
                     }    
             }
-    
+        
+        info.classList.remove('hide');    
+        texto.innerHTML = `El porcentaje de Pokemones con ${p2}km es de: ${((cont/allPokemon.length)*100).toFixed(2)}%`;
         return mostrar;
      }
 
