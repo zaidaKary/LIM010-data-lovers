@@ -120,12 +120,7 @@ const mostrarPokemones = (allPokemon) => {
     return mostrar;
 };
 allPokemones.innerHTML = mostrarPokemones(pokemonNew);
-//Funcionaliad de ordenar Pokemones de A-z
-const ordenarAz = (allPokemon) => {
-    allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
-    return (allPokemon);
-};
-
+//Funcionalidad de Ordenar A-Z
 selecAz.addEventListener('click',()=>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
 });
@@ -134,39 +129,14 @@ selecAz.addEventListener('click',()=>{
 selecZa.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAz(pokemonNew)).reverse());
 });
-
-
-//Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
-
-const ordenarAsc = (allPokemon) => {
-    allPokemon.sort((unaMascota, otraMascota) => unaMascota.frecuencia - otraMascota.frecuencia);
-    return (allPokemon);
-}
-
+//Funcionalidad de ordenar Pokemones ascendentemente
 selecAsc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
 });
-
+//Funcionalidad de ordenar Pokemones descendentemente
 selecDesc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAsc(pokemonNew)).reverse());
 });
-
-
-
-//funcionalidad para obtener todos los tipos de pokemones 
-
-const obtenerTipos = (allPokemon) => {
-    let tipos = [], aux = 0;
-    for (let i = 0; i < allPokemon.length; i++) {
-
-        for (let j = 0; j < allPokemon[i].tipo.length; j++) {
-            tipos[aux] = allPokemon[i].tipo[j];
-            aux = aux + 1;
-        }
-    }
-    const distintos = [...new Set(tipos)];
-    return (distintos);
-}
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
 
@@ -194,23 +164,6 @@ const mostrarPorTipos = (allPokemon,p2) => {
     }
 
     return mostrar;
-}
-
-/*console.log(obtenerTipos(pokemonNew)); */
-
-//funcionalidad para obtener todos las debilidades  de pokemones 
-
-const obtenerDebilidades = (allPokemon) => {
-    let debilidades = [], aux = 0;
-    for (let i = 0; i < allPokemon.length; i++) {
-
-        for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
-            debilidades[aux] = allPokemon[i].debilidades[j];
-            aux = aux + 1;
-        }
-    }
-    const distintos = [...new Set(debilidades)];
-    return (distintos);
 }
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
@@ -241,16 +194,7 @@ const mostrarPorDebilidades = (allPokemon) => {
     return mostrar;
 }
 
-     //Funcionalidad de Obterner porcentaje de huevos a eclosionar 
-     const obtenerPorcentaje = (allPokemon) =>{
-        let km =[];
-        for (let i =0; i<allPokemon.length;i++){
-                km[i]= allPokemon[i].huevo;
-        }
-        const distintos = [...new Set(km)];
-        return(distintos);
-
-     }
+ 
      const  mostrarPorcentaje =(allPokemon,p2)=>{
         const distancia = obtenerPorcentaje(allPokemon);
         let mostrar = '';
@@ -272,7 +216,6 @@ const mostrarPorDebilidades = (allPokemon) => {
         return mostrar;
      }
 
-     
 
 const salir = () => {
     usuario.value = '';
