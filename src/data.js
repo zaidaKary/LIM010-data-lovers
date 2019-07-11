@@ -30,7 +30,9 @@ const nuevaDataPokemones = () => {
       'caramelo': POKEMON.pokemon[i].candy,
       'contadorDeCaramelos': POKEMON.pokemon[i].candy_count,
       'huevo': POKEMON.pokemon[i].egg,
-      'debilidades':POKEMON.pokemon[i].weaknesses
+      'debilidades':POKEMON.pokemon[i].weaknesses,
+      'frecuencia':POKEMON.pokemon[i].avg_spawns
+
 
     });
    }
@@ -46,9 +48,11 @@ const ordenarAz = (allPokemon) => {
 };
 //Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 const ordenarAsc = (allPokemon) => {
-  allPokemon.sort((unaMascota, otraMascota) => unaMascota.frecuencia - otraMascota.frecuencia);
+  allPokemon.sort((unPokemon, otroPokemon) =>unPokemon.frecuencia -  otroPokemon.frecuencia);
   return (allPokemon);
 }
+
+
 
 //funcionalidad para obtener todos los tipos de pokemones 
 
