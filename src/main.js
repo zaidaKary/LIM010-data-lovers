@@ -58,6 +58,18 @@ BotonIngresar.addEventListener('click', () => {
     }
 });
 
+//Ingresar con Enter
+const input = document.getElementById('contrasenha');
+input.addEventListener("keyup", (event) => {
+
+  if (event.keyCode === 13) {
+
+    event.preventDefault();
+
+    document.getElementById('BotonIngresar').click();
+  }
+});
+
 //Funcionalidad del Boton Buscar
 botonBuscar.addEventListener('click', () => {
     uno.innerHTML = buscarPorNombre(pokemonNew);
@@ -196,7 +208,6 @@ const mostrarPorDebilidades = (allPokemon) => {
 
  
      const  mostrarPorcentaje =(allPokemon,p2)=>{
-        const distancia = obtenerPorcentaje(allPokemon);
         let mostrar = '';
             for (let i = 0; i < allPokemon.length; i++) {
                 
