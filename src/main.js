@@ -20,6 +20,7 @@ const selecAsc =document.getElementById('asc');
 const selecDesc =document.getElementById('desc');
 //ComboBox
 const porTipo = document.getElementById('porTipo');
+const porcentaje = document.getElementById('porcentaje');
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
 
@@ -250,26 +251,28 @@ const mostrarPorDebilidades = (allPokemon) => {
         return(distintos);
 
      }
-     const  porcentaje =(allPokemon)=>{
+     const  mostrarPorcentaje =(allPokemon,p2)=>{
         const distancia = obtenerPorcentaje(allPokemon);
-        let resultado =[], aux=0;
-    
-        for(let i=0; i< allPokemon.length; i++){
-          
-            if(distancia[0] == allPokemon[i].huevo){
-              
-                resultado[aux] =allPokemon[i];
-                aux++;
+        let mostrar = '';
+            for (let i = 0; i < allPokemon.length; i++) {
+                
+                    if (allPokemon[i].huevo.includes(p2)) {
+                        let llamado = `<div id="pokemones">
+                            <div class="contenedor-img">
+                            <img src= "${allPokemon[i].imagen}" />
+                            </div>
+                            <div class="contenedor-info">
+                            <p class="p-nombre">${allPokemon[i].nombre}</p>
+                            <p class="p-numbertipo">${allPokemon[i].number}</p>
+                            <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
+                        mostrar += llamado;
+                    }    
             }
-
-        }
-        document.getElementById('texto').innerHTML =`<h2>El Porcentaje de los huevos a eclosionar con ${resultado[0].huevo}, es de ${((resultado.length/allPokemon.length)*100).toFixed(2)}%</h2>`;
-        return (resultado);
+    
+        return mostrar;
      }
 
-     const mostrarPorcentaje = () => {
-        allPokemones.innerHTML = mostrarPokemones(porcentaje(pokemonNew));
-     }
+     
 
 const salir = () => {
     usuario.value = '';
@@ -283,7 +286,7 @@ const salir = () => {
 const seleccionOpcionComboBox = document.getElementById('seleccion-tipo');
 const tiposPokemones = obtenerTipos(pokemonNew);
 
-const pintarTiposEnComboBox = (p1, p2) => {
+const pintarEnComboBox = (p1, p2) => {
     let template = '<option>Seleccione una opción...</option>';
     for (let i = 0; i< p1.length; i++) {
      template += `<option value=${p1[i]}>${p1[i].toUpperCase()}</option>`
@@ -292,7 +295,7 @@ const pintarTiposEnComboBox = (p1, p2) => {
    }
 
    porTipo.addEventListener('click', () => {
-    pintarTiposEnComboBox(tiposPokemones, seleccionOpcionComboBox);
+    pintarEnComboBox(tiposPokemones, seleccionOpcionComboBox);
    });
 
 /*Haciendo el event target*/
@@ -302,4 +305,25 @@ seleccionOpcionComboBox.addEventListener('change', (event) => {
     const tipoSeleccionado = event.target.value;
 
     allPokemones.innerHTML = `${mostrarPorTipos(pokemonNew,tipoSeleccionado)}`;
-})
+});
+
+
+/*Haciendo Templates literales para el porcentaje*/
+const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
+const kmPokemones = obtenerPorcentaje(pokemonNew);
+
+   porcentaje.addEventListener('click', () => {
+    pintarEnComboBox(kmPokemones, seleccionOpcionComboBox2);
+   });
+
+/*Haciendo el event target*/
+
+seleccionOpcionComboBox2.addEventListener('change', (event) => {
+
+    const seleccionado = event.target.value;
+
+    allPokemones.innerHTML = `${mostrarPorcentaje(pokemonNew,seleccionado)}`;
+});
+
+
+
