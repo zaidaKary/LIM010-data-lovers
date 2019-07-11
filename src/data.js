@@ -30,7 +30,6 @@ const nuevaDataPokemones = () => {
       'caramelo': POKEMON.pokemon[i].candy,
       'contadorDeCaramelos': POKEMON.pokemon[i].candy_count,
       'huevo': POKEMON.pokemon[i].egg,
-      'frecuencia':POKEMON.pokemon[i].avg_spawns,
       'debilidades':POKEMON.pokemon[i].weaknesses
 
     });
@@ -90,6 +89,6 @@ const obtenerDebilidades = (allPokemon) => {
         return(distintos);
 
      }
-
+//flick card
 
 
