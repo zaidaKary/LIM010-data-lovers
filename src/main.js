@@ -20,6 +20,11 @@ const selecAsc =document.getElementById('asc');
 const selecDesc =document.getElementById('desc');
 //ComboBox
 const porTipo = document.getElementById('porTipo');
+const porDebilidad = document.getElementById('porDebilidad');
+//ComboBox para ocultar
+const ComboBoxTipo = document.getElementById('ComboBoxFiltrarTipo');
+const ComboBoxDebilidad = document.getElementById('ComboBoxFiltrarDebilidad');
+//Porcentaje
 const porcentaje = document.getElementById('porcentaje');
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
@@ -45,6 +50,10 @@ BotonIngresar.addEventListener('click', () => {
         VistaInicio.classList.remove('hide');
         BarraMenu.classList.remove('hide');
         BarraMenu.classList.remove('barra-menu');
+        ComboBoxTipo.classList.add('ocultarComboBox');
+        ComboBoxDebilidad.classList.add('ocultarComboBox');
+
+
     } else {
         if (contador == 0) {
             VistaLogin.classList.add('hide');
@@ -123,11 +132,15 @@ allPokemones.innerHTML = mostrarPokemones(pokemonNew);
 //Funcionalidad de Ordenar A-Z
 selecAz.addEventListener('click',()=>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
 });
 
 //Funcionaliad de ordenar Pokemones de Z-a
 selecZa.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAz(pokemonNew)).reverse());
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
 });
 //Funcionalidad de ordenar Pokemones ascendentemente
 selecAsc.addEventListener('click',() =>{
@@ -168,13 +181,13 @@ const mostrarPorTipos = (allPokemon,p2) => {
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
 
-const mostrarPorDebilidades = (allPokemon) => {
+const mostrarPorDebilidades = (allPokemon,p2) => {
     const debilidades = obtenerDebilidades(allPokemon);
     let mostrar = '';
-    if (debilidades.includes("Fire")) {
+    if (debilidades.includes(p2)) {
         for (let i = 0; i < allPokemon.length; i++) {
             for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
-                if (allPokemon[i].debilidades[j].includes("Fire")) {
+                if (allPokemon[i].debilidades[j].includes(p2)) {
                     let llamado = `<div id="pokemones">
                         <div class="contenedor-img">
                         <img src= "${allPokemon[i].imagen}" />
@@ -226,8 +239,10 @@ const salir = () => {
 }
 
 /*Haciendo Templates literales*/
-const seleccionOpcionComboBox = document.getElementById('seleccion-tipo');
+const seleccionComboBoxTipo = document.getElementById('seleccion-tipo');
 const tiposPokemones = obtenerTipos(pokemonNew);
+const seleccionComboBoxDebilidad = document.getElementById('seleccion-debilidad');
+const debilidadPokemones = obtenerDebilidades(pokemonNew);
 
 const pintarEnComboBox = (p1, p2) => {
     let template = '<option>Seleccione una opción...</option>';
@@ -238,19 +253,32 @@ const pintarEnComboBox = (p1, p2) => {
    }
 
    porTipo.addEventListener('click', () => {
-    pintarEnComboBox(tiposPokemones, seleccionOpcionComboBox);
+    pintarEnComboBox(tiposPokemones, seleccionComboBoxTipo);
+    ComboBoxTipo.classList.replace('ocultarComboBox', 'centrar-flex');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
+    
+   });
+   porDebilidad.addEventListener('click', () => {
+    pintarEnComboBox(debilidadPokemones, seleccionComboBoxDebilidad);
+    ComboBoxDebilidad.classList.remove('ocultarComboBox');
+    ComboBoxTipo.classList.add('ocultarComboBox');
    });
 
 /*Haciendo el event target*/
 
-seleccionOpcionComboBox.addEventListener('change', (event) => {
+seleccionComboBoxTipo.addEventListener('change', (event) => {
 
     const tipoSeleccionado = event.target.value;
 
     allPokemones.innerHTML = `${mostrarPorTipos(pokemonNew,tipoSeleccionado)}`;
 });
 
+seleccionComboBoxDebilidad.addEventListener('change', (event) => {
 
+    const debilidadSeleccionado = event.target.value;
+
+    allPokemones.innerHTML = `${mostrarPorDebilidades(pokemonNew,debilidadSeleccionado)}`;
+})
 /*Haciendo Templates literales para el porcentaje*/
 const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
 const kmPokemones = obtenerPorcentaje(pokemonNew);
