@@ -1,9 +1,8 @@
 /* FLIP CARD*/
-.contenedormenu {
+.maincontainer {
   position: relative;
   width: 250px;
   height: 320px;
-  background: green;
 }
 .thecard {
  position: absolute;
@@ -11,22 +10,22 @@
  height: 100%;
  transform-style: preserve-3d;
  transition: all 0.5s ease;
- background: yellow;
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
 }
 .thefront{
   position: absolute;
-  width: 100%;
-  height: 100%;
   backface-visibility: hidden;
-  background: #b90202;
-  color: #333;
 }
 .theback {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 67%;
+  height: 70%;
   backface-visibility: hidden;
-  background: #fafafa;
+  background: #5fcf80;
+  border-radius: 10px;
   color: #333;
-  transform: rotateY(100deg);
+  transform: rotateY(180deg);
 }

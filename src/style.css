@@ -1,4 +1,5 @@
 /*CSS PARA EL LOGIN WEB Y MOVIL*/
+@import url(flipcard.css);
 #VistaLogin {
   display: flex;
   align-items: center;

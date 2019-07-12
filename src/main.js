@@ -129,14 +129,24 @@ const buscarPorNombre = (allPokemon) => {
 const mostrarPokemones = (allPokemon) => {
     let mostrar = '';
     for (let i = 0; i < allPokemon.length; i++) {
-        let llamado = `<div id="pokemones">
+        let llamado = `<div class="maincontainer"><div class="thecard"><div id="pokemones" class="thefront">
                         <div class="contenedor-img">
                         <img src= "${allPokemon[i].imagen}" />
                         </div>
                         <div class="contenedor-info">
                         <p class="p-nombre">${allPokemon[i].nombre}</p>
                         <p class="p-numbertipo">${allPokemon[i].number}</p>
-                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
+                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>
+                        <div id="pokemones" class="theback">
+                        <p class="p-nombre">Nombre: ${allPokemon[i].nombre}</p>
+                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p>
+                        <p class="p-numbertipo">Altura: ${allPokemon[i].altura}</p>
+                        <p class="p-numbertipo">Peso: ${allPokemon[i].peso}</p>
+                        <p class="p-numbertipo">Caramelo: ${allPokemon[i].caramelo}</p>
+                        <p class="p-numbertipo">Huevo: ${allPokemon[i].huevo}</p>
+                        <p class="p-numbertipo">Debilidades: ${allPokemon[i].debilidades}</p>
+                        <p class="p-numbertipo">Frecuencia: ${allPokemon[i].frecuencia}</p>
+                        </div></div></div>`;
         mostrar += llamado;
     }
     return mostrar;
