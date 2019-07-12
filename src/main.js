@@ -24,6 +24,7 @@ const porDebilidad = document.getElementById('porDebilidad');
 //ComboBox para ocultar
 const ComboBoxTipo = document.getElementById('ComboBoxFiltrarTipo');
 const ComboBoxDebilidad = document.getElementById('ComboBoxFiltrarDebilidad');
+const ComboBoxPorcentaje = document.getElementById('comboBoxPorcentaje');
 //Porcentaje
 const porcentaje = document.getElementById('porcentaje');
 //Variable de la Data
@@ -52,7 +53,7 @@ BotonIngresar.addEventListener('click', () => {
         BarraMenu.classList.remove('barra-menu');
         ComboBoxTipo.classList.add('ocultarComboBox');
         ComboBoxDebilidad.classList.add('ocultarComboBox');
-
+        ComboBoxPorcentaje.classList.add('ocultarComboBox');
 
     } else {
         if (contador == 0) {
@@ -128,14 +129,24 @@ const buscarPorNombre = (allPokemon) => {
 const mostrarPokemones = (allPokemon) => {
     let mostrar = '';
     for (let i = 0; i < allPokemon.length; i++) {
-        let llamado = `<div id="pokemones">
+        let llamado = `<div class="maincontainer"><div class="thecard"><div id="pokemones" class="thefront">
                         <div class="contenedor-img">
                         <img src= "${allPokemon[i].imagen}" />
                         </div>
                         <div class="contenedor-info">
                         <p class="p-nombre">${allPokemon[i].nombre}</p>
                         <p class="p-numbertipo">${allPokemon[i].number}</p>
-                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
+                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>
+                        <div id="pokemones" class="theback">
+                        <p class="p-nombre">Nombre: ${allPokemon[i].nombre}</p>
+                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p>
+                        <p class="p-numbertipo">Altura: ${allPokemon[i].altura}</p>
+                        <p class="p-numbertipo">Peso: ${allPokemon[i].peso}</p>
+                        <p class="p-numbertipo">Caramelo: ${allPokemon[i].caramelo}</p>
+                        <p class="p-numbertipo">Huevo: ${allPokemon[i].huevo}</p>
+                        <p class="p-numbertipo">Debilidades: ${allPokemon[i].debilidades}</p>
+                        <p class="p-numbertipo">Frecuencia: ${allPokemon[i].frecuencia}</p>
+                        </div></div></div>`;
         mostrar += llamado;
     }
     return mostrar;
@@ -146,6 +157,7 @@ selecAz.addEventListener('click',()=>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
     ComboBoxTipo.classList.add('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
     info.classList.add('hide'); 
 });
 
@@ -154,16 +166,23 @@ selecZa.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAz(pokemonNew)).reverse());
     ComboBoxTipo.classList.add('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
     info.classList.add('hide'); 
 });
 //Funcionalidad de ordenar Pokemones ascendentemente
 selecAsc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
     info.classList.add('hide'); 
 });
 //Funcionalidad de ordenar Pokemones descendentemente
 selecDesc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAsc(pokemonNew)).reverse());
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
     info.classList.add('hide'); 
 });
 
@@ -244,14 +263,17 @@ const pintarEnComboBox = (p1, p2) => {
 
    porTipo.addEventListener('click', () => {
     pintarEnComboBox(tiposPokemones, seleccionComboBoxTipo);
-    ComboBoxTipo.classList.replace('ocultarComboBox', 'centrar-flex');
+    ComboBoxTipo.classList.remove('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
+
     
    });
    porDebilidad.addEventListener('click', () => {
     pintarEnComboBox(debilidadPokemones, seleccionComboBoxDebilidad);
     ComboBoxDebilidad.classList.remove('ocultarComboBox');
     ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
    });
 
 /*Haciendo el event target*/
@@ -273,8 +295,11 @@ seleccionComboBoxDebilidad.addEventListener('change', (event) => {
 const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
 const kmPokemones = obtenerPorcentaje(pokemonNew);
 
-   porcentaje.addEventListener('click', () => {
+porcentaje.addEventListener('click', () => {
     pintarEnComboBox(kmPokemones, seleccionOpcionComboBox2);
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.remove('ocultarComboBox');
    });
 
 /*Haciendo el event target*/

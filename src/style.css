@@ -1,4 +1,5 @@
 /*CSS PARA EL LOGIN WEB Y MOVIL*/
+@import url(flipcard.css);
 #VistaLogin {
   display: flex;
   align-items: center;
@@ -136,7 +137,7 @@ header {
   width: 94px;
   height: 60px;
 }
-header label{
+header label {
   display: none !important;
   float: right;
 }
@@ -193,6 +194,7 @@ background: rgba(248, 96, 8, 1);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
 }
 #VistaInicio .contenedor {
   display: flex;
@@ -252,14 +254,14 @@ background: rgba(248, 96, 8, 1);
     
     transform: translateX(-100%);
 }
-.menu ul{
+.menu ul {
     display: block;
     background: rgba(10, 10, 10, 0.9);
     width: 100%;
     height: 100vh;
 }
 
-.menu ul li:hover ul{
+.menu ul li:hover ul {
     display: none;
 }
 #btn-menu:checked ~ .menu {
@@ -347,7 +349,7 @@ display: block;
     background-attachment: fixed;
     height: 100vh;
 }
-#uno{
+#uno {
     align-self: center;
 }
 #especifico {
@@ -374,10 +376,11 @@ display: block;
 }
 .ocultarComboBox {
   display: none;
-
 }
-
-.centrar-flex{
-  display: flex;
-  justify-content: center;
+.mensaje-seleccione {
+  font-size: large;
+}
+.margen{
+  margin: 29px;
+  text-align: center;
 }
