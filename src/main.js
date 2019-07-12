@@ -170,48 +170,32 @@ selecDesc.addEventListener('click',() =>{
 //Funcionalidad para mostrar los pokemones por sus tipos 
 
 const mostrarPorTipos = (allPokemon,p2) => {
-    let mostrar = '',cont =0;
+    let mostrar = [],cont =0;
         for (let i = 0; i < allPokemon.length; i++) {
             for (let j = 0; j < allPokemon[i].tipo.length; j++) {
                 if (allPokemon[i].tipo[j].includes(p2)) {
-                    let llamado = `<div id="pokemones">
-                        <div class="contenedor-img">
-                        <img src= "${allPokemon[i].imagen}" />
-                        </div>
-                        <div class="contenedor-info">
-                        <p class="p-nombre">${allPokemon[i].nombre}</p>
-                        <p class="p-numbertipo">${allPokemon[i].number}</p>
-                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
-                        cont++;
-                    mostrar += llamado;
+                   mostrar.push(allPokemon[i]);
+                   cont++;
                 }
 
             }
         }
     info.classList.remove('hide');       
-    texto.innerHTML = `La cantidad de pokemones de tipo ${p2} es de: ${cont}.`;
+    texto.innerHTML = `La cantidad de pokemones  de tipo ${p2} es de: ${cont}.`;
     return mostrar;
 }
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
 
 const mostrarPorDebilidades = (allPokemon,p2) => {
-    const debilidades = obtenerDebilidades(allPokemon);
-    let mostrar = '', cont =0;
+   
+    let mostrar = [], cont =0;
         for (let i = 0; i < allPokemon.length; i++) {
             for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
                 if (allPokemon[i].debilidades[j].includes(p2)) {
-                    let llamado = `<div id="pokemones">
-                        <div class="contenedor-img">
-                        <img src= "${allPokemon[i].imagen}" />
-                        </div>
-                        <div class="contenedor-info">
-                        <p class="p-nombre">${allPokemon[i].nombre}</p>
-                        <p class="p-numbertipo">${allPokemon[i].number}</p>
-                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
-                        cont++;
-                    mostrar += llamado;
-                }
+                    mostrar.push(allPokemon[i]);
+                    cont++;
+                 }
 
             }
         }  
@@ -222,21 +206,12 @@ const mostrarPorDebilidades = (allPokemon,p2) => {
 
  
      const  mostrarPorcentaje =(allPokemon,p2)=>{
-        let mostrar = '', cont =0;
+        let mostrar = [], cont =0;
             for (let i = 0; i < allPokemon.length; i++) {
-                
-                    if (allPokemon[i].huevo.includes(p2)) {
-                        let llamado = `<div id="pokemones">
-                            <div class="contenedor-img">
-                            <img src= "${allPokemon[i].imagen}" />
-                            </div>
-                            <div class="contenedor-info">
-                            <p class="p-nombre">${allPokemon[i].nombre}</p>
-                            <p class="p-numbertipo">${allPokemon[i].number}</p>
-                            <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>`;
-                        mostrar += llamado;
-                        cont++;
-                    }    
+              if (allPokemon[i].huevo.includes(p2)) {
+                   mostrar.push(allPokemon[i]);
+                   cont++;
+                }
             }
         
         info.classList.remove('hide');    
@@ -285,14 +260,14 @@ seleccionComboBoxTipo.addEventListener('change', (event) => {
 
     const tipoSeleccionado = event.target.value;
 
-    allPokemones.innerHTML = `${mostrarPorTipos(pokemonNew,tipoSeleccionado)}`;
+    allPokemones.innerHTML = `${mostrarPokemones(mostrarPorTipos(pokemonNew,tipoSeleccionado))}`;
 });
 
 seleccionComboBoxDebilidad.addEventListener('change', (event) => {
 
     const debilidadSeleccionado = event.target.value;
 
-    allPokemones.innerHTML = `${mostrarPorDebilidades(pokemonNew,debilidadSeleccionado)}`;
+    allPokemones.innerHTML = `${mostrarPokemones(mostrarPorDebilidades(pokemonNew,debilidadSeleccionado))}`;
 })
 /*Haciendo Templates literales para el porcentaje*/
 const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
@@ -308,7 +283,7 @@ seleccionOpcionComboBox2.addEventListener('change', (event) => {
 
     const seleccionado = event.target.value;
 
-    allPokemones.innerHTML = `${mostrarPorcentaje(pokemonNew,seleccionado)}`;
+    allPokemones.innerHTML = `${mostrarPokemones(mostrarPorcentaje(pokemonNew,seleccionado))}`;
 });
 
 
