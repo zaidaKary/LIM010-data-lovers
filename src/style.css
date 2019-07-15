@@ -1,4 +1,5 @@
 /*CSS PARA EL LOGIN WEB Y MOVIL*/
+@import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
 @import url(flipcard.css);
 #VistaLogin {
   display: flex;
@@ -45,6 +46,7 @@
   border-radius: 2px;
   line-height: 25px;
   margin-bottom: 12px;
+  inline-size: 307px
 }
 .login button {
   background: rgba(26, 153, 224, 0.8);
@@ -164,28 +166,36 @@ header img {
 }
 .menu a {
   display: block;
-  padding: 21px 23px;
+  padding: 19px 33px;
   color: #fff;
+  font-weight: 600;
+  font-size: 16px;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .menu a:hover {
   background: rgba(80, 78, 78, 0.836);
   top: 0%;
+  color: #FFFFFF;
+  text-decoration: none;
+
 }
 .menu ul li:hover .uno {
   display: block;
   position: absolute;
-  width: 135px;
-  height: 248px;
+  width: 195px;
+  height: 245px;
   background: rgba(248, 96, 8, 1);
 }
 .menu ul li:hover .dos {
 display: block;
 position: absolute;
-width: 122px;
-height: 144px;
+width: 181px;
+height: 145px;
 background: rgba(248, 96, 8, 1);
+}
+.glyphicon {
+  font-size: 23px;
 }
 /*Mostrar pokemones para movil*/
 #VistaInicio {
@@ -206,7 +216,7 @@ background: rgba(248, 96, 8, 1);
   background: #C4C4C4;
 }
 #pokemones {
-  margin: 12px;
+  margin: 3px;
   padding: 15px;
 }
 .contenedor-info p {
@@ -273,16 +283,10 @@ background: rgba(248, 96, 8, 1);
 display: block; 
 }
 .menu ul li:hover .uno {
-  display: initial;
-  width: -1px;
-  height: 251px;
-  background: rgba(248, 96, 8, 1);
+  display: contents;
 }
 .menu ul li:hover .dos {
-  display: initial;
-  width: -1px;
-  height: 251px;
-  background: rgba(248, 96, 8, 1);
+  display: contents;
 }
 }
 /*Haciendo el responsive para web*/
@@ -293,14 +297,14 @@ display: block;
   .menu ul li:hover .uno {
     display: block;
     position: absolute;
-    width: 135px;
-    height: 248px;
+    width: 195px;
+    height: 244px;
     background: rgba(248, 96, 8, 1);
   }
   .menu ul li:hover .dos {
   display: block;
   position: absolute;
-  width: 122px;
+  width: 181px;
   height: 144px;
   background: rgba(248, 96, 8, 1);
   }
@@ -317,9 +321,12 @@ display: block;
     margin-top: 90px;
 }
 #pokemones {
-    padding: 33px;
+    padding: 23px;
 }
-
+.contenedor img {
+  width: 168px;
+  background: #C4C4C4;
+}
   /*Haciendo el responsive para pantalla de error*/
   #fondoParrafoError p {
     margin-top: 13px;
@@ -378,9 +385,35 @@ display: block;
   display: none;
 }
 .mensaje-seleccione {
-  font-size: large;
+  font-size: 30px;
+  margin-right: 26px;
+  font-family: 'Concert One', cursive;
+  -webkit-text-stroke: 0.1px rgb(251, 212, 13);
 }
 .margen{
-  margin: 29px;
+ padding-top: 21px;
   text-align: center;
+}
+.img-huevo {
+  width: 52px;
+  margin-top: -8px;
+  margin-right: 8px;
+}
+.img-cerrar, .img-filtrar, .img-ordenar {
+  width: 40px;
+  margin-top: -8px;
+  margin-right: 8px;
+}
+#seleccion-tipo, #seleccion-porc, #seleccion-debilidad {
+  height: 40px;
+  width: 187px;
+  font-weight: 600;
+}
+.resultado-cantidad {
+  display: flex;
+  justify-content: center;
+  font-family: 'Concert One', cursive;
+  color: black;
+    font-size: 32px;
+
 }
