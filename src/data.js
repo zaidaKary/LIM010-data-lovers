@@ -16,12 +16,13 @@ y tambien probamos las propiedades: window.aaa
 Probamos la propiedad:   window.example
 Probamos el metodo       window.example()
 Solo por ser el objeto window es que funciona estas propiedades
+windows.POKEMON = POKEMON.pokemon;
 */
 const nuevaDataPokemones = () => {
-  const poke =[];
-   for(let i=0;i<POKEMON.pokemon.length;i++){
+  const poke = [];
+  for (let i = 0; i < POKEMON.pokemon.length; i++) {
     poke.push({
-      'number':POKEMON.pokemon[i].num,
+      'number': POKEMON.pokemon[i].num,
       'nombre': POKEMON.pokemon[i].name,
       'imagen': POKEMON.pokemon[i].img,
       'tipo': POKEMON.pokemon[i].type,
@@ -30,13 +31,11 @@ const nuevaDataPokemones = () => {
       'caramelo': POKEMON.pokemon[i].candy,
       'contadorDeCaramelos': POKEMON.pokemon[i].candy_count,
       'huevo': POKEMON.pokemon[i].egg,
-      'debilidades':POKEMON.pokemon[i].weaknesses,
-      'frecuencia':POKEMON.pokemon[i].avg_spawns
-
-
+      'debilidades': POKEMON.pokemon[i].weaknesses,
+      'frecuencia': POKEMON.pokemon[i].avg_spawns
     });
-   }
-    return poke;
+  }
+  return poke;
 };
 
 window.nuevaDataPokemones = nuevaDataPokemones;
@@ -48,11 +47,9 @@ const ordenarAz = (allPokemon) => {
 };
 //Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 const ordenarAsc = (allPokemon) => {
-  allPokemon.sort((unPokemon, otroPokemon) =>unPokemon.frecuencia -  otroPokemon.frecuencia);
+  allPokemon.sort((unPokemon, otroPokemon) => unPokemon.frecuencia - otroPokemon.frecuencia);
   return (allPokemon);
 }
-
-
 
 //funcionalidad para obtener todos los tipos de pokemones 
 
@@ -60,10 +57,10 @@ const obtenerTipos = (allPokemon) => {
   let tipos = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
 
-      for (let j = 0; j < allPokemon[i].tipo.length; j++) {
-          tipos[aux] = allPokemon[i].tipo[j];
-          aux = aux + 1;
-      }
+    for (let j = 0; j < allPokemon[i].tipo.length; j++) {
+      tipos[aux] = allPokemon[i].tipo[j];
+      aux = aux + 1;
+    }
   }
   const distintos = [...new Set(tipos)];
   return (distintos);
@@ -74,25 +71,31 @@ const obtenerDebilidades = (allPokemon) => {
   let debilidades = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
 
-      for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
-          debilidades[aux] = allPokemon[i].debilidades[j];
-          aux = aux + 1;
-      }
+    for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
+      debilidades[aux] = allPokemon[i].debilidades[j];
+      aux = aux + 1;
+    }
   }
   const distintos = [...new Set(debilidades)];
   return (distintos);
 }
 
-    //Funcionalidad de Obterner porcentaje de huevos a eclosionar 
-     const obtenerPorcentaje = (allPokemon) =>{
-        let km =[];
-        for (let i =0; i<allPokemon.length;i++){
-                km[i]= allPokemon[i].huevo;
-        }
-        const distintos = [...new Set(km)];
-        return(distintos);
+//Funcionalidad de Obterner porcentaje de huevos a eclosionar 
+const obtenerPorcentaje = (allPokemon) => {
+  let km = [];
+  for (let i = 0; i < allPokemon.length; i++) {
+    km[i] = allPokemon[i].huevo;
+  }
+  const distintos = [...new Set(km)];
+  return (distintos);
 
-     }
-//flick card
-
+}
+//Funcion buscar un pokemon
+const buscarPokemones = (allPokemon, busqueda) => {
+  return allPokemon.filter(objeto => objeto.nombre.toLowerCase().startsWith(busqueda));
+};
+//Funcion filtrar tipos
+const filtrarTipos = (allPokemon, filtrado) => {
+  return allPokemon.filter(objeto => objeto.tipo.indexOf(types) > -1);
+};
 

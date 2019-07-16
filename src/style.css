@@ -288,6 +288,23 @@ display: block;
 .menu ul li:hover .dos {
   display: contents;
 }
+/*Resultado de texto: cantidad y procentaje de pokemones*/
+.mensaje-seleccione {
+  font-size: 16px;
+  margin-right: 10px;
+  text-align: center;
+  font-family:  'Concert One', cursive;
+  color: rgb(11, 16, 218);
+  font-weight: 800;
+}
+#seleccion-tipo, #seleccion-porc, #seleccion-debilidad {
+  height: 24px;
+}
+.resultado-cantidad {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+}
 }
 /*Haciendo el responsive para web*/
 
@@ -343,6 +360,24 @@ display: block;
     text-align: center;
     margin-top: -42px;
   }
+  .mensaje-seleccione {
+    font-size: 30px;
+    margin-right: 26px;
+    font-family: 'Concert One', cursive;
+    -webkit-text-stroke: 0.1px rgb(251, 212, 13);
+  }
+  #seleccion-tipo, #seleccion-porc, #seleccion-debilidad {
+    height: 40px;
+    width: 187px;
+    font-weight: 600;
+  }
+  .resultado-cantidad {
+    display: flex;
+    justify-content: center;
+    font-family: 'Concert One', cursive;
+    color: black;
+    font-size: 32px;
+  }
 }
 /*CSS PARA EL BUSCAR POKEMON*/
 #unPokemon {
@@ -384,12 +419,8 @@ display: block;
 .ocultarComboBox {
   display: none;
 }
-.mensaje-seleccione {
-  font-size: 30px;
-  margin-right: 26px;
-  font-family: 'Concert One', cursive;
-  -webkit-text-stroke: 0.1px rgb(251, 212, 13);
-}
+/*Texto de dato*/
+
 .margen{
  padding-top: 21px;
   text-align: center;
@@ -403,17 +434,4 @@ display: block;
   width: 40px;
   margin-top: -8px;
   margin-right: 8px;
-}
-#seleccion-tipo, #seleccion-porc, #seleccion-debilidad {
-  height: 40px;
-  width: 187px;
-  font-weight: 600;
-}
-.resultado-cantidad {
-  display: flex;
-  justify-content: center;
-  font-family: 'Concert One', cursive;
-  color: black;
-    font-size: 32px;
-
 }
