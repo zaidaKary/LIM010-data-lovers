@@ -1,13 +1,13 @@
 /* FLIP CARD*/
 .maincontainer {
   position: relative;
-  width: 250px;
-  height: 320px;
+  width: 324px;
+  height: 289px;
 }
 .thecard {
  position: absolute;
- width: 100%;
- height: 100%;
+ width: 100px;
+ height: 228px;
  transform-style: preserve-3d;
  transition: all 0.5s ease;
 }
@@ -24,8 +24,51 @@
   width: 67%;
   height: 70%;
   backface-visibility: hidden;
-  background: #5fcf80;
-  border-radius: 10px;
-  color: #333;
   transform: rotateY(180deg);
+}
+/*Estilos de las card*/
+.stylenombre {
+  text-align: center;
+  font-family: cursive;
+  font-size: 16px;
+  color: #fff;
+  background: #ea0811;
+  padding: 11px;
+  border-radius: 6px;
+}
+td {
+  color: rgb(10, 10, 10);
+  font-size: medium;
+  border: 1px solid #333;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+.styleinfo {
+ background: rgb(4, 187, 172);
+ font-weight: 550;
+}
+.styledato {
+  background: rgb(226, 204, 4);
+  font-size: 11px;
+}
+td{
+  padding: 3px !important;
+}
+@media (max-width:768px){
+  .maincontainer {
+    width: 151px;
+    height: 252px;
+  }
+  .theback {
+    width: 100%;
+  }
+  td {
+    font-size: 11px;
+  }
+  .stylenombre {
+    font-size: 14px;
+    padding: 7px;
+    border-radius: 5px;
+  }
+
 }

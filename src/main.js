@@ -2,7 +2,7 @@
 //Valores del input
 let usuario = document.getElementById('usuario');
 let contrasenha = document.getElementById('contrasenha');
-const obtenerNombre = document.getElementById('nombre');
+
 
 //Vistas
 const VistaLogin = document.getElementById('VistaLogin');
@@ -12,8 +12,8 @@ const VistaInicio = document.getElementById('VistaInicio');
 const BarraMenu = document.getElementById('barra-menu');
 //Botones
 const BotonIngresar = document.getElementById('BotonIngresar');
-const botonBuscar = document.getElementById('botonBuscar');
-const regresar = document.getElementById('regresar');
+// const botonBuscar = document.getElementById('botonBuscar');
+// const regresar = document.getElementById('regresar');
 const selecAz =document.getElementById('az');
 const selecZa =document.getElementById('za');
 const selecAsc =document.getElementById('asc');
@@ -25,6 +25,8 @@ const porDebilidad = document.getElementById('porDebilidad');
 const ComboBoxTipo = document.getElementById('ComboBoxFiltrarTipo');
 const ComboBoxDebilidad = document.getElementById('ComboBoxFiltrarDebilidad');
 const ComboBoxPorcentaje = document.getElementById('comboBoxPorcentaje');
+//Mensaje de cantidad y porcentaje de pokemones 
+const resultCantidad = document.getElementById('info');
 //Porcentaje
 const porcentaje = document.getElementById('porcentaje');
 //Variable de la Data
@@ -78,47 +80,65 @@ input.addEventListener("keyup", (event) => {
     document.getElementById('BotonIngresar').click();
   }
 });
+//Boton de buscador con enter
+// const btnBuscador = document.getElementById('nombre');
+// btnBuscador.addEventListener("keyup",(event) => {
+//     if (event.keyCode === 13) {
+
+//         event.preventDefault();
+    
+//         document.getElementById('botonBuscar').click();
+//       }
+// })
 
 //Funcionalidad del Boton Buscar
-botonBuscar.addEventListener('click', () => {
-    uno.innerHTML = buscarPorNombre(pokemonNew);
-    allPokemones.classList.add('hide');
-    unPokemon.classList.remove('hide');
-});
+// botonBuscar.addEventListener('click', () => {
+//     uno.innerHTML = buscarPorNombre(pokemonNew);
+//     allPokemones.classList.add('hide');
+//     unPokemon.classList.remove('hide');
+//     resultCantidad.classList.add('hide');
+//     ComboBoxTipo.classList.add('ocultarComboBox');
+//     ComboBoxDebilidad.classList.add('ocultarComboBox');
+//     ComboBoxPorcentaje.classList.add('ocultarComboBox');
+// });
 
-//Funcionalidad del boton regresar 
-regresar.addEventListener('click', () => {
-    obtenerNombre.value = '';
-    allPokemones.classList.remove('hide');
-    unPokemon.classList.add('hide');
+// //Funcionalidad del boton regresar 
+// regresar.addEventListener('click', () => {
+//     obtenerNombre.value = '';
+//     allPokemones.classList.remove('hide');
+//     unPokemon.classList.add('hide');
 
-});
+// });
+
+// const MaysPrimera = (string) => {
+//     return string.charAt(0).toUpperCase() + string.slice(1);
+// }
 
 //Funcion Buscar Pokemones
-const buscarPorNombre = (allPokemon) => {
-    let llamado = '';
+// const buscarPorNombre = (allPokemon) => {
+//     let llamado = '';
 
-    for (let i = 0; i < allPokemon.length; i++) {
+//     for (let i = 0; i < allPokemon.length; i++) {
 
-        if (MaysPrimera(obtenerNombre.value) == allPokemon[i].nombre && i < allPokemon.length) {
-            llamado = `<div id="especifico">
-             <img  src= "${allPokemon[i].imagen}"/>
-             <div id="letras">
-             <p><strong>Nombre:</strong> ${allPokemon[i].nombre}</p>
-             <p><strong>Número:</strong> ${allPokemon[i].number}</p>
-             <p><strong>Altura:</strong> ${allPokemon[i].altura}</p>
-             <p><strong>Peso:</strong> ${allPokemon[i].peso}</p>
-             <p><strong>caramelo</strong>: ${allPokemon[i].caramelo}</p>
-             <p><strong>contador de Caramelos:</strong> ${allPokemon[i].contadorDeCaramelos}</p>
-             <p><strong>Huevo:</strong> ${allPokemon[i].huevo}</p>
-             <p><strong>Tipo:</strong> ${allPokemon[i].tipo}</p></div></div>`;
-            break;
-        } else {
-            llamado = "No hay ningún Pokémon que coincida con tu búsqueda.";
-        }
-    }
-    return llamado
-};
+//         if (MaysPrimera(obtenerNombre.value) == allPokemon[i].nombre && i < allPokemon.length) {
+//             llamado = `<div id="especifico">
+//              <img src= "${allPokemon[i].imagen}"/></div>
+//              <div id="letras">
+//              <p><strong>Nombre:</strong> ${allPokemon[i].nombre}</p>
+//              <p><strong>Número:</strong> ${allPokemon[i].number}</p>
+//              <p><strong>Altura:</strong> ${allPokemon[i].altura}</p>
+//              <p><strong>Peso:</strong> ${allPokemon[i].peso}</p>
+//              <p><strong>caramelo</strong>: ${allPokemon[i].caramelo}</p>
+//              <p><strong>contador de Caramelos:</strong> ${allPokemon[i].contadorDeCaramelos}</p>
+//              <p><strong>Huevo:</strong> ${allPokemon[i].huevo}</p>
+//              <p><strong>Tipo:</strong> ${allPokemon[i].tipo}</p></div>`;
+//             break;
+//         } else {
+//             llamado = "No se encontraron resultados";
+//         }
+//     }
+//     return llamado
+// };
 
 //Funcion Mostrar Pokemones
 const mostrarPokemones = (allPokemon) => {
@@ -133,13 +153,28 @@ const mostrarPokemones = (allPokemon) => {
                         <p class="p-numbertipo">${allPokemon[i].number}</p>
                         <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>
                         <div id="pokemones" class="theback">
-                        <p class="p-nombre">Nombre: ${allPokemon[i].nombre}</p>
-                        <p class="p-numbertipo">Altura: ${allPokemon[i].altura}</p>
-                        <p class="p-numbertipo">Peso: ${allPokemon[i].peso}</p>
-                        <p class="p-numbertipo">Caramelo: ${allPokemon[i].caramelo}</p>
-                        <p class="p-numbertipo">Huevo: ${allPokemon[i].huevo}</p>
-                        <p class="p-numbertipo">Debilidades: ${allPokemon[i].debilidades}</p>
-                        <p class="p-numbertipo">Frecuencia: ${allPokemon[i].frecuencia}</p>
+                        <table><thead><tr><th colspan="3" class="stylenombre">${allPokemon[i].nombre.toUpperCase()}</th></tr></thead>
+                        <tbody><tr>
+                        <td class="styleinfo">Altura:</td>
+                        <td class="styleinfo">Peso:</td>
+                        <td class="styleinfo">Huevo:</td>
+                        </tr>
+                        <tr>
+                        <td class="styledato">${allPokemon[i].altura}</td>
+                        <td class="styledato">${allPokemon[i].peso}</td>
+                        <td class="styledato">${allPokemon[i].huevo}</td>
+                        </tr>
+                        <tr>
+                        <td colspan="3" class="styleinfo">Debilidades:</td>
+                        </tr>
+                        <tr>
+                        <td colspan="3" class="styledato"> ${allPokemon[i].debilidades}</td></tr>
+                        <tr>
+                        <td colspan="3" class="styleinfo">Frecuencia:</td>
+                        </tr>
+                        <tr>
+                        <td colspan="3" class="styledato">${allPokemon[i].frecuencia}</td></tr>
+                        </tbody></table>
                         </div></div></div>`;
         mostrar += llamado;
     }
@@ -194,7 +229,7 @@ const mostrarPorTipos = (allPokemon,p2) => {
             }
         }
     info.classList.remove('hide');       
-    texto.innerHTML = `La cantidad de pokemones  de tipo ${p2} es de: ${cont}.`;
+    texto.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones  de tipo ${p2} es de: ${cont}.</div>`;
     return mostrar;
 }
 
@@ -213,11 +248,9 @@ const mostrarPorDebilidades = (allPokemon,p2) => {
             }
         }  
     info.classList.remove('hide');       
-    texto.innerHTML = `La cantidad de pokemones con  debilidad ${p2} es de: ${cont}.`;
-    return mostrar;
+    texto.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones con  debilidad ${p2} es de: ${cont}.</div>`;
+    return mostrar; 
 }
-
- 
      const  mostrarPorcentaje =(allPokemon,p2)=>{
         let mostrar = [], cont =0;
             for (let i = 0; i < allPokemon.length; i++) {
@@ -228,7 +261,7 @@ const mostrarPorDebilidades = (allPokemon,p2) => {
             }
         
         info.classList.remove('hide');    
-        texto.innerHTML = `El porcentaje de Pokemones con ${p2}km es de: ${((cont/allPokemon.length)*100).toFixed(2)}%`;
+        texto.innerHTML = `<div class="resultado-cantidad">El porcentaje de Pokemones con ${p2}km es de: ${((cont/allPokemon.length)*100).toFixed(2)}%</div>`;
         return mostrar;
      }
 
@@ -260,6 +293,7 @@ const pintarEnComboBox = (p1, p2) => {
     ComboBoxTipo.classList.remove('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
     ComboBoxPorcentaje.classList.add('ocultarComboBox');
+    resultCantidad.classList.add('hide');
 
     
    });
@@ -268,10 +302,10 @@ const pintarEnComboBox = (p1, p2) => {
     ComboBoxDebilidad.classList.remove('ocultarComboBox');
     ComboBoxTipo.classList.add('ocultarComboBox');
     ComboBoxPorcentaje.classList.add('ocultarComboBox');
+    resultCantidad.classList.add('hide');
    });
 
 /*Haciendo el event target*/
-
 seleccionComboBoxTipo.addEventListener('change', (event) => {
 
     const tipoSeleccionado = event.target.value;
@@ -294,13 +328,23 @@ porcentaje.addEventListener('click', () => {
     ComboBoxTipo.classList.add('ocultarComboBox');
     ComboBoxDebilidad.classList.add('ocultarComboBox');
     ComboBoxPorcentaje.classList.remove('ocultarComboBox');
+    resultCantidad.classList.add('hide');
    });
 
 /*Haciendo el event target*/
-
 seleccionOpcionComboBox2.addEventListener('change', (event) => {
 
     const seleccionado = event.target.value;
 
     allPokemones.innerHTML = `${mostrarPokemones(mostrarPorcentaje(pokemonNew,seleccionado))}`;
 });
+
+/*Funcion de buscar */
+const obtenerNombre = document.getElementById('nombre');
+obtenerNombre.addEventListener('input', event => {
+    const pokemonBuscado = buscarPokemones(pokemonNew, event.target.value.toLowerCase());
+    allPokemones.innerHTML = mostrarPokemones(pokemonBuscado);
+});
+
+
+console.log(filtrarTipos(pokemonNew,'tipo'));
