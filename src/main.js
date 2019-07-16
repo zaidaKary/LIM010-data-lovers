@@ -1,9 +1,8 @@
 /* Manejo del DOM */
-//Valores del input
+
+//Valores del input de usuario y contraseña
 let usuario = document.getElementById('usuario');
 let contrasenha = document.getElementById('contrasenha');
-
-
 //Vistas
 const VistaLogin = document.getElementById('VistaLogin');
 const VistaError = document.getElementById('VistaError');
@@ -12,13 +11,12 @@ const VistaInicio = document.getElementById('VistaInicio');
 const BarraMenu = document.getElementById('barra-menu');
 //Botones
 const BotonIngresar = document.getElementById('BotonIngresar');
-// const botonBuscar = document.getElementById('botonBuscar');
-// const regresar = document.getElementById('regresar');
+//Botones de menu
 const selecAz =document.getElementById('az');
 const selecZa =document.getElementById('za');
 const selecAsc =document.getElementById('asc');
 const selecDesc =document.getElementById('desc');
-//ComboBox
+//Botones de menu ComboBox
 const porTipo = document.getElementById('porTipo');
 const porDebilidad = document.getElementById('porDebilidad');
 //ComboBox para ocultar
@@ -32,9 +30,8 @@ const porcentaje = document.getElementById('porcentaje');
 //Variable de la Data
 const pokemonNew = nuevaDataPokemones();
 
-//Funcionalidad del Boton Ingresar
+//Funcionalidad del Boton Ingresar Usuario y Contraseña
 let contador = 0;
-
 BotonIngresar.addEventListener('click', () => {
     if (contrasenha.value === '' && usuario.value === '') {
         contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su usuario y contraseña.</strong>';
@@ -70,7 +67,7 @@ BotonIngresar.addEventListener('click', () => {
     }
 });
 
-//Ingresar con Enter
+//Funcion de ingresar con Enter
 const input = document.getElementById('contrasenha');
 input.addEventListener("keyup", (event) => {
 
@@ -81,67 +78,8 @@ input.addEventListener("keyup", (event) => {
     document.getElementById('BotonIngresar').click();
   }
 });
-//Boton de buscador con enter
-// const btnBuscador = document.getElementById('nombre');
-// btnBuscador.addEventListener("keyup",(event) => {
-//     if (event.keyCode === 13) {
 
-//         event.preventDefault();
-    
-//         document.getElementById('botonBuscar').click();
-//       }
-// })
-
-//Funcionalidad del Boton Buscar
-// botonBuscar.addEventListener('click', () => {
-//     uno.innerHTML = buscarPorNombre(pokemonNew);
-//     allPokemones.classList.add('hide');
-//     unPokemon.classList.remove('hide');
-//     resultCantidad.classList.add('hide');
-//     ComboBoxTipo.classList.add('ocultarComboBox');
-//     ComboBoxDebilidad.classList.add('ocultarComboBox');
-//     ComboBoxPorcentaje.classList.add('ocultarComboBox');
-// });
-
-// //Funcionalidad del boton regresar 
-// regresar.addEventListener('click', () => {
-//     obtenerNombre.value = '';
-//     allPokemones.classList.remove('hide');
-//     unPokemon.classList.add('hide');
-
-// });
-
-// const MaysPrimera = (string) => {
-//     return string.charAt(0).toUpperCase() + string.slice(1);
-// }
-
-//Funcion Buscar Pokemones
-// const buscarPorNombre = (allPokemon) => {
-//     let llamado = '';
-
-//     for (let i = 0; i < allPokemon.length; i++) {
-
-//         if (MaysPrimera(obtenerNombre.value) == allPokemon[i].nombre && i < allPokemon.length) {
-//             llamado = `<div id="especifico">
-//              <img src= "${allPokemon[i].imagen}"/></div>
-//              <div id="letras">
-//              <p><strong>Nombre:</strong> ${allPokemon[i].nombre}</p>
-//              <p><strong>Número:</strong> ${allPokemon[i].number}</p>
-//              <p><strong>Altura:</strong> ${allPokemon[i].altura}</p>
-//              <p><strong>Peso:</strong> ${allPokemon[i].peso}</p>
-//              <p><strong>caramelo</strong>: ${allPokemon[i].caramelo}</p>
-//              <p><strong>contador de Caramelos:</strong> ${allPokemon[i].contadorDeCaramelos}</p>
-//              <p><strong>Huevo:</strong> ${allPokemon[i].huevo}</p>
-//              <p><strong>Tipo:</strong> ${allPokemon[i].tipo}</p></div>`;
-//             break;
-//         } else {
-//             llamado = "No se encontraron resultados";
-//         }
-//     }
-//     return llamado
-// };
-
-//Funcion Mostrar Pokemones
+//Funcion Mostrar Pokemones (FLIT CARD)
 const mostrarPokemones = (allPokemon) => {
     let mostrar = '';
     for (let i = 0; i < allPokemon.length; i++) {
@@ -182,6 +120,7 @@ const mostrarPokemones = (allPokemon) => {
     return mostrar;
 };
 allPokemones.innerHTML = mostrarPokemones(pokemonNew);
+
 //Funcionalidad de Ordenar A-Z
 selecAz.addEventListener('click',()=>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
@@ -199,6 +138,7 @@ selecZa.addEventListener('click',() =>{
     ComboBoxPorcentaje.classList.add('ocultarComboBox');
     info.classList.add('hide'); 
 });
+
 //Funcionalidad de ordenar Pokemones ascendentemente
 selecAsc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
@@ -207,6 +147,7 @@ selecAsc.addEventListener('click',() =>{
     ComboBoxPorcentaje.classList.add('ocultarComboBox');
     info.classList.add('hide'); 
 });
+
 //Funcionalidad de ordenar Pokemones descendentemente
 selecDesc.addEventListener('click',() =>{
     allPokemones.innerHTML = mostrarPokemones((ordenarAsc(pokemonNew)).reverse());
@@ -217,7 +158,6 @@ selecDesc.addEventListener('click',() =>{
 });
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
-
 const mostrarPorTipos = (allPokemon,p2) => {
     let mostrar = [],cont =0;
         for (let i = 0; i < allPokemon.length; i++) {
@@ -235,7 +175,6 @@ const mostrarPorTipos = (allPokemon,p2) => {
 }
 
 //Funcionalidad para mostrar los pokemones por sus tipos 
-
 const mostrarPorDebilidades = (allPokemon,p2) => {
    
     let mostrar = [], cont =0;
@@ -282,7 +221,7 @@ const seleccionComboBoxDebilidad = document.getElementById('seleccion-debilidad'
 const debilidadPokemones = obtenerDebilidades(pokemonNew);
 
 const pintarEnComboBox = (p1, p2) => {
-    let template = '<option>Seleccione una opción...</option>';
+    let template = '<option disabled selected>Seleccione una opción...</option>';
     for (let i = 0; i< p1.length; i++) {
      template += `<option value=${p1[i]}>${p1[i].toUpperCase()}</option>`
     }
@@ -306,20 +245,6 @@ const pintarEnComboBox = (p1, p2) => {
     resultCantidad.classList.add('hide');
    });
 
-/*Haciendo el event target*/
-seleccionComboBoxTipo.addEventListener('change', (event) => {
-
-    const tipoSeleccionado = event.target.value;
-
-    allPokemones.innerHTML = `${mostrarPokemones(mostrarPorTipos(pokemonNew,tipoSeleccionado))}`;
-});
-
-seleccionComboBoxDebilidad.addEventListener('change', (event) => {
-
-    const debilidadSeleccionado = event.target.value;
-
-    allPokemones.innerHTML = `${mostrarPokemones(mostrarPorDebilidades(pokemonNew,debilidadSeleccionado))}`;
-})
 /*Haciendo Templates literales para el porcentaje*/
 const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
 const kmPokemones = obtenerPorcentaje(pokemonNew);
@@ -332,7 +257,7 @@ porcentaje.addEventListener('click', () => {
     resultCantidad.classList.add('hide');
    });
 
-/*Haciendo el event target*/
+/*Haciendo el event target para porcentaje*/
 seleccionOpcionComboBox2.addEventListener('change', (event) => {
 
     const seleccionado = event.target.value;
@@ -340,10 +265,28 @@ seleccionOpcionComboBox2.addEventListener('change', (event) => {
     allPokemones.innerHTML = `${mostrarPokemones(mostrarPorcentaje(pokemonNew,seleccionado))}`;
 });
 
-/*Funcion de buscar */
+/*Llamando a la función de buscar*/
+/*Haciendo el event target para buscar*/
 const obtenerNombre = document.getElementById('nombre');
 obtenerNombre.addEventListener('input', event => {
     const pokemonBuscado = buscarPokemones(pokemonNew, event.target.value.toLowerCase());
-    console.log(pokemonBuscado);
     allPokemones.innerHTML = mostrarPokemones(pokemonBuscado);
+});
+
+/*Llamando a la función Filtrar*/
+/*Haciendo el event target para tipo*/
+seleccionComboBoxTipo.addEventListener('change', (event) => {
+
+    const tipoSeleccionado = event.target.value;
+
+    allPokemones.innerHTML = `${mostrarPokemones(filtrarTipos(pokemonNew,tipoSeleccionado))}`;
+});
+
+/*Llamando a la función Debilidad*/
+/*Haciendo el event target para debilidad*/
+seleccionComboBoxDebilidad.addEventListener('change', (event) => {
+
+    const debilidadSeleccionado = event.target.value;
+
+    allPokemones.innerHTML = `${mostrarPokemones(filtrarDebilidades(pokemonNew,debilidadSeleccionado))}`;
 });

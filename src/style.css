@@ -67,7 +67,7 @@
 }
 /*Para esconder vistas*/
 .hide {
-  display: none;
+  display: none !important;
 }
 /*Pie de página para movil*/
 .footer {
@@ -204,6 +204,7 @@ background: rgba(248, 96, 8, 1);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    min-height: 100vh;
     
 }
 #VistaInicio .contenedor {
@@ -241,11 +242,6 @@ background: rgba(248, 96, 8, 1);
 #VistaInicio .contenedor-buscar {
   display: flex;
   justify-content: center;
-}
-#botonBuscar {
-  height: 39px;
-  width: 36px;
-  margin-top: 78px;
 }
 /*Barra de menu para movil*/
 @media (max-width:768px){
@@ -332,11 +328,6 @@ display: block;
     margin-top: 90px;
     width: 500px;
 }
-#botonBuscar {
-    height: 50px;
-    width: 50px;
-    margin-top: 90px;
-}
 #pokemones {
     padding: 23px;
 }
@@ -380,20 +371,6 @@ display: block;
   }
 }
 /*CSS PARA EL BUSCAR POKEMON*/
-#unPokemon {
-    display: flex;
-    flex-flow: column wrap;
-    padding: 16px;
-    background-image: url(img/fondoMenu.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-}
-#uno {
-    align-self: center;
-}
 #especifico {
   background-color: rgb(97, 95, 95);
   width: 215px;
@@ -405,12 +382,6 @@ display: block;
     padding: 14px;
     width: 215px;
   }
-#regresar {
-  width: 79px;
-  height: 79px;
-  align-self: center;
-  margin: 60px;
-}
 .comboBox {
   margin: 61px;
   width: 166px;
