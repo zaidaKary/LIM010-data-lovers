@@ -32,7 +32,6 @@ const pokemonNew = nuevaDataPokemones();
 
 //Funcionalidad del Boton Ingresar
 let contador = 0;
-
 BotonIngresar.addEventListener('click', () => {
     if (contrasenha.value === '' && usuario.value === '') {
         contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su usuario y contraseña.</strong>';
@@ -95,10 +94,6 @@ regresar.addEventListener('click', () => {
 
 });
 
-const MaysPrimera = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
 //Funcion Buscar Pokemones
 const buscarPorNombre = (allPokemon) => {
     let llamado = '';
@@ -107,7 +102,7 @@ const buscarPorNombre = (allPokemon) => {
 
         if (MaysPrimera(obtenerNombre.value) == allPokemon[i].nombre && i < allPokemon.length) {
             llamado = `<div id="especifico">
-             <img src= "${allPokemon[i].imagen}"/></div>
+             <img  src= "${allPokemon[i].imagen}"/>
              <div id="letras">
              <p><strong>Nombre:</strong> ${allPokemon[i].nombre}</p>
              <p><strong>Número:</strong> ${allPokemon[i].number}</p>
@@ -116,10 +111,10 @@ const buscarPorNombre = (allPokemon) => {
              <p><strong>caramelo</strong>: ${allPokemon[i].caramelo}</p>
              <p><strong>contador de Caramelos:</strong> ${allPokemon[i].contadorDeCaramelos}</p>
              <p><strong>Huevo:</strong> ${allPokemon[i].huevo}</p>
-             <p><strong>Tipo:</strong> ${allPokemon[i].tipo}</p></div>`;
+             <p><strong>Tipo:</strong> ${allPokemon[i].tipo}</p></div></div>`;
             break;
         } else {
-            llamado = "No se encontraron resultados";
+            llamado = "No hay ningún Pokémon que coincida con tu búsqueda.";
         }
     }
     return llamado
@@ -139,7 +134,6 @@ const mostrarPokemones = (allPokemon) => {
                         <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>
                         <div id="pokemones" class="theback">
                         <p class="p-nombre">Nombre: ${allPokemon[i].nombre}</p>
-                        <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p>
                         <p class="p-numbertipo">Altura: ${allPokemon[i].altura}</p>
                         <p class="p-numbertipo">Peso: ${allPokemon[i].peso}</p>
                         <p class="p-numbertipo">Caramelo: ${allPokemon[i].caramelo}</p>
@@ -310,6 +304,3 @@ seleccionOpcionComboBox2.addEventListener('change', (event) => {
 
     allPokemones.innerHTML = `${mostrarPokemones(mostrarPorcentaje(pokemonNew,seleccionado))}`;
 });
-
-
-

@@ -41,6 +41,12 @@ const nuevaDataPokemones = () => {
 
 window.nuevaDataPokemones = nuevaDataPokemones;
 
+const MaysPrimera = (string) => {
+  string = string.toLowerCase();
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+
 //Funcionaliad de ordenar Pokemones de A-z
 const ordenarAz = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
@@ -51,7 +57,6 @@ const ordenarAsc = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) =>unPokemon.frecuencia -  otroPokemon.frecuencia);
   return (allPokemon);
 }
-
 
 
 //funcionalidad para obtener todos los tipos de pokemones 
