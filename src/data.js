@@ -1,8 +1,8 @@
 /* Manejo de data */
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-/*const example = () => {
+/* esta es una función de ejemplo
+puedes ver como agregamos la función a nuestro objeto global window
+const example = () => {
   return 'exameple';
 };
 window es un objeto que tiene una propiedad example y le asignado un valor el cual representa una funcion. 
@@ -43,26 +43,23 @@ window.nuevaDataPokemones = nuevaDataPokemones;
 const MaysPrimera = (string) => {
   string = string.toLowerCase();
   return string.charAt(0).toUpperCase() + string.slice(1);
-}
+};
 
 
-//Funcionaliad de ordenar Pokemones de A-z
+// Funcionaliad de ordenar Pokemones de A-z
 const ordenarAz = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
   return (allPokemon);
 };
-//Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
+// Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 const ordenarAsc = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.frecuencia - otroPokemon.frecuencia);
   return (allPokemon);
-}
-
-//funcionalidad para obtener todos los tipos de pokemones 
-
+};
+// funcionalidad para obtener todos los tipos de pokemones 
 const obtenerTipos = (allPokemon) => {
   let tipos = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
-
     for (let j = 0; j < allPokemon[i].tipo.length; j++) {
       tipos[aux] = allPokemon[i].tipo[j];
       aux = aux + 1;
@@ -70,13 +67,11 @@ const obtenerTipos = (allPokemon) => {
   }
   const distintos = [...new Set(tipos)];
   return (distintos);
-}
-//funcionalidad para obtener todos las debilidades  de pokemones 
-
+};
+// funcionalidad para obtener todos las debilidades  de pokemones 
 const obtenerDebilidades = (allPokemon) => {
   let debilidades = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
-
     for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
       debilidades[aux] = allPokemon[i].debilidades[j];
       aux = aux + 1;
@@ -84,9 +79,8 @@ const obtenerDebilidades = (allPokemon) => {
   }
   const distintos = [...new Set(debilidades)];
   return (distintos);
-}
-
-//Funcionalidad de Obterner porcentaje de huevos a eclosionar 
+};
+// Funcionalidad de obterner porcentaje de huevos a eclosionar 
 const obtenerPorcentaje = (allPokemon) => {
   let km = [];
   for (let i = 0; i < allPokemon.length; i++) {
@@ -94,14 +88,16 @@ const obtenerPorcentaje = (allPokemon) => {
   }
   const distintos = [...new Set(km)];
   return (distintos);
-
-}
-//Funcion buscar un pokemon
+};
+// Funcion buscar un pokemon
 const buscarPokemones = (allPokemon, busqueda) => {
   return allPokemon.filter(objeto => objeto.nombre.toLowerCase().startsWith(busqueda));
 };
-//Funcion filtrar tipos
+// Funcion filtrar tipos
 const filtrarTipos = (allPokemon, filtrado) => {
   return allPokemon.filter(objeto => objeto.tipo.indexOf(filtrado) > -1);
 };
-
+// Funcion filtrar debilidades
+const filtrarDebilidades = (allPokemon, debilidad) => {
+  return allPokemon.filter(objeto => objeto.debilidades.indexOf(debilidad) > -1);
+};
