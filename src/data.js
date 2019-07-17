@@ -45,11 +45,15 @@ const ordenarAz = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
   return (allPokemon);
 };
+window.ordenarAz = ordenarAz;
+
 //Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 const ordenarAsc = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.frecuencia - otroPokemon.frecuencia);
   return (allPokemon);
 }
+window.ordenarAsc = ordenarAsc;
+
 //funcionalidad para obtener todos los tipos de pokemones 
 const obtenerTipos = (allPokemon) => {
   let tipos = [], aux = 0;
@@ -63,6 +67,8 @@ const obtenerTipos = (allPokemon) => {
   const distintos = [...new Set(tipos)];
   return (distintos);
 }
+window.obtenerTipos = obtenerTipos;
+
 //funcionalidad para obtener todos las debilidades  de pokemones 
 const obtenerDebilidades = (allPokemon) => {
   let debilidades = [], aux = 0;
@@ -76,6 +82,8 @@ const obtenerDebilidades = (allPokemon) => {
   const distintos = [...new Set(debilidades)];
   return (distintos);
 }
+window.obtenerDebilidades = obtenerDebilidades;
+
 //Funcionalidad de obterner porcentaje de huevos a eclosionar 
 const obtenerPorcentaje = (allPokemon) => {
   let km = [];
@@ -85,15 +93,28 @@ const obtenerPorcentaje = (allPokemon) => {
   const distintos = [...new Set(km)];
   return (distintos);
 }
+window.obtenerPorcentaje = obtenerPorcentaje;
+
 //Funcion buscar un pokemon
 const buscarPokemones = (allPokemon, busqueda) => {
   return allPokemon.filter(objeto => objeto.nombre.toLowerCase().startsWith(busqueda));
 };
+window.buscarPokemones = buscarPokemones;
+
 //Funcion filtrar tipos
 const filtrarTipos = (allPokemon, filtrado) => {
   return allPokemon.filter(objeto => objeto.tipo.indexOf(filtrado) > -1);
 };
+window.filtrarTipos = filtrarTipos;
+
 //Funcion filtrar debilidades
 const filtrarDebilidades = (allPokemon, debilidad) => {
   return allPokemon.filter(objeto => objeto.debilidades.indexOf(debilidad) > -1);
 };
+window.filtrarDebilidades = filtrarDebilidades;
+
+//Funcion filtrar porcentaje
+const filtrarPorcentaje = (allPokemon, porcentaje) => {
+  return allPokemon.filter(objeto => objeto.huevo.indexOf(porcentaje) > -1);
+};
+window.filtrarPorcentaje = filtrarPorcentaje;
