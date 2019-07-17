@@ -51,12 +51,16 @@ const ordenarAz = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
   return (allPokemon);
 };
-// Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
+window.ordenarAz = ordenarAz;
+
+//Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 const ordenarAsc = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.frecuencia - otroPokemon.frecuencia);
   return (allPokemon);
-};
-// funcionalidad para obtener todos los tipos de pokemones 
+}
+window.ordenarAsc = ordenarAsc;
+
+//funcionalidad para obtener todos los tipos de pokemones 
 const obtenerTipos = (allPokemon) => {
   let tipos = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
@@ -67,8 +71,10 @@ const obtenerTipos = (allPokemon) => {
   }
   const distintos = [...new Set(tipos)];
   return (distintos);
-};
-// funcionalidad para obtener todos las debilidades  de pokemones 
+}
+window.obtenerTipos = obtenerTipos;
+
+//funcionalidad para obtener todos las debilidades  de pokemones 
 const obtenerDebilidades = (allPokemon) => {
   let debilidades = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
@@ -79,8 +85,10 @@ const obtenerDebilidades = (allPokemon) => {
   }
   const distintos = [...new Set(debilidades)];
   return (distintos);
-};
-// Funcionalidad de obterner porcentaje de huevos a eclosionar 
+}
+window.obtenerDebilidades = obtenerDebilidades;
+
+//Funcionalidad de obterner porcentaje de huevos a eclosionar 
 const obtenerPorcentaje = (allPokemon) => {
   let km = [];
   for (let i = 0; i < allPokemon.length; i++) {
@@ -88,16 +96,29 @@ const obtenerPorcentaje = (allPokemon) => {
   }
   const distintos = [...new Set(km)];
   return (distintos);
-};
-// Funcion buscar un pokemon
+}
+window.obtenerPorcentaje = obtenerPorcentaje;
+
+//Funcion buscar un pokemon
 const buscarPokemones = (allPokemon, busqueda) => {
   return allPokemon.filter(objeto => objeto.nombre.toLowerCase().startsWith(busqueda));
 };
-// Funcion filtrar tipos
+window.buscarPokemones = buscarPokemones;
+
+//Funcion filtrar tipos
 const filtrarTipos = (allPokemon, filtrado) => {
   return allPokemon.filter(objeto => objeto.tipo.indexOf(filtrado) > -1);
 };
-// Funcion filtrar debilidades
+window.filtrarTipos = filtrarTipos;
+
+//Funcion filtrar debilidades
 const filtrarDebilidades = (allPokemon, debilidad) => {
   return allPokemon.filter(objeto => objeto.debilidades.indexOf(debilidad) > -1);
 };
+window.filtrarDebilidades = filtrarDebilidades;
+
+//Funcion filtrar porcentaje
+const filtrarPorcentaje = (allPokemon, porcentaje) => {
+  return allPokemon.filter(objeto => objeto.huevo.indexOf(porcentaje) > -1);
+};
+window.filtrarPorcentaje = filtrarPorcentaje;
