@@ -1,7 +1,7 @@
 /*CSS PARA EL LOGIN WEB Y MOVIL*/
 @import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
 @import url(flipcard.css);
-#VistaLogin {
+#vista-login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,10 +35,10 @@
   line-height: 35px;
   color: #000000;
 }
-.Olvidastecontrasenha {
+.olvidaste-contrasenha {
   align-self: flex-end;
 }
-.Registrate {
+.registrate {
   align-self: center;
 }
 .login input {
@@ -80,7 +80,7 @@
   margin-top: -26px;
 }
 /*CSS PARA LA PANTALLA DE ERROR PARA MOVIL*/
-#VistaError {
+#vista-error {
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -102,13 +102,13 @@
   border-radius: 100px;
   align-self: center;
 }
-#fondoParrafoError {
+#fondo-parrafo-error {
   width: 290px;
   box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 0.1);
   background-color: rgba(208, 197, 197, 0.4);
   margin-top: 10vh; 
 }
-#parrafoError {
+#parrafo-error {
   font-family: OpenSans;
   font-size: 15px;
   font-weight: 800;
@@ -118,7 +118,7 @@
   letter-spacing: normal;
   color: #000000;
 }
-#fondoParrafoError p {
+#fondo-parrafo-error p {
   margin-top: 8px;
 }
 /*CSS PARA EL MENU DE INICIO PARA WEB*/
@@ -135,7 +135,7 @@ header {
   position: fixed;
   z-index: 100;
 }
-.logopokemonmenu { /*logo de menu*/
+.logo-pokemon-menu { /*logo de menu*/
   width: 94px;
   height: 60px;
 }
@@ -198,7 +198,7 @@ background: rgba(248, 96, 8, 1);
   font-size: 23px;
 }
 /*Mostrar pokemones para movil*/
-#VistaInicio {
+#vista-inicio {
     background-image: url(img/fondoMenu.jpg);
     background-size: cover;
     background-position: center;
@@ -207,7 +207,7 @@ background: rgba(248, 96, 8, 1);
     min-height: 100vh;
     
 }
-#VistaInicio .contenedor {
+#vista-inicio .contenedor {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -223,23 +223,23 @@ background: rgba(248, 96, 8, 1);
 .contenedor-info p {
   text-align: center;
 }
-#VistaInicio .p-nombre {
+#vista-inicio .p-nombre {
   font-weight: 800;
   font-size: 13px;
 }
-#VistaInicio .p-numbertipo {
+#vista-inicio .p-numbertipo {
   margin-top: -10px;
   font-size: 12px;
 }
-#VistaInicio .contenedor-info {
+#vista-inicio .contenedor-info {
   background: #D9DC41;
 }
-#VistaInicio .buscador {
+#vista-inicio .buscador {
   padding: 8px;
   margin-top: 78px;
   width: 253px;
 }
-#VistaInicio .contenedor-buscar {
+#vista-inicio .contenedor-buscar {
   display: flex;
   justify-content: center;
 }
@@ -324,7 +324,7 @@ display: block;
 
   /*Haciendo el responsive para la página de mostrar*/
 
-#VistaInicio .buscador {
+#vista-inicio .buscador {
     margin-top: 90px;
     width: 500px;
 }
@@ -336,14 +336,14 @@ display: block;
   background: #C4C4C4;
 }
   /*Haciendo el responsive para pantalla de error*/
-  #fondoParrafoError p {
+  #fondo-parrafo-error p {
     margin-top: 13px;
     margin-left: 17px;
 }
-#fondoParrafoError {
+#fondo-parrafo-error {
   width: 414px;
 }
-#parrafoError {
+#parrafo-error {
   font-size: 22px;
 }
 .footer {
@@ -373,7 +373,7 @@ display: block;
 /*CSS PARA EL BUSCAR POKEMON*/
 #especifico {
   background-color: rgb(97, 95, 95);
-  width: 215px;
+  width: 335px;
   display: flex;
   justify-content: center;
 }

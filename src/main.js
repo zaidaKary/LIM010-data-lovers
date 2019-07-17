@@ -1,75 +1,72 @@
 /* Manejo del DOM */
 
-//Valores del input de usuario y contraseña
+// Valores del input de usuario y contraseña
 let usuario = document.getElementById('usuario');
 let contrasenha = document.getElementById('contrasenha');
-//Vistas
-const VistaLogin = document.getElementById('VistaLogin');
-const VistaError = document.getElementById('VistaError');
-const VistaInicio = document.getElementById('VistaInicio');
-//Barra de menu
+const contrasenhaIncorrecta = document.getElementById('contrasenha-incorrecta');
+// Vistas
+const vistaLogin = document.getElementById('vista-login');
+const VistaError = document.getElementById('vista-error');
+const VistaInicio = document.getElementById('vista-inicio');
+// Barra de menu
 const BarraMenu = document.getElementById('barra-menu');
-//Botones
-const BotonIngresar = document.getElementById('BotonIngresar');
-//Botones de menu
+// Botones
+const BotonIngresar = document.getElementById('boton-ingresar');
+// Botones de menu
 const selecAz = document.getElementById('az');
 const selecZa = document.getElementById('za');
 const selecAsc = document.getElementById('asc');
 const selecDesc = document.getElementById('desc');
-//Botones de menu ComboBox
-const porTipo = document.getElementById('porTipo');
-const porDebilidad = document.getElementById('porDebilidad');
-//ComboBox para ocultar
-const ComboBoxTipo = document.getElementById('ComboBoxFiltrarTipo');
-const ComboBoxDebilidad = document.getElementById('ComboBoxFiltrarDebilidad');
-const ComboBoxPorcentaje = document.getElementById('comboBoxPorcentaje');
-//Mensaje de cantidad y porcentaje de pokemones 
+// Botones de menu ComboBox
+const porTipo = document.getElementById('por-tipo');
+const porDebilidad = document.getElementById('por-debilidad');
+// ComboBox para ocultar
+const ComboBoxTipo = document.getElementById('combobox-filtrar-tipo');
+const ComboBoxDebilidad = document.getElementById('combobox-filtrar-debilidad');
+const ComboBoxPorcentaje = document.getElementById('combobox-porcentaje');
+// Mensaje de cantidad y porcentaje de pokemones 
 const resultCantidad = document.getElementById('info');
-//Porcentaje
+// Porcentaje
 const porcentaje = document.getElementById('porcentaje');
-//Variable de la Data
+const allPokemones = document.getElementById('all-pokemones');
+// Variable de la Data
 const pokemonNew = nuevaDataPokemones();
 //Cerrar sesion
 const cerrarPokemon = document.getElementById('cerrar');
 
-//Funcionalidad del Boton Ingresar Usuario y Contraseña
+// Funcionalidad del Boton Ingresar Usuario y Contraseña
 let contador = 0;
 BotonIngresar.addEventListener('click', () => {
-    if (contrasenha.value === '' && usuario.value === '') {
-        contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su usuario y contraseña.</strong>';
-    }
-    else if (contrasenha.value === '') {
-        contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su contraseña.</strong>';
-        document.getElementById('usuario').value = '';
-    }
-    else if (usuario.value === '') {
-        contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su usuario.</strong>';
-        document.getElementById('contrasenha').value = '';
-    }
-    else if (usuario.value === '1' && contrasenha.value === '1') {
-
-        VistaLogin.classList.add('hide');
-        VistaInicio.classList.remove('hide');
-        BarraMenu.classList.remove('hide');
-        BarraMenu.classList.remove('barra-menu');
-        ComboBoxTipo.classList.add('ocultarComboBox');
-        ComboBoxDebilidad.classList.add('ocultarComboBox');
-        ComboBoxPorcentaje.classList.add('ocultarComboBox');
-
+  if (contrasenha.value === '' && usuario.value === '') {
+    contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su usuario y contraseña.</strong>';
+  } else if (contrasenha.value === '') {
+    contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su contraseña.</strong>';
+    document.getElementById('usuario').value = '';
+  } else if (usuario.value === '') {
+    contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su usuario.</strong>';
+    document.getElementById('contrasenha').value = '';
+  } else if (usuario.value === '1' && contrasenha.value === '1') {
+    vistaLogin.classList.add('hide');
+    VistaInicio.classList.remove('hide');
+    BarraMenu.classList.remove('hide');
+    BarraMenu.classList.remove('barra-menu');
+    ComboBoxTipo.classList.add('ocultarComboBox');
+    ComboBoxDebilidad.classList.add('ocultarComboBox');
+    ComboBoxPorcentaje.classList.add('ocultarComboBox');
+  } else {
+    if (contador === 0) {
+      vistaLogin.classList.add('hide');
+      VistaError.classList.remove('hide');
     } else {
-        if (contador == 0) {
-            VistaLogin.classList.add('hide');
-            VistaError.classList.remove('hide');
-        } else {
-            contrasenhaIncorrecta.innerHTML = '<strong>Datos incorrectos, le quedan ' + contador + ' intento(s)</strong>';
-            usuario.value = '';
-            contrasenha.value = '';
-            contador--;
-        }
+      contrasenhaIncorrecta.innerHTML = '<strong>Datos incorrectos, le quedan ' + contador + ' intento(s)</strong>';
+      usuario.value = '';
+      contrasenha.value = '';
+      contador--;
     }
+  }
 });
 
-//Funcion de ingresar con Enter
+// Funcion de ingresar con Enter
 const input = document.getElementById('contrasenha');
 input.addEventListener("keyup", (event) => {
 
@@ -81,11 +78,11 @@ input.addEventListener("keyup", (event) => {
     }
 });
 
-//Funcion Mostrar Pokemones (FLIT CARD)
+// Funcion Mostrar Pokemones (FLIT CARD)
 const mostrarPokemones = (allPokemon) => {
-    let mostrar = '';
-    for (let i = 0; i < allPokemon.length; i++) {
-        let llamado = `<div class="maincontainer"><div class="thecard"><div id="pokemones" class="thefront">
+  let mostrar = '';
+  for (let i = 0; i < allPokemon.length; i++) {
+    let llamado = `<div class="maincontainer"><div class="thecard"><div id="pokemones" class="thefront">
                         <div class="contenedor-img">
                         <img src= "${allPokemon[i].imagen}" />
                         </div>
@@ -117,9 +114,9 @@ const mostrarPokemones = (allPokemon) => {
                         <td colspan="3" class="styledato">${allPokemon[i].frecuencia}</td></tr>
                         </tbody></table>
                         </div></div></div>`;
-        mostrar += llamado;
-    }
-    return mostrar;
+    mostrar += llamado;
+  }
+  return mostrar;
 };
 allPokemones.innerHTML = mostrarPokemones(pokemonNew);
 
@@ -211,17 +208,16 @@ porcentaje.addEventListener('click', () => {
     resultCantidad.classList.add('hide');
 });
 
-/*Llamando a la función de buscar*/
-/*Haciendo el event target para buscar*/
+/* Llamando a la función de buscar*/
+/* Haciendo el event target para buscar*/
 const obtenerNombre = document.getElementById('nombre');
 obtenerNombre.addEventListener('input', event => {
     const pokemonBuscado = buscarPokemones(pokemonNew, event.target.value.toLowerCase());
-    console.log(pokemonBuscado)
     allPokemones.innerHTML = mostrarPokemones(pokemonBuscado);
 });
 
-/*Llamando a la función Filtrar*/
-/*Haciendo el event target para tipo*/
+/* Llamando a la función Filtrar*/
+/* Haciendo el event target para tipo*/
 seleccionComboBoxTipo.addEventListener('change', (event) => {
     const tipoSeleccionado = event.target.value;
     info.classList.remove('hide'); 
@@ -229,8 +225,8 @@ seleccionComboBoxTipo.addEventListener('change', (event) => {
     allPokemones.innerHTML = `${mostrarPokemones(filtrarTipos(pokemonNew,tipoSeleccionado))}`; 
 });
 
-/*Llamando a la función Debilidad*/
-/*Haciendo el event target para debilidad*/
+/* Llamando a la función Debilidad*/
+/* Haciendo el event target para debilidad*/
 seleccionComboBoxDebilidad.addEventListener('change', (event) => {
     const debilidadSeleccionado = event.target.value;
     info.classList.remove('hide');

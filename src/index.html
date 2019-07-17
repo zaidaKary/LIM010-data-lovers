@@ -10,15 +10,13 @@
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
   <header class="barra-menu" id="barra-menu">
     <div class="contenedor-menu">
       <div class="contenedor-logo">
-        <img class="logopokemonmenu" src="img/Logopokemon.png" alt="Logo pokemon go" />
+        <img class="logo-pokemon-menu" src="img/Logopokemon.png" alt="Logo pokemon go" />
       </div>
       <input type="checkbox" id="btn-menu">
       <label class="glyphicon glyphicon-align-justify" for="btn-menu"></label>
@@ -34,8 +32,8 @@
           </li>
           <li class="item-menu"><a><img src="img/filtrar.png" alt="filtrar" class="img-filtrar">FILTRAR</a>
             <ul class="sub-menu dos">
-              <li><a id="porTipo">POR TIPO</a></li>
-              <li><a id="porDebilidad">POR DEBILIDAD</a></li>
+              <li><a id="por-tipo">POR TIPO</a></li>
+              <li><a id="por-debilidad">POR DEBILIDAD</a></li>
             </ul>
           </li>
           <li><a id="porcentaje"><img src="img/porcentaje.png" alt="porcentaje huevo" class="img-huevo">HUEVOS</a></li>
@@ -47,25 +45,25 @@
   </header>
   <main>
 
-    <section id="VistaLogin">
+    <section id="vista-login">
       <form class="login" id="contenedor-login">
         <img class="logopokemon" src="img/Logopokemon.png" alt="Logo pokemon go" />
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" placeholder="Ingrese su usuario...">
         <label for="contrasenha">Contraseña:</label>
         <input type="password" id="contrasenha" placeholder="Ingrese su constraseña...">
-        <p id="contrasenhaIncorrecta"></p>
-        <label for="Olvidastecontrasenha" class="Olvidastecontrasenha"><strong>¿Olvidaste tu contraseña?</strong></label>
-        <button id="BotonIngresar" class="botonIngresar" type="button">INGRESAR</button>
-        <label for="Registrate" class="Registrate">¿No tienes una cuenta? <strong>Registrate</strong></label>
+        <p id="contrasenha-incorrecta"></p>
+        <label for="olvidaste-contrasenha" class="olvidaste-contrasenha"><strong>¿Olvidaste tu contraseña?</strong></label>
+        <button id="boton-ingresar" class="boton-ingresar" type="button">INGRESAR</button>
+        <label for="registrate" class="registrate">¿No tienes una cuenta? <strong>Registrate</strong></label>
       </form>
     </section>
 
-    <section id="VistaError" class="hide">
+    <section id="vista-error" class="hide">
       <div class="contenedor-error">
         <img class="logopokemon" src="img/Logopokemon.png" alt="Logo pokemon go" />
-        <div id="fondoParrafoError">
-          <p id="parrafoError"><strong>Upss!!!...Tercer intento incorrecto!!!
+        <div id="fondo-parrafo-error">
+          <p id="parrafo-error"><strong>Upss!!!...Tercer intento incorrecto!!!
               Ya utilizaste todos tus intentos, en
               este momento no podras ingresar a PokémonGo.</strong></p>
         </div>
@@ -73,27 +71,27 @@
       </div>
     </section>
 
-    <section id="VistaInicio" class="hide">
+    <section id="vista-inicio" class="hide">
       <div class="contenedor-buscar">
         <input class="buscador" type="text" id="nombre" placeholder="Ingrese el nombre del pokémon..." size="30">
       </div>
-      <div id="ComboBoxFiltrarTipo" class="ocultarComboBox margen">
+      <div id="combobox-filtrar-tipo">
         <label class="mensaje-seleccione">SELECCIONE EL TIPO DE POKEMON QUE DESEA FILTRAR:</label>
         <select id="seleccion-tipo"></select>
       </div>
-      <div id="comboBoxPorcentaje" class="ocultarComboBox margen">
+      <div id="combobox-porcentaje" >
         <label class="mensaje-seleccione">SELECCIONE EL HUEVO QUE DESEA CALCULAR EL PORCENTAJE:</label>
         <select id="seleccion-porc"></select>
       </div>
 
-      <div id="ComboBoxFiltrarDebilidad" class="ocultarComboBox margen">
+      <div id="combobox-filtrar-debilidad">
         <label class="mensaje-seleccione">SELECCIONE LA DEBILIDAD DEL POKEMON QUE DESEA FILTRAR:</label>
         <select id="seleccion-debilidad"></select>
       </div>
       <div id="info" class="hide">
         <h2 id="texto"></h2>
       </div>
-      <div class="contenedor" id="allPokemones">
+      <div class="contenedor" id="all-pokemones">
       </div>
     </section>
   </main>
@@ -101,6 +99,8 @@
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

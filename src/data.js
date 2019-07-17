@@ -1,6 +1,6 @@
 /* Manejo de data */
 
-/*esta es una función de ejemplo
+/* esta es una función de ejemplo
 puedes ver como agregamos la función a nuestro objeto global window
 const example = () => {
   return 'exameple';
@@ -40,7 +40,13 @@ const nuevaDataPokemones = () => {
 
 window.nuevaDataPokemones = nuevaDataPokemones;
 
-//Funcionaliad de ordenar Pokemones de A-Z
+const MaysPrimera = (string) => {
+  string = string.toLowerCase();
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
+
+// Funcionaliad de ordenar Pokemones de A-z
 const ordenarAz = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
   return (allPokemon);
@@ -58,7 +64,6 @@ window.ordenarAsc = ordenarAsc;
 const obtenerTipos = (allPokemon) => {
   let tipos = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
-
     for (let j = 0; j < allPokemon[i].tipo.length; j++) {
       tipos[aux] = allPokemon[i].tipo[j];
       aux = aux + 1;
@@ -73,7 +78,6 @@ window.obtenerTipos = obtenerTipos;
 const obtenerDebilidades = (allPokemon) => {
   let debilidades = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
-
     for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
       debilidades[aux] = allPokemon[i].debilidades[j];
       aux = aux + 1;
