@@ -18,21 +18,21 @@ Probamos el metodo       window.example()
 Solo por ser el objeto window es que funciona estas propiedades
 windows.POKEMON = POKEMON.pokemon;
 */
-const nuevaDataPokemones = () => {
+const nuevaDataPokemones = (data) => {
   const poke = [];
-  for (let i = 0; i < POKEMON.pokemon.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     poke.push({
-      'number': POKEMON.pokemon[i].num,
-      'nombre': POKEMON.pokemon[i].name,
-      'imagen': POKEMON.pokemon[i].img,
-      'tipo': POKEMON.pokemon[i].type,
-      'altura': POKEMON.pokemon[i].height,
-      'peso': POKEMON.pokemon[i].weight,
-      'caramelo': POKEMON.pokemon[i].candy,
-      'contadorDeCaramelos': POKEMON.pokemon[i].candy_count,
-      'huevo': POKEMON.pokemon[i].egg,
-      'debilidades': POKEMON.pokemon[i].weaknesses,
-      'frecuencia': POKEMON.pokemon[i].avg_spawns
+      'number': data[i].num,
+      'nombre': data[i].name,
+      'imagen': data[i].img,
+      'tipo': data[i].type,
+      'altura': data[i].height,
+      'peso': data[i].weight,
+      'caramelo': data[i].candy,
+      'contadorDeCaramelos': data[i].candy_count,
+      'huevo': data[i].egg,
+      'debilidades': data[i].weaknesses,
+      'frecuencia': data[i].avg_spawns
     });
   }
   return poke;
@@ -54,7 +54,7 @@ const ordenarAsc = (allPokemon) => {
 };
 window.ordenarAsc = ordenarAsc;
 
-// Funcionalidad para obtener todos los tipos de pokemones 
+// funcionalidad para obtener todos los tipos de pokemones 
 const obtenerTipos = (allPokemon) => {
   let tipos = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
@@ -94,10 +94,10 @@ const obtenerPorcentaje = (allPokemon) => {
 window.obtenerPorcentaje = obtenerPorcentaje;
 
 // Funcion buscar un pokemon
-const buscarPokemones = (allPokemon, busqueda) => {
+const buscarPokemonesPorNombre = (allPokemon, busqueda) => {
   return allPokemon.filter(objeto => objeto.nombre.toLowerCase().startsWith(busqueda));
 };
-window.buscarPokemones = buscarPokemones;
+window.buscarPokemonesPorNombre = buscarPokemonesPorNombre;
 
 // Funcion filtrar tipos
 const filtrarTipos = (allPokemon, filtrado) => {

@@ -30,7 +30,7 @@ const resultCantidad = document.getElementById('info');
 const porcentaje = document.getElementById('porcentaje');
 const allPokemones = document.getElementById('all-pokemones');
 // Variable de la Data
-const pokemonNew = nuevaDataPokemones();
+const pokemonNew = nuevaDataPokemones(POKEMON.pokemon);
 // Cerrar sesion
 const cerrarPokemon = document.getElementById('cerrar');
 
@@ -208,7 +208,7 @@ porcentaje.addEventListener('click', () => {
 /* Haciendo el event target para buscar */
 const obtenerNombre = document.getElementById('nombre');
 obtenerNombre.addEventListener('input', event => {
-  const pokemonBuscado = buscarPokemones(pokemonNew, event.target.value.toLowerCase());
+  const pokemonBuscado = buscarPokemonesPorNombre(pokemonNew, event.target.value.toLowerCase());
   allPokemones.innerHTML = mostrarPokemones(pokemonBuscado);
 });
 
@@ -229,7 +229,7 @@ seleccionComboBoxDebilidad.addEventListener('change', (event) => {
   info.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones con  debilidad ${debilidadSeleccionado} es de: ${filtrarDebilidades(pokemonNew, debilidadSeleccionado).length}.</div>`;
   allPokemones.innerHTML = `${mostrarPokemones(filtrarDebilidades(pokemonNew, debilidadSeleccionado))}`;
 });
-/* Llamando la funcion de porcentaje */
+/* Llamando la funcion de porcentaje*/
 /* Haciendo el event target para porcentaje */
 seleccionOpcionComboBox2.addEventListener('change', (event) => {
   const porcentajeSeleccionado = event.target.value;
