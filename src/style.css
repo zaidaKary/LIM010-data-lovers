@@ -121,6 +121,10 @@
 #fondo-parrafo-error p {
   margin-top: 8px;
 }
+.combo-centrado{
+  display: flex;
+  justify-content: center;
+}
 /*CSS PARA EL MENU DE INICIO PARA WEB*/
 /*Barra de menu para web*/
 header {

@@ -40,12 +40,6 @@ const nuevaDataPokemones = () => {
 
 window.nuevaDataPokemones = nuevaDataPokemones;
 
-const MaysPrimera = (string) => {
-  string = string.toLowerCase();
-  return string.charAt(0).toUpperCase() + string.slice(1);
-};
-
-
 // Funcionaliad de ordenar Pokemones de A-z
 const ordenarAz = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
@@ -53,14 +47,14 @@ const ordenarAz = (allPokemon) => {
 };
 window.ordenarAz = ordenarAz;
 
-//Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
+// Funcionalidad de ordenar ascendentemente por frecuencia de aparicion
 const ordenarAsc = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.frecuencia - otroPokemon.frecuencia);
   return (allPokemon);
-}
+};
 window.ordenarAsc = ordenarAsc;
 
-//funcionalidad para obtener todos los tipos de pokemones 
+// Funcionalidad para obtener todos los tipos de pokemones 
 const obtenerTipos = (allPokemon) => {
   let tipos = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
@@ -71,10 +65,10 @@ const obtenerTipos = (allPokemon) => {
   }
   const distintos = [...new Set(tipos)];
   return (distintos);
-}
+};
 window.obtenerTipos = obtenerTipos;
 
-//funcionalidad para obtener todos las debilidades  de pokemones 
+// Funcionalidad para obtener todos las debilidades  de pokemones 
 const obtenerDebilidades = (allPokemon) => {
   let debilidades = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
@@ -85,10 +79,10 @@ const obtenerDebilidades = (allPokemon) => {
   }
   const distintos = [...new Set(debilidades)];
   return (distintos);
-}
+};
 window.obtenerDebilidades = obtenerDebilidades;
 
-//Funcionalidad de obterner porcentaje de huevos a eclosionar 
+// Funcionalidad de obterner porcentaje de huevos a eclosionar 
 const obtenerPorcentaje = (allPokemon) => {
   let km = [];
   for (let i = 0; i < allPokemon.length; i++) {
@@ -96,28 +90,28 @@ const obtenerPorcentaje = (allPokemon) => {
   }
   const distintos = [...new Set(km)];
   return (distintos);
-}
+};
 window.obtenerPorcentaje = obtenerPorcentaje;
 
-//Funcion buscar un pokemon
+// Funcion buscar un pokemon
 const buscarPokemones = (allPokemon, busqueda) => {
   return allPokemon.filter(objeto => objeto.nombre.toLowerCase().startsWith(busqueda));
 };
 window.buscarPokemones = buscarPokemones;
 
-//Funcion filtrar tipos
+// Funcion filtrar tipos
 const filtrarTipos = (allPokemon, filtrado) => {
   return allPokemon.filter(objeto => objeto.tipo.indexOf(filtrado) > -1);
 };
 window.filtrarTipos = filtrarTipos;
 
-//Funcion filtrar debilidades
+// Funcion filtrar debilidades
 const filtrarDebilidades = (allPokemon, debilidad) => {
   return allPokemon.filter(objeto => objeto.debilidades.indexOf(debilidad) > -1);
 };
 window.filtrarDebilidades = filtrarDebilidades;
 
-//Funcion filtrar porcentaje
+// Funcion filtrar porcentaje
 const filtrarPorcentaje = (allPokemon, porcentaje) => {
   return allPokemon.filter(objeto => objeto.huevo.indexOf(porcentaje) > -1);
 };
