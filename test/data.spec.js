@@ -238,23 +238,6 @@ const ouput9 = [{
   ],
 }];
 
-
-// Ejemplo:
-// describe('example', () => {
-//   it('debería ser una función', () => {
-//     assert.equal(typeof example, 'function');
-//   });
-//   it('debería retornar "example"', () => {
-//     assert.equal(example(), 'example');
-//   });
-// });
-
-// describe('pokemon', () => {
-//   it('debería ser una objeto', () => {
-//     expect(typeof POKEMON).toEqual('object');
-//   });
-// });
-
 describe('Deberia retornar la data nueva de los pokemones', () => {
   it('debería ser una funcion', () => {
     expect(typeof global.nuevaDataPokemones).toEqual('function');

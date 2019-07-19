@@ -288,7 +288,7 @@ display: block;
 .menu ul li:hover .dos {
   display: contents;
 }
-/*Resultado de texto: cantidad y procentaje de pokemones*/
+/*Resultado de texto: cantidad y porcentaje de pokemones*/
 .mensaje-seleccione {
   font-size: 16px;
   margin-right: 10px;

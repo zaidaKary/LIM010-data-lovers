@@ -1,23 +1,3 @@
-/* Manejo de data */
-
-/* esta es una función de ejemplo
-puedes ver como agregamos la función a nuestro objeto global window
-const example = () => {
-  return 'exameple';
-};
-window es un objeto que tiene una propiedad example y le asignado un valor el cual representa una funcion. 
-Window es un objeto global del navegador
-window.example = example;
-window.aaa = 'hola'; agregando una propiedad aaa a la varible global window
-window.diasSemana = ['lunes','Martes','Miercoles','Jueves','Viernes']
-Probamos el window  en la consola.
-y tambien probamos las propiedades: window.aaa
-                                    window.diasSemana
-Probamos la propiedad:   window.example
-Probamos el metodo       window.example()
-Solo por ser el objeto window es que funciona estas propiedades
-windows.POKEMON = POKEMON.pokemon;
-*/
 const nuevaDataPokemones = (data) => {
   const poke = [];
   for (let i = 0; i < data.length; i++) {
