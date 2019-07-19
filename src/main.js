@@ -35,7 +35,7 @@ const pokemonNew = nuevaDataPokemones(POKEMON.pokemon);
 const cerrarPokemon = document.getElementById('cerrar');
 
 // Funcionalidad del Boton Ingresar Usuario y Contraseña
-let contador = 0;
+let contador = 3;
 BotonIngresar.addEventListener('click', () => {
   if (contrasenha.value === '' && usuario.value === '') {
     contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su usuario y contraseña.</strong>';
@@ -45,7 +45,7 @@ BotonIngresar.addEventListener('click', () => {
   } else if (usuario.value === '') {
     contrasenhaIncorrecta.innerHTML = '<strong>Por favor, ingrese su usuario.</strong>';
     document.getElementById('contrasenha').value = '';
-  } else if (usuario.value === '1' && contrasenha.value === '1') {
+  } else if (usuario.value === 'LABORATORIA' && contrasenha.value === 'LABORATORIA') {
     vistaLogin.classList.add('hide');
     VistaInicio.classList.remove('hide');
     BarraMenu.classList.remove('hide');
@@ -89,7 +89,7 @@ const mostrarPokemones = (allPokemon) => {
                         <p class="p-numbertipo">Tipo: ${allPokemon[i].tipo}</p></div></div>
                         <div id="pokemones" class="theback">
                         <table><thead><tr><th colspan="3" class="stylenombre">${allPokemon[i].nombre.toUpperCase()}</th></tr></thead>
-                        <tbody><tr>
+                        <body><tr>
                         <td class="styleinfo">Altura:</td>
                         <td class="styleinfo">Peso:</td>
                         <td class="styleinfo">Huevo:</td>
