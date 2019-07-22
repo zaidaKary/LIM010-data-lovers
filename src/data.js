@@ -20,7 +20,7 @@ const nuevaDataPokemones = (data) => {
 
 window.nuevaDataPokemones = nuevaDataPokemones;
 
-// Funcionaliad de ordenar Pokemones de A-z
+// Funcionalidad de ordenar Pokemones de A-z
 const ordenarAz = (allPokemon) => {
   allPokemon.sort((unPokemon, otroPokemon) => unPokemon.nombre.localeCompare(otroPokemon.nombre));
   return (allPokemon);
