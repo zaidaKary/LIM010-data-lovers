@@ -35,32 +35,19 @@ const ordenarAsc = (allPokemon) => {
 window.ordenarAsc = ordenarAsc;
 
 // funcionalidad para obtener todos los tipos de pokemones 
-const obtenerTipos = (allPokemon) => {
+const obtener = (allPokemon, p2) => {
   let tipos = [], aux = 0;
   for (let i = 0; i < allPokemon.length; i++) {
-    for (let j = 0; j < allPokemon[i].tipo.length; j++) {
-      tipos[aux] = allPokemon[i].tipo[j];
+    for (let j = 0; j < allPokemon[i][p2].length; j++) {
+      tipos[aux] = allPokemon[i][p2][j];
       aux = aux + 1;
     }
   }
   const distintos = [...new Set(tipos)];
   return (distintos);
 };
-window.obtenerTipos = obtenerTipos;
 
-// Funcionalidad para obtener todos las debilidades  de pokemones 
-const obtenerDebilidades = (allPokemon) => {
-  let debilidades = [], aux = 0;
-  for (let i = 0; i < allPokemon.length; i++) {
-    for (let j = 0; j < allPokemon[i].debilidades.length; j++) {
-      debilidades[aux] = allPokemon[i].debilidades[j];
-      aux = aux + 1;
-    }
-  }
-  const distintos = [...new Set(debilidades)];
-  return (distintos);
-};
-window.obtenerDebilidades = obtenerDebilidades;
+window.obtener = obtener;
 
 // Funcionalidad de obterner porcentaje de huevos a eclosionar 
 const obtenerPorcentaje = (allPokemon) => {
@@ -80,8 +67,8 @@ const buscarPokemonesPorNombre = (allPokemon, busqueda) => {
 window.buscarPokemonesPorNombre = buscarPokemonesPorNombre;
 
 // Funcion filtrar tipos
-const filtrarTipos = (allPokemon, filtrado) => {
-  return allPokemon.filter(objeto => objeto.tipo.indexOf(filtrado) > -1);
+const filtrarTipos = (allPokemon, filtrado, opcion) => {
+  return allPokemon.filter(objeto => (objeto[opcion]).indexOf(filtrado) > -1);
 };
 window.filtrarTipos = filtrarTipos;
 

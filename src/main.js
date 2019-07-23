@@ -116,7 +116,6 @@ const mostrarPokemones = (allPokemon) => {
   return mostrar;
 };
 allPokemones.innerHTML = mostrarPokemones(pokemonNew);
-
 // Funcionalidad de Ordenar A-Z
 selecAz.addEventListener('click', () => {
   allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
@@ -164,10 +163,10 @@ cerrarPokemon.addEventListener('click', () => {
 
 /* Haciendo Templates literales para pintar en ComboBox para tipo, debilidades y porcentaje */
 const seleccionComboBoxTipo = document.getElementById('seleccion-tipo');
-const tiposPokemones = obtenerTipos(pokemonNew);
+const tiposPokemones = obtener(pokemonNew, 'tipo');
 
 const seleccionComboBoxDebilidad = document.getElementById('seleccion-debilidad');
-const debilidadPokemones = obtenerDebilidades(pokemonNew);
+const debilidadPokemones = obtener(pokemonNew, 'debilidades');
 
 const pintarEnComboBox = (p1, p2) => {
   let template = '<option disabled="disabled" selected="selected">Seleccione una opción...</option>';
@@ -217,8 +216,8 @@ obtenerNombre.addEventListener('input', event => {
 seleccionComboBoxTipo.addEventListener('change', (event) => {
   const tipoSeleccionado = event.target.value;
   resultCantidad.classList.remove('hide'); 
-  resultCantidad.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones  de tipo ${tipoSeleccionado} es de: ${filtrarTipos(pokemonNew, tipoSeleccionado).length}.</div>`;
-  allPokemones.innerHTML = `${mostrarPokemones(filtrarTipos(pokemonNew, tipoSeleccionado))}`; 
+  resultCantidad.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones  de tipo ${tipoSeleccionado} es de: ${(filtrarTipos(pokemonNew, tipoSeleccionado, 'tipos')).length}.</div>`;
+  allPokemones.innerHTML = `${mostrarPokemones(filtrarTipos(pokemonNew, tipoSeleccionado, 'tipos'))}`; 
 });
 
 /* Llamando a la función Debilidad */
