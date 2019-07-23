@@ -117,40 +117,36 @@ const mostrarPokemones = (allPokemon) => {
 };
 allPokemones.innerHTML = mostrarPokemones(pokemonNew);
 
-// Funcionalidad de Ordenar A-Z
-selecAz.addEventListener('click', () => {
-  allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
+// Función para ocultar
+const ocultar = () => {
   ComboBoxTipo.classList.add('ocultarComboBox');
   ComboBoxDebilidad.classList.add('ocultarComboBox');
   ComboBoxPorcentaje.classList.add('ocultarComboBox');
   resultCantidad.classList.add('hide');
+};
+
+// Funcionalidad de Ordenar A-Z
+selecAz.addEventListener('click', () => {
+  allPokemones.innerHTML = mostrarPokemones(ordenarAz(pokemonNew));
+  ocultar();
 });
 
 // Funcionaliad de ordenar Pokemones de Z-a
 selecZa.addEventListener('click', () => {
   allPokemones.innerHTML = mostrarPokemones((ordenarAz(pokemonNew)).reverse());
-  ComboBoxTipo.classList.add('ocultarComboBox');
-  ComboBoxDebilidad.classList.add('ocultarComboBox');
-  ComboBoxPorcentaje.classList.add('ocultarComboBox');
-  resultCantidad.classList.add('hide');
+  ocultar();
 });
 
 // Funcionalidad de ordenar Pokemones ascendentemente
 selecAsc.addEventListener('click', () => {
   allPokemones.innerHTML = mostrarPokemones(ordenarAsc(pokemonNew));
-  ComboBoxTipo.classList.add('ocultarComboBox');
-  ComboBoxDebilidad.classList.add('ocultarComboBox');
-  ComboBoxPorcentaje.classList.add('ocultarComboBox');
-  resultCantidad.classList.add('hide');
+  ocultar();
 });
 
 // Funcionalidad de ordenar Pokemones descendentemente
 selecDesc.addEventListener('click', () => {
   allPokemones.innerHTML = mostrarPokemones((ordenarAsc(pokemonNew)).reverse());
-  ComboBoxTipo.classList.add('ocultarComboBox');
-  ComboBoxDebilidad.classList.add('ocultarComboBox');
-  ComboBoxPorcentaje.classList.add('ocultarComboBox');
-  resultCantidad.classList.add('hide');
+  ocultar();
 });
 
 // Cerrar sesion 
@@ -164,10 +160,10 @@ cerrarPokemon.addEventListener('click', () => {
 
 /* Haciendo Templates literales para pintar en ComboBox para tipo, debilidades y porcentaje */
 const seleccionComboBoxTipo = document.getElementById('seleccion-tipo');
-const tiposPokemones = obtenerTipos(pokemonNew);
+const tiposPokemones = obtenerTipoDebilidad(pokemonNew, 'tipo');
 
 const seleccionComboBoxDebilidad = document.getElementById('seleccion-debilidad');
-const debilidadPokemones = obtenerDebilidades(pokemonNew);
+const debilidadPokemones = obtenerTipoDebilidad(pokemonNew,'debilidades');
 
 const pintarEnComboBox = (p1, p2) => {
   let template = '<option disabled="disabled" selected="selected">Seleccione una opción...</option>';
@@ -179,18 +175,14 @@ const pintarEnComboBox = (p1, p2) => {
 
 porTipo.addEventListener('click', () => {
   pintarEnComboBox(tiposPokemones, seleccionComboBoxTipo);
+  ocultar();
   ComboBoxTipo.classList.remove('ocultarComboBox');
-  ComboBoxDebilidad.classList.add('ocultarComboBox');
-  ComboBoxPorcentaje.classList.add('ocultarComboBox');
-  resultCantidad.classList.add('hide');
 });
 
 porDebilidad.addEventListener('click', () => {
   pintarEnComboBox(debilidadPokemones, seleccionComboBoxDebilidad);
+  ocultar();
   ComboBoxDebilidad.classList.remove('ocultarComboBox');
-  ComboBoxTipo.classList.add('ocultarComboBox');
-  ComboBoxPorcentaje.classList.add('ocultarComboBox');
-  resultCantidad.classList.add('hide');
 });
 
 const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
@@ -198,10 +190,8 @@ const kmPokemones = obtenerPorcentaje(pokemonNew);
 
 porcentaje.addEventListener('click', () => {
   pintarEnComboBox(kmPokemones, seleccionOpcionComboBox2);
-  ComboBoxTipo.classList.add('ocultarComboBox');
-  ComboBoxDebilidad.classList.add('ocultarComboBox');
+  ocultar();
   ComboBoxPorcentaje.classList.remove('ocultarComboBox');
-  resultCantidad.classList.add('hide');
 });
 
 /* Llamando a la función de buscar */
@@ -217,8 +207,8 @@ obtenerNombre.addEventListener('input', event => {
 seleccionComboBoxTipo.addEventListener('change', (event) => {
   const tipoSeleccionado = event.target.value;
   resultCantidad.classList.remove('hide'); 
-  resultCantidad.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones  de tipo ${tipoSeleccionado} es de: ${filtrarTipos(pokemonNew, tipoSeleccionado).length}.</div>`;
-  allPokemones.innerHTML = `${mostrarPokemones(filtrarTipos(pokemonNew, tipoSeleccionado))}`; 
+  resultCantidad.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones  de tipo ${tipoSeleccionado} es de: ${filtrar(pokemonNew, 'tipo', tipoSeleccionado).length}.</div>`;
+  allPokemones.innerHTML = `${mostrarPokemones(filtrar(pokemonNew, 'tipo', tipoSeleccionado))}`; 
 });
 
 /* Llamando a la función Debilidad */
@@ -226,14 +216,16 @@ seleccionComboBoxTipo.addEventListener('change', (event) => {
 seleccionComboBoxDebilidad.addEventListener('change', (event) => {
   const debilidadSeleccionado = event.target.value;
   resultCantidad.classList.remove('hide');
-  resultCantidad.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones con  debilidad ${debilidadSeleccionado} es de: ${filtrarDebilidades(pokemonNew, debilidadSeleccionado).length}.</div>`;
-  allPokemones.innerHTML = `${mostrarPokemones(filtrarDebilidades(pokemonNew, debilidadSeleccionado))}`;
+  resultCantidad.innerHTML = `<div class="resultado-cantidad">La cantidad de pokemones con  debilidad ${debilidadSeleccionado} es de: ${filtrar(pokemonNew, 'debilidades', debilidadSeleccionado).length}.</div>`;
+  allPokemones.innerHTML = `${mostrarPokemones(filtrar(pokemonNew, 'debilidades', debilidadSeleccionado))}`;
 });
 /* Llamando la funcion de porcentaje*/
 /* Haciendo el event target para porcentaje */
 seleccionOpcionComboBox2.addEventListener('change', (event) => {
   const porcentajeSeleccionado = event.target.value;
   resultCantidad.classList.remove('hide');
-  resultCantidad.innerHTML = `<div class="resultado-cantidad">El porcentaje de Pokemones con ${porcentajeSeleccionado}km es de: ${((filtrarPorcentaje(pokemonNew, porcentajeSeleccionado).length / pokemonNew.length) * 100).toFixed(2)}%</div>`;
-  allPokemones.innerHTML = `${mostrarPokemones(filtrarPorcentaje(pokemonNew, porcentajeSeleccionado))}`;
+  resultCantidad.innerHTML = `<div class="resultado-cantidad">El porcentaje de Pokemones con ${porcentajeSeleccionado}km es de: ${((filtrar(pokemonNew, 'huevo', porcentajeSeleccionado).length / pokemonNew.length) * 100).toFixed(2)}%</div>`;
+  allPokemones.innerHTML = `${mostrarPokemones(filtrar(pokemonNew, 'huevo', porcentajeSeleccionado))}`;
 });
+
+/* Funcion para texto de cantidad de pokemones filtrados */
