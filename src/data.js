@@ -45,6 +45,7 @@ const obtenerTipoDebilidad = (allPokemon, propiedad) => {
   const distintos = [...new Set(nuevoArreglo)];
   return (distintos);
 };
+window.obtenerTipoDebilidad = obtenerTipoDebilidad;
 
 // Funcionalidad de obterner porcentaje de huevos a eclosionar 
 const obtenerPorcentaje = (allPokemon) => {
