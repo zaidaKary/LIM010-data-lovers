@@ -33,35 +33,36 @@ const allPokemones = document.getElementById('all-pokemones');
 let pokemonNew = [];
 // Cerrar sesion
 const cerrarPokemon = document.getElementById('cerrar');
-const seleccionComboBoxTipo = document.getElementById('seleccion-tipo');
-const seleccionComboBoxDebilidad = document.getElementById('seleccion-debilidad');
 
 //Usando fetch()
 const url = 'https://raw.githubusercontent.com/zaidaKary/LIM010-data-lovers/master/src/data/pokemon/pokemon.json';
 fetch(url)
 .then(response => response.json())
 .then(data => {
-
   pokemonNew = nuevaDataPokemones(data.pokemon);
   allPokemones.innerHTML = mostrarPokemones(pokemonNew);
 
   const tiposPokemones = obtenerTipoDebilidad(pokemonNew, 'tipo');
-  
-
   porTipo.addEventListener('click', () => {
     pintarEnComboBox(tiposPokemones, seleccionComboBoxTipo);
     ocultar();
     ComboBoxTipo.classList.remove('ocultarComboBox');
   });
 
- 
   const debilidadPokemones = obtenerTipoDebilidad(pokemonNew,'debilidades');
   porDebilidad.addEventListener('click', () => {
     pintarEnComboBox(debilidadPokemones, seleccionComboBoxDebilidad);
     ocultar();
     ComboBoxDebilidad.classList.remove('ocultarComboBox');
-
   });
+
+  const kmPokemones = obtenerPorcentaje(pokemonNew);
+
+  porcentaje.addEventListener('click', () => {
+  pintarEnComboBox(kmPokemones, seleccionOpcionComboBox2);
+  ocultar();
+  ComboBoxPorcentaje.classList.remove('ocultarComboBox');
+});
   console.log(pokemonNew);
 })
 .catch(err => console.log(err))
@@ -148,7 +149,6 @@ const mostrarPokemones = (allPokemon) => {
   }
   return mostrar;
 };
-// allPokemones.innerHTML = mostrarPokemones(pokemonNew);
 
 // Función para ocultar
 const ocultar = () => {
@@ -192,11 +192,9 @@ cerrarPokemon.addEventListener('click', () => {
 });
 
 /* Haciendo Templates literales para pintar en ComboBox para tipo, debilidades y porcentaje */
-// const seleccionComboBoxTipo = document.getElementById('seleccion-tipo');
-// const tiposPokemones = obtenerTipoDebilidad(pokemonNew, 'tipo');
-
-// const seleccionComboBoxDebilidad = document.getElementById('seleccion-debilidad');
-// const debilidadPokemones = obtenerTipoDebilidad(pokemonNew,'debilidades');
+const seleccionComboBoxTipo = document.getElementById('seleccion-tipo');
+const seleccionComboBoxDebilidad = document.getElementById('seleccion-debilidad');
+const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
 
 const pintarEnComboBox = (p1, p2) => {
   let template = '<option disabled="disabled" selected="selected">Seleccione una opción...</option>';
@@ -206,31 +204,11 @@ const pintarEnComboBox = (p1, p2) => {
   p2.innerHTML = template;
 };
 
-// porTipo.addEventListener('click', () => {
-//   pintarEnComboBox(tiposPokemones, seleccionComboBoxTipo);
-//   ocultar();
-//   ComboBoxTipo.classList.remove('ocultarComboBox');
-// });
-
-// porDebilidad.addEventListener('click', () => {
-//   pintarEnComboBox(debilidadPokemones, seleccionComboBoxDebilidad);
-//   ocultar();
-//   ComboBoxDebilidad.classList.remove('ocultarComboBox');
-// });
-
-const seleccionOpcionComboBox2 = document.getElementById('seleccion-porc');
-const kmPokemones = obtenerPorcentaje(pokemonNew);
-
-porcentaje.addEventListener('click', () => {
-  pintarEnComboBox(kmPokemones, seleccionOpcionComboBox2);
-  ocultar();
-  ComboBoxPorcentaje.classList.remove('ocultarComboBox');
-});
-
 /* Llamando a la función de buscar */
 /* Haciendo el event target para buscar */
 const obtenerNombre = document.getElementById('nombre');
 obtenerNombre.addEventListener('input', event => {
+  ocultar();
   const pokemonBuscado = buscarPokemonesPorNombre(pokemonNew, event.target.value.toLowerCase());
   allPokemones.innerHTML = mostrarPokemones(pokemonBuscado);
 });
